@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>tk_steroids.datamanager API documentation</title>
+<meta name="description" content="Widgets for managing lists of items.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>tk_steroids.datamanager</code></h1>
+</header>
+<section id="section-intro">
+<p>Widgets for managing lists of items.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="tk_steroids.datamanager.ItemManager"><code class="flex name class">
+<span>class <span class="ident">ItemManager</span></span>
+<span>(</span><span>parent, fields=[], start_data={}, selection_callback=None, postchange_callback=None, save_callback=None, cancel_callback=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adding, removing, renaming items in a list.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>current</code></strong> :&ensp;<code>string</code> or <code>None</code></dt>
+<dd>Name of the currently selected item (item_name)</dd>
+<dt><strong><code>data</code></strong> :&ensp;<code>dict</code> of <code>dicts</code></dt>
+<dd>{item_name: {field1: string1, &hellip;}}</dd>
+<dt><strong><code>fields</code></strong> :&ensp;<code>list</code> of <code>strings</code></dt>
+<dd>Names of the fields user can input data (in addition to the
+name of the entry)</dd>
+<dt><strong><code>listbox</code></strong> :&ensp;<code>object</code></dt>
+<dd>tk_steroids Listbox (tkinter Listbox object by self.listbox.listbox)</dd>
+<dt><strong><code>buttons</code></strong> :&ensp;<code>object</code></dt>
+<dd>tk_steroids ButtonsFrame (self.buttons.buttons for underlying tkinter
+button objects)</dd>
+<dt><strong><code>selection_callback</code></strong> :&ensp;<code>callable</code></dt>
+<dd>Called when an item is selected</dd>
+<dt><strong><code>postchange_callback</code></strong> :&ensp;<code>callable</code></dt>
+<dd>Called after an item is removed, renamed or added</dd>
+<dt><strong><code>save_callback</code></strong> :&ensp;<code>callable</code></dt>
+<dd>Callable when pressing save button</dd>
+<dt><strong><code>cancel_callback</code></strong> :&ensp;<code>callable</code></dt>
+<dd>Callable when pressing close button</dd>
+<dt><strong><code>parent</code></strong> :&ensp;<code>object</code></dt>
+<dd>Tkinter parent widget</dd>
+<dt><strong><code>start_data</code></strong> :&ensp;<code>dict</code> of <code>dicts OR dict</code> of <code>lists</code></dt>
+<dd>Initial entries in form {item_name: {field1: string1, &hellip;}}
+or {item_name: [string1, string2, &hellip;]}</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ItemManager(tk.Frame):
+    &#39;&#39;&#39;
+    Adding, removing, renaming items in a list.
+    
+    Attributes
+    ----------
+    current : string or None
+        Name of the currently selected item (item_name)
+    data : dict of dicts
+        {item_name: {field1: string1, ...}}
+    fields : list of strings
+        Names of the fields user can input data (in addition to the
+        name of the entry)
+    listbox : object
+        tk_steroids Listbox (tkinter Listbox object by self.listbox.listbox)
+    buttons : object
+        tk_steroids ButtonsFrame (self.buttons.buttons for underlying tkinter
+        button objects)
+    
+    selection_callback : callable
+        Called when an item is selected
+    postchange_callback : callable
+        Called after an item is removed, renamed or added
+    save_callback : callable
+        Callable when pressing save button
+    cancel_callback : callable
+        Callable when pressing close button
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, fields=[], start_data={},
+            selection_callback=None, postchange_callback=None,
+            save_callback=None, cancel_callback=None):
+        &#39;&#39;&#39;
+        parent : object
+            Tkinter parent widget
+        start_data : dict of dicts OR dict of lists
+            Initial entries in form {item_name: {field1: string1, ...}}
+            or {item_name: [string1, string2, ...]}
+        &#39;&#39;&#39;
+
+        tk.Frame.__init__(self, parent)
+        
+        self.current = None
+        self.fields = fields
+        self.data = start_data
+        self.selection_callback = selection_callback
+        self.postchange_callback = postchange_callback
+        
+        # Left side entries
+
+        self.listbox = Listbox(self, list(self.data.keys()), self._on_listbox_selection)
+        self.listbox.grid(row=1, column=1, sticky=&#39;NSWE&#39;)
+
+        
+        # Right side buttons frame
+        button_names = [&#39;Add&#39;, &#39;Remove&#39;]
+        button_commands = [self.add, self.remove]
+        
+        self.buttons = ButtonsFrame(self, button_names, button_commands, horizontal=False)
+        self.buttons.grid(row=1, column=2)
+        
+        if callable(save_callback):
+            tk.Button(self, text=&#39;Save&#39;, command=save_callback).grid(row=2, column=1)
+        if callable(cancel_callback):
+            tk.Button(self, text=&#39;Cancel&#39;, command=cancel_callback).grid(row=2, column=2)
+        
+        # Specify stretching
+        self.columnconfigure(1, weight=1)
+        self.rowconfigure(1, weight=1)
+
+
+    def add(self):
+        name = tkinter.simpledialog.askstring(&#39;New entry&#39;, &#39;Item name&#39;)
+        if name:
+            self.data[name] = {}
+
+        self.listbox.set_selections(list(self.data.keys()))
+        
+        if self.postchange_callback:
+            self.postchange_callback(self.data)
+    
+
+    def remove(self):
+        
+        del self.data[self.current]
+        
+        self.listbox.set_selections(list(self.data.keys()))
+        
+        if self.postchange_callback:
+            self.postchange_callback(self.data)
+ 
+
+    def _on_listbox_selection(self, selection):
+        self.current = selection
+        
+        if self.selection_callback:
+            self.selection_callback(self.data[selection])
+   
+
+    def set_data(self, data):
+        &#39;&#39;&#39;
+        data : list or dict
+            [item1, item2, ...] or {item1: {}, item2: {}}
+            where item_i is a string.
+        &#39;&#39;&#39;
+        if isinstance(data, list):
+            self.data = {key: {} for key in data}
+        else:
+            self.data = data
+        
+        self.listbox.set_selections(list(self.data.keys()))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tk_steroids.datamanager.ItemManager.add"><code class="name flex">
+<span>def <span class="ident">add</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="tk_steroids.datamanager.ItemManager.remove"><code class="name flex">
+<span>def <span class="ident">remove</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="tk_steroids.datamanager.ItemManager.set_data"><code class="name flex">
+<span>def <span class="ident">set_data</span></span>(<span>self, data)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>data : list or dict
+[item1, item2, &hellip;] or {item1: {}, item2: {}}
+where item_i is a string.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="tk_steroids.datamanager.ListManager"><code class="flex name class">
+<span>class <span class="ident">ListManager</span></span>
+<span>(</span><span>parent, start_data=[], save_callback=None, cancel_callback=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Like ItemManager but each item is a further sublist.
+See ItemManager for documentation.</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ListManager(tk.Frame):
+    &#39;&#39;&#39;
+    Like ItemManager but each item is a further sublist.
+    See ItemManager for documentation.
+    &#39;&#39;&#39;
+    
+    def __init__(self, parent, start_data=[],
+            save_callback=None, cancel_callback=None):
+        tk.Frame.__init__(self, parent)
+
+        self.im2 = ItemManager(self,
+                save_callback=save_callback, cancel_callback=cancel_callback)
+        self.im1 = ItemManager(self, start_data=start_data,
+                selection_callback=self.im2.set_data)
+
+        self.im2.postchange_callback = self.update_im1
+
+        self.im1.grid(row=1, column=1, sticky=&#39;NSWE&#39;)
+        self.im2.grid(row=1, column=2, sticky=&#39;NSWE&#39;)
+
+        self.columnconfigure(1, weight=1)
+        self.columnconfigure(2, weight=1)
+        self.rowconfigure(1, weight=1)
+
+
+    def update_im1(self, data):
+        self.im1.data[self.im1.current] = list(data.keys())
+        self.im1.listbox.set_selections(list(self.im1.data.keys()))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tk_steroids.datamanager.ListManager.update_im1"><code class="name flex">
+<span>def <span class="ident">update_im1</span></span>(<span>self, data)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="tk_steroids" href="index.html">tk_steroids</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="tk_steroids.datamanager.ItemManager" href="#tk_steroids.datamanager.ItemManager">ItemManager</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.datamanager.ItemManager.add" href="#tk_steroids.datamanager.ItemManager.add">add</a></code></li>
+<li><code><a title="tk_steroids.datamanager.ItemManager.remove" href="#tk_steroids.datamanager.ItemManager.remove">remove</a></code></li>
+<li><code><a title="tk_steroids.datamanager.ItemManager.set_data" href="#tk_steroids.datamanager.ItemManager.set_data">set_data</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tk_steroids.datamanager.ListManager" href="#tk_steroids.datamanager.ListManager">ListManager</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.datamanager.ListManager.update_im1" href="#tk_steroids.datamanager.ListManager.update_im1">update_im1</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

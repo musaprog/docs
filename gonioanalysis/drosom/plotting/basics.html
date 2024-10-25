@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioanalysis.drosom.plotting.basics API documentation</title>
+<meta name="description" content="Most commonly needed functions to plot the data.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioanalysis.drosom.plotting.basics</code></h1>
+</header>
+<section id="section-intro">
+<p>Most commonly needed functions to plot the data.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps"><code class="name flex">
+<span>def <span class="ident">compare_3d_vectormaps</span></span>(<span>manalyser1, manalyser2, axes=None, illustrate=True, total_error=True, compact=False, animation=None, animation_type=None, animation_variable=None, optimal_ranges=None, pulsation_length=1, biphasic=False, kwargs1={}, kwargs2={}, kwargsD={}, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calls get 3d vectors for both analysers.
+Arrow rotation option only affects manalyser2</p>
+<p>Note! If total_error is true, sets attributes pupil_compare_errors
+and pupil_compare_rotations to the last ax in axes</p>
+<p>manalyser1,manalyser2 : objects
+Analyser objects
+axes : list of objects
+List of Matplotlib Axes objects. Expected base length == 3 which
+is modified by options orientation, total_error and compact.</p>
+<p>illustrate : bool
+Wheter to plot the illustrative plot. Increases the axes requirement by 1
+total_error: bool
+Whether to plot the total error plot Increases the axes requirement by 1
+compact : bool
+Join vectorplots in one. Decreases axes requirement by 1</p>
+<p>animation : list
+For total error x-axis limits
+kwargs1,kwargs2 : dict
+List of keyword arguments to pass to <code><a title="gonioanalysis.drosom.plotting.basics.plot_3d_vectormap" href="#gonioanalysis.drosom.plotting.basics.plot_3d_vectormap">plot_3d_vectormap()</a></code>
+kwargsD : dict
+List of keywords arguments to pass to <code><a title="gonioanalysis.drosom.plotting.basics.plot_3d_differencemap" href="#gonioanalysis.drosom.plotting.basics.plot_3d_differencemap">plot_3d_differencemap()</a></code></p>
+<p>Returns [axes]</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps_compact"><code class="name flex">
+<span>def <span class="ident">compare_3d_vectormaps_compact</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wrapper for compare_3d_vectormaps but
+compact=True, total_error=False, illustrate=False</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps_manyviews"><code class="name flex">
+<span>def <span class="ident">compare_3d_vectormaps_manyviews</span></span>(<span>*args, axes=None, column_titles=['Microsaccades', 'Rhabdomere orientation', 'Difference', 'Mean microsaccade'], row_titles=['Dorsal\nview', 'Anterior\nview', 'Ventral\nview'], **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Just with different views rendered</p>
+<p>First axes gets attributes .orientation_ax and .error_ax</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.basics.plot_1d_magnitude"><code class="name flex">
+<span>def <span class="ident">plot_1d_magnitude</span></span>(<span>manalyser, image_folder=None, i_repeat=None, mean_repeats=False, mean_imagefolders=False, mean_eyes=False, color_eyes=False, gray_repeats=False, progressive_colors=False, show_mean=False, show_std=False, show_label=True, milliseconds=False, microns=False, phase=False, derivative=False, label='EYE-ANGLE-IREPEAT', ax=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plots 1D displacement magnitude over time, separately for each eye.</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>manalyser</code></strong> :&ensp;<code>object</code></dt>
+<dd>MAnalyser object instance</dd>
+<dt><strong><code>image_folder</code></strong> :&ensp;<code>string</code> or <code>None</code></dt>
+<dd>Image folder to plot the data from. If None (default), plot all image folders.</dd>
+<dt><strong><code>mean_repeats</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter to take mean of the repeats or plot each repeat separately</dd>
+<dt><strong><code>mean_imagefolders</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True and image_folder is None (plotting all image folders), takes the mean
+of all image folders.</dd>
+<dt><strong><code>mean_eyes</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter to take a mean over the left and right eyes</dd>
+<dt><strong><code>label</code></strong> :&ensp;<code>string</code></dt>
+<dd>Label to show. If None, no label. Otherwise
+EYE gets replaced with eye
+ANGLE gets replaced by image folder name
+IREPEAT gets reaplaced by the number of repeat</dd>
+<dt><strong><code>Returns</code></strong></dt>
+<dd>ax
+Matplotlib axes
+traces
+What has been plotted
+N_repeats
+The total number of repeats (independent of i_repeat)</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.basics.plot_2d_vectormap"><code class="name flex">
+<span>def <span class="ident">plot_2d_vectormap</span></span>(<span>manalyser, ax=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plots a 2-dimensional vector map.</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>manalyser</code></strong> :&ensp;<code>object</code></dt>
+<dd>Instance of MAnalyser class or MAverager class (having get2DVectors method)</dd>
+<dt><strong><code>ax</code></strong> :&ensp;<code>object</code></dt>
+<dd>Matplotlib axes object</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.basics.plot_3d_differencemap"><code class="name flex">
+<span>def <span class="ident">plot_3d_differencemap</span></span>(<span>manalyser1, manalyser2, ax=None, stats_map=False, elev=10, azim=70, colinear=True, direction=False, colorbar=True, colorbar_text=True, colorbar_ax=None, reverse_errors=False, colorbar_text_positions=[[1.1, 0.95, 'left', 'top'], [1.1, 0.5, 'left', 'center'], [1.1, 0.05, 'left', 'bottom']], i_frame=0, arrow_rotations=[0], pitch_rot=None, yaw_rot=None, roll_rot=None, hide_axes=False, hide_text=False, guidance=False, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plots 3d heatmap presenting the diffrerence in the vector orientations
+for two analyser objects, by putting the get_3d_vectors of both analysers
+to field_error and making a surface plot.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Errors (differences) are calculated at manalyser1's points.</li>
+<li>arrow_rotations, pitch_rot only affects manalyser2</li>
+</ul>
+<p>manalyser1, manalyser2 : object
+Analyser objects to plot the difference with 3d vectors
+ax : object or None
+Matplotlib Axes object
+stats_map : bool
+If true, plot p-vals.
+colorbar : bool
+Whether to add the colors explaining colorbar
+colorbar_text: bool
+Wheter to add the text annotations on the colorbar
+colorbar_ax : object
+Optional Axes where to put the colorbar
+arrow_rotations : list
+Arrow rotations, for the second manalyser
+i_frame : int
+Neglected here
+hide_axes : bool
+hide_text : bool
+guidance : bool</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.basics.plot_3d_vectormap"><code class="name flex">
+<span>def <span class="ident">plot_3d_vectormap</span></span>(<span>manalyser, arrow_rotations=[0], rhabdomeres=False, repeats_separately=False, vertical_hardborder=False, elev=None, azim=None, pitch_rot=None, roll_rot=None, yaw_rot=None, animation=None, animation_type=None, animation_variable=None, i_frame=0, ax=None, *, points, vectors, color='black', mutation_scale=6, scale_length=1, i_pulsframe=None, guidance=False, camerapos=None, draw_sphere=True, vrot_lines=False, hide_axes=False, hide_text=False, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plot a 3D vectormap, where the arrows point movement (MAnalyser, FAnalyser) or
+feature (OAnalyser) directions.</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>manalyser</code></strong> :&ensp;<code>object</code></dt>
+<dd>Analyser object</dd>
+<dt><strong><code>arrow_rotations</code></strong> :&ensp;<code>list</code> of <code>int</code></dt>
+<dd>Rotation of arrows in the plane of the arrows (ie. radially).</dd>
+<dt><strong><code>rhabdomeres</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True, draw rhabdomere pattern where the arrows are.</dd>
+<dt><strong><code>repeats_separately</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True, and repeat data exists, draw each repeat
+with it's own arrow.</dd>
+<dt><strong><code>vertical_hardborder</code></strong> :&ensp;<code>bool</code></dt>
+<dd>For MAverager, interpolate dorsal and ventral separetly</dd>
+<dt><strong><code>elev</code></strong>, <strong><code>azim</code></strong> :&ensp;<code>float</code> or <code>None</code></dt>
+<dd>Plot elevation and azim</dd>
+<dt><strong><code>animation</code></strong> :&ensp;<code>None</code></dt>
+<dd>&nbsp;</dd>
+<dt><strong><code>animation_type</code></strong> :&ensp;<code>None</code></dt>
+<dd>&nbsp;</dd>
+<dt><strong><code>animation_variable</code></strong> :&ensp;<code>None</code></dt>
+<dd>&nbsp;</dd>
+<dt><strong><code>i_frame</code></strong> :&ensp;<code>int</code></dt>
+<dd>&nbsp;</dd>
+<dt><strong><code>ax</code></strong> :&ensp;<code>object</code></dt>
+<dd>Maptlotlib ax object. If not specified, creates a new figure.</dd>
+<dt><strong><code>kwargs</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Variable keyword arguments are passed to vector_plot function.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>ax</code></strong> :&ensp;<code>object</code></dt>
+<dd>Matplotlib Axes object</dd>
+<dt><strong><code>vectors</code></strong> :&ensp;<code>list</code> of <code>objects</code></dt>
+<dd>List of arrow artist drawn on the figure.</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.basics.plot_magnitude_probability"><code class="name flex">
+<span>def <span class="ident">plot_magnitude_probability</span></span>(<span>manalysers, wanted_imagefolders=None, ax=None, mean_repeats=False, mean_imagefolders=False, microns=True, milliseconds=True, xpoints=100)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>With many analysers and image folders, calculate probablity of the magnitude
+response (2D histogram).</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>manalysers</code></strong> :&ensp;<code>list</code> of <code>objs</code></dt>
+<dd>Analyser objects</dd>
+<dt><strong><code>wanted_imagefolders</code></strong> :&ensp;<code>None</code> or <code>dict</code></dt>
+<dd>Keys are analyser names, items lists of image folder names
+to incldue. If None, use all image folders.</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.basics.plot_xy_trajectory"><code class="name flex">
+<span>def <span class="ident">plot_xy_trajectory</span></span>(<span>manalysers, wanted_imagefolders=None, i_repeat=None, mean_repeats=True, ax=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A (x,y) 2D plot of the movement trajectory where time is encoded
+in color.</p>
+<p>manalysers : list
+wanted_imagefolders : dict
+{specimen_name: [image_folder1, &hellip;]}
+i_repeat : int
+mean_repeats : bool</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioanalysis.drosom.plotting" href="index.html">gonioanalysis.drosom.plotting</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps" href="#gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps">compare_3d_vectormaps</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps_compact" href="#gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps_compact">compare_3d_vectormaps_compact</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps_manyviews" href="#gonioanalysis.drosom.plotting.basics.compare_3d_vectormaps_manyviews">compare_3d_vectormaps_manyviews</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.basics.plot_1d_magnitude" href="#gonioanalysis.drosom.plotting.basics.plot_1d_magnitude">plot_1d_magnitude</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.basics.plot_2d_vectormap" href="#gonioanalysis.drosom.plotting.basics.plot_2d_vectormap">plot_2d_vectormap</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.basics.plot_3d_differencemap" href="#gonioanalysis.drosom.plotting.basics.plot_3d_differencemap">plot_3d_differencemap</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.basics.plot_3d_vectormap" href="#gonioanalysis.drosom.plotting.basics.plot_3d_vectormap">plot_3d_vectormap</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.basics.plot_magnitude_probability" href="#gonioanalysis.drosom.plotting.basics.plot_magnitude_probability">plot_magnitude_probability</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.basics.plot_xy_trajectory" href="#gonioanalysis.drosom.plotting.basics.plot_xy_trajectory">plot_xy_trajectory</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

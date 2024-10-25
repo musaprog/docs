@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioimsoft.core API documentation</title>
+<meta name="description" content="GonioImsoft main components.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioimsoft.core</code></h1>
+</header>
+<section id="section-intro">
+<p>GonioImsoft main components.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gonioimsoft.core.GonioImsoftCore"><code class="flex name class">
+<span>class <span class="ident">GonioImsoftCore</span></span>
+<span>(</span><span>dynamic_parameters={'isi': 10.0, 'repeats': 1, 'pre_stim': 0.0, 'stim': 0.2, 'post_stim': 0.0, 'frame_length': 0.01, 'ir_imaging': 5, 'ir_waiting': 0, 'ir_livefeed': 1, 'flash_on': 5, 'flash_off': 0, 'ir_channel': 'Dev1/ao1', 'flash_channel': 'Dev1/ao0', 'suffix': '', 'trigger_channel': '/Dev1/PFI0', 'trigger_out_channel': 'Dev1/ao7', 'biosyst_stimulus': '', 'biosyst_channel': 2, 'avgint_adaptation': 0, 'flash_type': 'square', 'save_stack': True, 'reboot_cameras': False, 'ROI': None})</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Main interface to control GonioImsoft recordings.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>reader</code></strong> :&ensp;<code>obj</code></dt>
+<dd>Reading rotary encoder values from the Arduino Board.</dd>
+<dt><strong><code>cameras</code></strong> :&ensp;<code>list</code></dt>
+<dd>Camera client objects that each talk to a specific server
+over IPv4 sockets. The server's can be local (on the same
+machine) or remote.</dd>
+<dt><strong><code>vios</code></strong> :&ensp;<code>list</code></dt>
+<dd>Analog voltage input/ouput clients. Similar to the cameras,
+they talk to a vio server.</dd>
+</dl>
+<p>Sets up ArduinoReader, CameraClient/Server.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class GonioImsoftCore:
+    &#39;&#39;&#39;Main interface to control GonioImsoft recordings.
+
+    Attributes
+    ----------
+    reader : obj
+        Reading rotary encoder values from the Arduino Board.
+    cameras : list
+        Camera client objects that each talk to a specific server
+        over IPv4 sockets. The server&#39;s can be local (on the same
+        machine) or remote.
+    vios : list
+        Analog voltage input/ouput clients. Similar to the cameras,
+        they talk to a vio server.
+    &#39;&#39;&#39;
+
+
+    def __init__(self, dynamic_parameters=DEFAULT_DYNAMIC_PARAMETERS):
+        &#39;&#39;&#39;
+        Sets up ArduinoReader, CameraClient/Server.
+        &#39;&#39;&#39;
+
+        # Angle pairs reader (rotary encoder values)
+        self.reader = ArduinoReader()
+        
+        self.cameras = []
+        self.vios = []
+        
+        # Details about preparation (name, sex, age) are saved in this
+        self.preparation = {&#39;name&#39;: &#39;test&#39;, &#39;sex&#39;: &#39;&#39;, &#39;age&#39;: &#39;&#39;}
+
+        self.dynamic_parameters = dynamic_parameters
+
+        self.previous_angle = None
+
+        # Suffix to be appended in the subfolders, see set_subfolder_suffix method
+        self.suffix = &#39;&#39;
+
+        # Set up motors followingly
+        # 0)    Horizontal + sensor
+        # 1)    Vertical + sensor
+        # 2)    Microscope focus (no sensor)
+        self.motors = []
+        if ENABLE_MOTORS:
+            for i_motor, i_sensor in zip([0,1,2],[0,1,None]):
+                self.motors.append(Motor(self.reader, i_motor, i_sensor))
+        
+
+        # Macro imaging: Automatically move motors and take images
+        # self macro is a list of anglepairs where to move the horizontal/vertical,
+        # take image &#34;commands&#34; (string &#39;image&#39;) and other functions.
+        # For more details see the tick method of this class.
+        self.macro = None
+        self.i_macro = 0
+        self.waittime = 0
+
+        self.trigger_rotation = False
+
+        self.trigger_signal = np.array([3,3,3,0])
+        self.triggered_anglepairs = None
+
+        self.data_savedir = None
+
+        self.local_camera_servers_running_index = 0
+        self.local_vio_servers_running_index = 0
+
+        self.pause_livefeed = False
+        self.vio_livefeed = False
+        self.vio_livefeed_dur = 0.1
+
+        self._last_vio = time.time()
+
+    
+    def _add_client(self, name, host, port):
+        &#39;&#39;&#39;Adds a camera client to the given host and port.
+
+        If host is None uses the localhost and starts a local
+        server if no local server running at that port
+
+        Arguments
+        ---------
+        name : string
+            The name of the client. &#34;camera&#34; or &#34;vio&#34;
+        &#39;&#39;&#39;
+        if name == &#39;camera&#39;:
+            Client = CameraClient
+            register = self.cameras
+            self.local_camera_servers_running_index += 1
+            index = self.local_camera_servers_running_index
+        elif name == &#39;vio&#39;:
+            Client = VIOClient
+            register = self.vios
+            self.local_vio_servers_running_index += 1
+            index = self.local_vio_servers_running_index
+        else:
+            raise ValueError
+
+        client = Client(host, port, running_index=index-1)
+
+        if host is None and not client.is_server_running():
+            client.start_server()
+        register.append(client)
+        
+        return client
+
+
+    def add_camera_client(self, host, port):
+        return self._add_client(&#39;camera&#39;, host, port)
+        
+    def add_vio_client(self, host, port):
+        return self._add_client(&#39;vio&#39;, host, port)
+
+
+    def _remove_client(self, name, i_client):
+        if name == &#39;camera&#39;:
+            register = self.cameras
+        elif name == &#39;vio&#39;:
+            reigster = self.vios
+        # Popping is enough and the client should be garbage collected
+        # by Python (the sockets are not kept alive so nothing is
+        # left open etc. by the client)
+        if isinstance(i_client, int):
+            client = self.register.pop(i_client)
+        elif isinstance(i_client, (CameraClient, VIOClient)):
+            client = i_client
+            self.register.remove(client)
+        else:
+            raise ValueError(f&#39;Cannot remove {i_client} from clients&#39;)
+
+        # If the client started a local server, close the server
+        if client.local_server is not None:
+            client.close_server()
+
+        return client
+
+
+    def remove_camera_client(self, client):
+        &#39;&#39;&#39;Removes a camera client and closes its server if local server
+
+        Arguments
+        ---------
+        client : object or int
+            Index of the client in self.cameras or the CameraClient
+            object to be removed
+        &#39;&#39;&#39;
+        return self._remove_client(&#39;camera&#39;, client)
+   
+
+    def remove_vio_client(self, client):
+        &#39;&#39;&#39;Removes the vio client and closes its server if local server
+
+        Arguments
+        ---------
+        client: object or int
+            Index of the client in self.vios or the VIOClient
+            object to be removed
+        &#39;&#39;&#39;
+        return self._remove_client(&#39;vio&#39;, client)
+
+
+
+    def analog_output(self, channels, stimuli, fs, wait_trigger, camera=True):
+        &#39;&#39;&#39;
+
+        channels    List of channel names
+        stimuli     List of 1D numpy arrays
+        fs          Sampling frequency of the stimuli
+        camera : bool
+            If True, send the camera server a &#34;ready&#34; command
+        &#39;&#39;&#39;
+        
+        if nidaqmx is None:
+            print(&#39;    pretending analog_output on channels {}&#39;.format(channels))
+            return None
+
+
+        with nidaqmx.Task() as task:
+            for i_channel, channel in enumerate(channels):
+                if type(channel) == type(&#39;string&#39;):
+                    task.ao_channels.add_ao_voltage_chan(channel)
+                else:
+                    for subchan in channel:
+                        task.ao_channels.add_ao_voltage_chan(subchan)
+                        stimuli.insert(i_channel, stimuli[i_channel])
+                    stimuli.pop(i_channel)
+                    
+            task.timing.cfg_samp_clk_timing(float(fs), samps_per_chan=len(stimuli[0]))
+
+            
+            if len(stimuli) &gt; 1:
+                stimulus = stimuli[0]
+                for s in stimuli[1:]:
+                    stimulus = np.vstack((stimulus, s))
+            else:
+                stimulus = stimuli[0]
+
+            task.write(stimulus)
+
+            if wait_trigger:
+                task.triggers.start_trigger.cfg_dig_edge_start_trig(&#34;/Dev1/PFI0&#34;, trigger_edge=nidaqmx.constants.Edge.RISING)
+
+            
+            task.start()
+
+            if camera:
+                for camera in self.cameras:
+                    camera.send_command(&#39;ready&#39;)
+                
+            task.wait_until_done(timeout=(len(stimuli[0])/fs)*1.5+20)
+
+
+    def send_trigger(self):
+        &#39;&#39;&#39;
+        Sending trigger.
+        &#39;&#39;&#39;
+
+        chan = self.dynamic_parameters.get(&#39;trigger_out_channel&#39;, None)
+        
+        if nidaqmx is None:
+            print(f&#39;    pretending to send trigger on chan {chan}&#39;)
+            return None
+
+        if chan:
+            with nidaqmx.Task() as task:
+                task.ao_channels.add_ao_voltage_chan(chan)
+                task.timing.cfg_samp_clk_timing(1000., samps_per_chan=4)
+                task.write(self.trigger_signal)
+                task.start()
+                task.wait_until_done(timeout=1.)
+        else:
+            print(&#39;trigger_out_channel not specified, no trigger out&#39;)
+
+        self.triggered_anglepairs.append(self.reader.get_latest())
+
+
+    def set_led(self, device, value, wait_trigger=False, exclude=None):
+        &#39;&#39;&#39;
+        Set an output channel to a specific voltage value.
+
+        INPUT ARGUMENTS     DESCRIPTION
+        device              A string (single device) or a list of strings (many devices at once)
+        &#39;&#39;&#39;
+        if nidaqmx is None:
+            print(f&#39;    pretending to set {device} on value {value}&#39;)
+            return None
+
+
+        excluded = 0
+
+        with nidaqmx.Task() as task:
+            
+            if type(device) == type(&#39;string&#39;):
+                # If there&#39;s only a single device
+                task.ao_channels.add_ao_voltage_chan(device)
+            else:
+                # If device is actually a list of devices
+                for dev in device:
+                    if exclude and dev in exclude:
+                        excluded += 1
+                        continue
+                    task.ao_channels.add_ao_voltage_chan(dev)
+                value = [value for i in range(len(device)-excluded)]
+            
+            if wait_trigger:
+                task.timing.cfg_samp_clk_timing(10000)
+                task.triggers.start_trigger.cfg_dig_edge_start_trig(&#34;/Dev1/PFI0&#34;, trigger_edge=nidaqmx.constants.Edge.FALLING)
+            task.write(value)
+            
+
+
+    def wait_for_trigger(self):
+        &#39;&#39;&#39;
+        Doesn&#39;t return until trigger signal is received.
+        &#39;&#39;&#39;
+        if nidaqmx is None:
+            print(f&#39;    waiting for trigger&#39;)
+            return None
+
+        with nidaqmx.Task() as task:
+            device = nidaqmx.system.device.Device(&#39;Dev1&#39;)
+            
+            task.ai_channels.add_ai_voltage_chan(&#39;Dev1/ai0&#39; )
+            
+            task.timing.cfg_samp_clk_timing(10000)
+            
+            task.triggers.start_trigger.cfg_dig_edge_start_trig(&#34;/Dev1/PFI0&#34;, trigger_edge=nidaqmx.constants.Edge.RISING)
+            task.read(number_of_samples_per_channel=1)
+        
+
+
+    #
+    # IMAGING METHODS
+    #
+
+    def take_snap(self, save=False):
+        &#39;&#39;&#39;
+        Takes a snap image.
+        
+        save        Whether to save the image directly or not.
+        &#39;&#39;&#39;
+        if save:
+            self.set_led(self.dynamic_parameters[&#39;ir_channel&#39;], self.dynamic_parameters[&#39;ir_imaging&#39;])
+            time.sleep(0.3)
+            for camera in self.cameras:
+                camera.acquireSingle(True, os.path.join(self.preparation[&#39;name&#39;], &#39;snaps&#39;))
+            self.set_led(self.dynamic_parameters[&#39;ir_channel&#39;], self.dynamic_parameters[&#39;ir_livefeed&#39;])
+            time.sleep(0.2)
+
+            print(&#39;A snap image taken&#39;)
+        else:
+            if self.pause_livefeed:
+                return
+
+
+                
+            for camera in self.cameras:
+                camera.acquireSingle(False, &#39;&#39;)
+            time.sleep(0.1)
+
+
+
+
+
+    
+    def image_trigger_softhard(self):
+        &#39;&#39;&#39;Software triggering of the cameras.
+
+        How this works?
+        CameraClient (self.camera) send message to CameraServer to start image acquisition. Starting
+        image acquistion takes some time, so to synchronize, we wait a trigger signal from the camera
+        before turning the LED on. What is done is essentially half software half hardware triggering.
+        Not ideal but seems to work.
+        &#39;&#39;&#39;
+        
+        self.set_led(dynamic_parameters[&#39;ir_channel&#39;], dynamic_parameters[&#39;ir_imaging&#39;])
+        time.sleep(0.5)
+        
+        # Subfolder suffix so if experimenter takes many images from the same position in different conditions
+        self.camera.acquireSeries(frame_length, 0, N_frames, label, os.path.join(self.preparation[&#39;name&#39;], &#39;pos{}_{}&#39;.format(imaging_angle, dynamic_parameters[&#39;suffix&#39;]+self.suffix)), &#39;send&#39;)
+        
+        self.wait_for_trigger()
+        time.sleep(dynamic_parameters[&#39;pre_stim&#39;])
+        
+        self.set_led(dynamic_parameters[&#39;flash_channel&#39;], dynamic_parameters[&#39;flash_on&#39;][i])
+        time.sleep(dynamic_parameters[&#39;stim&#39;])
+
+        self.set_led(dynamic_parameters[&#39;flash_channel&#39;], dynamic_parameters[&#39;flash_off&#39;])
+        
+        time.sleep(dynamic_parameters[&#39;post_stim&#39;])
+        
+        self.set_led(dynamic_parameters[&#39;ir_channel&#39;], dynamic_parameters[&#39;ir_waiting&#39;])
+        
+
+    def image_trigger_hard_cameraslave(self):
+        &#39;&#39;&#39;
+        Where camera is triggered by square wave.
+        Since the camera cannot be run this way at 100Hz at full frame,
+        image_series3 is used instead.
+        &#39;&#39;&#39;
+
+        fs = 1000
+
+        stimulus, illumination, camera = get_pulse_stimulus(dynamic_parameters[&#39;stim&#39;],
+                dynamic_parameters[&#39;pre_stim&#39;], dynamic_parameters[&#39;post_stim&#39;],
+                dynamic_parameters[&#39;frame_length&#39;], dynamic_parameters[&#39;flash_on&#39;][i],
+                dynamic_parameters[&#39;ir_imaging&#39;], fs,
+                stimulus_finalval=dynamic_parameters[&#39;flash_off&#39;],
+                illumination_finalval=dynamic_parameters[&#39;ir_waiting&#39;])
+        
+
+        self.camera.acquireSeries(frame_length, 0, N_frames, label,
+                os.path.join(self.preparation[&#39;name&#39;], &#39;pos{}{}&#39;.format(imaging_angle,
+                    dynamic_parameters[&#39;suffix&#39;]+self.suffix)), &#39;receive&#39;)
+        
+        time.sleep(5)
+
+        
+        self.analog_output([dynamic_parameters[&#39;flash_channel&#39;],
+                dynamic_parameters[&#39;ir_channel&#39;],
+                dynamic_parameters[&#39;trigger_channel&#39;]],
+                [stimulus, illumination, camera], fs)
+
+      
+
+    def image_series(self, trigger=&#39;hard_cameramaster&#39;, inter_loop_callback=None):
+        &#39;&#39;&#39;
+        Contains common steps for all image_series methods.
+        
+        triggering_type     &#34;softhard&#34;, &#34;hard_cameraslave&#34;, &#34;hard_cameramaster&#34;
+
+        Returns True if finished properly and False if user cancelled.
+        &#39;&#39;&#39;
+        
+        
+        
+        exit_imaging = False
+
+        print(&#39;Starting dynamic imaging using {} triggering&#39;.format(trigger))
+        if trigger == &#39;softhard&#39;:
+            imaging_function = self.image_trigger_softhard
+        elif trigger == &#39;hard_cameraslave&#39;:
+            imaging_function = self.image_trigger_hard_cameraslave
+        elif trigger == &#39;hard_cameramaster&#39;:
+            imaging_function = self.image_trigger_hard_cameramaster
+
+        # Wait ISI period here, if it has not passed since the last series imaging
+        # Otherwise, continue.
+        try:
+            if time.time() &lt; self.isi_slept_time: 
+                print(&#39;Waiting ISI to be fullfilled from the last run...&#39;)
+                time.sleep(self.isi_slept_time - time.time())
+                print(&#39;READY&#39;)
+        except AttributeError:
+            pass
+        
+        dynamic_parameters = copy.deepcopy(self.dynamic_parameters)
+
+        # Check that certain variables are actually lists (used for intensity series etc.)
+        # Check also for correct length if a list
+        for param in [&#39;isi&#39;, &#39;flash_on&#39;]:
+            if type(dynamic_parameters[param]) != type([]):
+                dynamic_parameters[param] = [dynamic_parameters[param]] * dynamic_parameters[&#39;repeats&#39;]
+            
+            elif len(dynamic_parameters[param]) != int(dynamic_parameters[&#39;repeats&#39;]):
+                print(&#39;Warning! Dynamic parameter {} length is {} but repeats is set to {}&#39;.format(param,
+                    len(dynamic_parameters[param]), dynamic_parameters[&#39;repeats&#39;] ))
+                dynamic_parameters[param] = [dynamic_parameters[param][0]] * dynamic_parameters[&#39;repeats&#39;] 
+
+        # Set stack save option
+        for camera in self.cameras:
+            camera.set_save_stack(dynamic_parameters.get(&#39;save_stack&#39;, False))
+        
+
+        # Get the current rotation stage angles and use this through the repeating
+        # (even if it would change during imaging)
+        imaging_angle = self.reader.get_latest()
+
+        spaceless_angle = str(imaging_angle).replace(&#39; &#39;, &#39;&#39;)
+        
+        # Prepare some variables that stay constant over imaging
+        image_directory = os.path.join(self.preparation[&#39;name&#39;], &#39;pos{}{}&#39;.format(spaceless_angle, dynamic_parameters[&#39;suffix&#39;]+self.suffix))
+        N_frames = int((dynamic_parameters[&#39;pre_stim&#39;]+dynamic_parameters[&#39;stim&#39;]+dynamic_parameters[&#39;post_stim&#39;])/dynamic_parameters[&#39;frame_length&#39;])
+       
+
+        for i in range(dynamic_parameters[&#39;repeats&#39;]):
+
+            label = &#39;im_pos{}_rep{}&#39;.format(spaceless_angle, i)
+            
+            # INTER_LOOP_CALLBACK for showing info to the user and for exiting
+            if callable(inter_loop_callback) and inter_loop_callback(label, i) == False:
+                exit_imaging = True  
+            if exit_imaging:
+                break
+            
+            fs = 1000
+            builder = StimulusBuilder(dynamic_parameters[&#39;stim&#39;],
+                dynamic_parameters[&#39;pre_stim&#39;], dynamic_parameters[&#39;post_stim&#39;],
+                dynamic_parameters[&#39;frame_length&#39;], dynamic_parameters[&#39;flash_on&#39;][i],
+                dynamic_parameters[&#39;ir_imaging&#39;], fs,
+                stimulus_finalval=dynamic_parameters[&#39;flash_off&#39;],
+                illumination_finalval=dynamic_parameters[&#39;ir_waiting&#39;],
+                wtype=dynamic_parameters[&#39;flash_type&#39;])
+
+            if dynamic_parameters.get(&#39;biosyst_stimulus&#39;, &#39;&#39;):
+                bsstim, fs = builder.overload_biosyst_stimulus(dynamic_parameters[&#39;biosyst_stimulus&#39;], dynamic_parameters[&#39;biosyst_channel&#39;])
+                N_frames = int(round((len(bsstim)/fs) / dynamic_parameters[&#39;frame_length&#39;]))
+
+            if i==0 and dynamic_parameters[&#39;avgint_adaptation&#39;]:
+                self.set_led(dynamic_parameters[&#39;flash_channel&#39;], np.mean(builder.get_stimulus_pulse()), exclude=&#39;Dev1/ao4&#39;)
+                time.sleep(dynamic_parameters[&#39;avgint_adaptation&#39;])
+            
+            imaging_function(dynamic_parameters, builder, label, N_frames, image_directory, set_led=bool(dynamic_parameters[&#39;isi&#39;][i]))
+
+            if i==0 and dynamic_parameters[&#39;avgint_adaptation&#39;]:
+                self.set_led(dynamic_parameters[&#39;flash_channel&#39;], np.mean(builder.get_stimulus_pulse()), exclude=&#39;Dev1/ao4&#39;)
+
+            # Dirtyfix
+            if dynamic_parameters[&#39;reboot_cameras&#39;]:
+                print(&#34;Rebooting cameras&#34;)
+                for i_camera, camera in enumerate(self.cameras):
+                    print(f&#39;  cam_{i_camera}...&#39;)
+                    camera.reboot()
+
+            # Wait the total imaging period; If ISI is short and imaging period is long, we would
+            # start the second imaging even before the camera is ready
+            # Better would be wait everything clear signal from the camera.
+            #total_imaging_time = dynamic_parameters[&#39;pre_stim&#39;] + dynamic_parameters[&#39;stim&#39;] + dynamic_parameters[&#39;post_stim&#39;]
+            #print(&#34;Total imaging time &#34; + str(total_imaging_time))
+            # Do the actual waiting together with ISI, see just below
+            
+            # WAITING ISI PERIOD
+            if i+1 == dynamic_parameters[&#39;repeats&#39;]:
+                self.isi_slept_time = time.time() + dynamic_parameters[&#39;isi&#39;][i]
+            else:
+                wakeup_time = time.time() + dynamic_parameters[&#39;isi&#39;][i] #+ total_imaging_time
+                
+                while wakeup_time &gt; time.time():
+                    if callable(inter_loop_callback) and inter_loop_callback(None, i) == False:
+                        exit_imaging = True
+                        break
+                    time.sleep(0.01)
+
+        self.set_led(dynamic_parameters[&#39;flash_channel&#39;], dynamic_parameters[&#39;flash_off&#39;])
+        self.set_led(dynamic_parameters[&#39;ir_channel&#39;], dynamic_parameters[&#39;ir_livefeed&#39;])
+        print(&#39;DONE!&#39;)
+
+        if exit_imaging:
+            return False
+        else:
+            return True
+
+
+    def image_trigger_hard_cameramaster(self, dynamic_parameters, builder, label, N_frames, image_directory, set_led=True):
+        &#39;&#39;&#39;
+        When starting the imaging, the camera sends a trigger pulse to NI board, leading to onset
+        of the stimulus (hardware triggering by the camera).
+        
+        Illumination IR light is hardware triggered together with the stimulus.
+
+        set_led   Set IR to ir_waiting in between (if long enough ISI)
+        &#39;&#39;&#39;
+        if set_led:
+            self.set_led(dynamic_parameters[&#39;ir_channel&#39;], dynamic_parameters[&#39;ir_imaging&#39;])
+            time.sleep(0.5)
+        
+        fs = builder.fs
+          
+        stimulus = builder.get_stimulus_pulse()
+        if isinstance(stimulus, list):
+            NN = len(stimulus[0])
+        else:
+            NN = stimulus.shape
+        irwave = dynamic_parameters[&#39;ir_imaging&#39;] * np.ones(NN)
+
+        #irwave = dynamic_parameters[&#39;ir_imaging&#39;] * np.ones(stimulus.shape)
+        if set_led:
+            irwave[-1] = dynamic_parameters[&#39;ir_waiting&#39;]
+
+        stimuli = []
+        channels = []
+
+        if isinstance(stimulus, list):
+            # Many stimulus channels
+            print(&#39;Many stimulus channels&#39;)
+            stimuli = [*stimulus, irwave]
+            channels = [*dynamic_parameters[&#39;flash_channel&#39;], dynamic_parameters[&#39;ir_channel&#39;]]
+        else:
+            # One stimulus channel
+            stimuli = [stimulus, irwave]
+            channels = [dynamic_parameters[&#39;flash_channel&#39;], dynamic_parameters[&#39;ir_channel&#39;]]
+
+
+
+        # Arm analog input recording if any vio clients
+        for i_vio, vio in enumerate(self.vios):
+            vio.set_save_directory(os.path.join(self.data_savedir, image_directory))
+            duration = N_frames * dynamic_parameters[&#39;frame_length&#39;]
+            vio_label = f&#39;vi{i_vio}{label[2:]}&#39;
+            vio.analog_input(duration, save=vio_label, wait_trigger=True)
+
+
+        if len(self.cameras) == 1:
+            self.cameras[0].acquireSeries(dynamic_parameters[&#39;frame_length&#39;], 0, N_frames, label, image_directory)
+        elif len(self.cameras) &gt; 1:
+            # With many cameras, add camN suffix to the label
+            for i_camera, camera in enumerate(self.cameras):
+                camera.acquireSeries(dynamic_parameters[&#39;frame_length&#39;], 0, N_frames, f&#39;{label}_cam{i_camera}&#39;, image_directory)
+
+
+        # If no cameras, we should not wait for trigger to come from them.
+        # Create own trigger on the trigger channel
+        if not self.cameras:
+            wait_trigger = False
+            trigwave = np.zeros(len(stimuli[0]))
+            for i in range(min(100, len(trigwave))):
+                trigwave[i] = 5
+            
+            stimuli = [*stimuli, trigwave]
+            channels = [*channels, dynamic_parameters[&#39;trigger_out_channel&#39;]]
+        else:
+            wait_trigger = True
+        
+        self.analog_output(channels, stimuli, fs, wait_trigger=wait_trigger)
+
+        
+
+
+    def set_savedir(self, savedir, camera=True):
+        &#39;&#39;&#39;
+        Set the directory where the taken images are saved.
+
+        camera : bool
+            If False, do not attempt to update save folder to the camera server
+        &#39;&#39;&#39;
+        if camera:
+            for device in self.cameras+self.vios:
+                device.set_save_directory(savedir)
+        self.data_savedir = savedir
+
+
+    def set_subfolder_suffix(self, suffix):
+        &#39;&#39;&#39;
+        Set any suffix to a data folder containing the images.
+        For example
+            pos(-14,0) would become pos(-14,0)_highmag if suffix == &#34;highmag&#34;
+        &#39;&#39;&#39;
+        if suffix:
+            self.suffix = &#39;_&#39;+suffix
+        else:
+            self.suffix = &#39;&#39;
+
+    def _update_descriptions_file(self):
+        # Saving description file
+        desc_string = &#34;name {}\nsex {}\nage {}&#34;.format(self.preparation[&#39;name&#39;], self.preparation[&#39;sex&#39;], self.preparation[&#39;age&#39;])
+        desc_string += &#34;\n\n#DYNAMIC PROTOCOL PARAMETERS\n&#34;
+        for name, value in self.dynamic_parameters.items():
+            desc_string += &#39;{} {}\n&#39;.format(name, value)
+        for camera in self.cameras:
+            camera.saveDescription(self.preparation[&#39;name&#39;], desc_string)
+        
+
+    def initialize(self, name, sex, age, camera=False, libui=None):
+        &#39;&#39;&#39;Call this to initialize the experiments.
+
+        Returns True if worked or None if user cancelled.
+
+
+        name, sex age       Can be &#39;&#39; (empty string)
+        &#39;&#39;&#39;
+        # Preparations, ask droso name
+        if name != &#39;&#39;:
+            self.preparation[&#39;name&#39;] = name
+        if sex != &#39;&#39;:
+            self.preparation[&#39;sex&#39;] = sex
+        if age != &#39;&#39;:
+            self.preparation[&#39;age&#39;] = age
+
+        params = getModifiedParameters(libui)
+        if params is None:
+            return None 
+
+        self.dynamic_parameters = params
+
+        if camera:
+            self._update_descriptions_file()
+        else:
+            self.triggered_anglepairs = []
+        
+        self.set_led(self.dynamic_parameters[&#39;ir_channel&#39;], self.dynamic_parameters[&#39;ir_livefeed&#39;])
+        self.set_led(self.dynamic_parameters[&#39;flash_channel&#39;], self.dynamic_parameters[&#39;flash_off&#39;])
+       
+        roi = self.dynamic_parameters[&#39;ROI&#39;]
+        if roi is not None:
+            for camera in self.cameras:
+                camera.set_roi(roi)
+
+        return True
+
+    def load_preset(self, preset_name):
+        fn = os.path.join(&#39;presets&#39;, preset_name)
+        self.dynamic_parameters = load_parameters(fn)
+        self._update_descriptions_file()
+
+
+
+    def tick(self, horizontal_trigger=True, vertical_trigger=False):
+        &#39;&#39;&#39;Updates the current angle and performs all &#34;houskeeping&#34; duties also.
+        
+        Meant to be called repeatedly inside the UI loop.
+        &#39;&#39;&#39;
+
+        change = False
+
+        if self.vio_livefeed:
+            if time.time()-self._last_vio &gt; max(self.vio_livefeed_dur+0.1, 0.1):
+                for vio in self.vios:
+                    vio.analog_input(self.vio_livefeed_dur)
+                self._last_vio = time.time()
+        
+        while True:
+            
+            # Update current angle and echo it to the console
+            current_angle = [list(self.reader.read_angles())]
+            toDegrees(current_angle)
+
+            if self.previous_angle != current_angle:
+                horchanged = self.previous_angle and self.previous_angle[0][0] != current_angle[0][0]
+                verchanged = self.previous_angle and self.previous_angle[0][1] != current_angle[0][1]
+                if (horizontal_trigger and horchanged) or (vertical_trigger and verchanged):
+                    self.trigger_rotation = True
+
+                print(&#34;Horizontal-vertical is {}&#34;.format(current_angle[0]))
+                self.previous_angle = current_angle
+                change = True
+            else:
+                break
+
+        if not change:
+            self.trigger_rotation = False
+
+        # Run macro if set
+        if self.macro:
+                
+            next_macro_step = False
+
+            action = self.macro[self.i_macro]
+            print(action)
+
+            
+            if type(action) == type((0,0)):
+                # Move motors only if they have reached their positions
+                if self.motors and all([self.motors[i].reached_target() for i in [0,1]]):
+                    self.motors[0].move_to(action[0])
+                    self.motors[1].move_to(action[1])
+                    next_macro_step = True
+            if &#39;wait&#39; in action:
+                self.waittime = time.time() + float(action.split(&#39; &#39;)[-1])
+                next_macro_step = True
+            
+            if next_macro_step and self.waittime &lt; time.time():
+                self.i_macro += 1
+                if self.i_macro == len(self.macro):
+                    self.macro = None
+                    self.i_macro = 0
+
+    def set_zero(self):
+        &#39;&#39;&#39;
+        Define the current angle pair as the zero point
+        (Like tar button on scales)
+        &#39;&#39;&#39;
+        self.reader.current_as_zero()
+
+
+
+    def finalize(self):
+        &#39;&#39;&#39;
+        Finalising the experiments, houskeeping stuff.
+        &#39;&#39;&#39;
+        self.set_led(self.dynamic_parameters[&#39;ir_channel&#39;], 0)
+        self.set_led(self.dynamic_parameters[&#39;flash_channel&#39;], 0)
+        
+        for motor in self.motors:
+            motor.move_to(0)
+
+        if self.triggered_anglepairs:
+            fn = os.path.join(self.data_savedir, self.preparation[&#39;name&#39;], &#39;anglepairs.txt&#39;)
+            os.makedirs(os.path.dirname(fn), exist_ok=True)
+
+            print(fn)
+            
+            with open(fn, &#39;w&#39;) as fp:
+                for line in self.triggered_anglepairs:
+                    fp.write(str(line).strip(&#39;()&#39;).replace(&#39; &#39;, &#39;&#39;)+&#39;\n&#39;)
+
+            self.triggered_anglepairs = None
+
+
+    def exit(self):
+        for camera in self.cameras:
+            camera.close_server()
+
+    #
+    # CONTROLLING LEDS, MOTORS ETC
+    #
+    
+    def move_motor(*args, **kwargs):
+        self.reader.move_motor(*args, **kwargs)
+
+
+    #
+    # PROTOCOL QUEUE / MACRO
+    #
+
+
+    @staticmethod
+    def list_macros():
+        return macro.list_macros()
+
+
+    def run_macro(self, macro_name):
+        self.macro = macro.load(macro_name)
+        self.i_macro = 0</code></pre>
+</details>
+<h3>Static methods</h3>
+<dl>
+<dt id="gonioimsoft.core.GonioImsoftCore.list_macros"><code class="name flex">
+<span>def <span class="ident">list_macros</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioimsoft.core.GonioImsoftCore.add_camera_client"><code class="name flex">
+<span>def <span class="ident">add_camera_client</span></span>(<span>self, host, port)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.add_vio_client"><code class="name flex">
+<span>def <span class="ident">add_vio_client</span></span>(<span>self, host, port)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.analog_output"><code class="name flex">
+<span>def <span class="ident">analog_output</span></span>(<span>self, channels, stimuli, fs, wait_trigger, camera=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>channels
+List of channel names
+stimuli
+List of 1D numpy arrays
+fs
+Sampling frequency of the stimuli
+camera : bool
+If True, send the camera server a "ready" command</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.exit"><code class="name flex">
+<span>def <span class="ident">exit</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.finalize"><code class="name flex">
+<span>def <span class="ident">finalize</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finalising the experiments, houskeeping stuff.</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.image_series"><code class="name flex">
+<span>def <span class="ident">image_series</span></span>(<span>self, trigger='hard_cameramaster', inter_loop_callback=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Contains common steps for all image_series methods.</p>
+<p>triggering_type
+"softhard", "hard_cameraslave", "hard_cameramaster"</p>
+<p>Returns True if finished properly and False if user cancelled.</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.image_trigger_hard_cameramaster"><code class="name flex">
+<span>def <span class="ident">image_trigger_hard_cameramaster</span></span>(<span>self, dynamic_parameters, builder, label, N_frames, image_directory, set_led=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>When starting the imaging, the camera sends a trigger pulse to NI board, leading to onset
+of the stimulus (hardware triggering by the camera).</p>
+<p>Illumination IR light is hardware triggered together with the stimulus.</p>
+<p>set_led
+Set IR to ir_waiting in between (if long enough ISI)</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.image_trigger_hard_cameraslave"><code class="name flex">
+<span>def <span class="ident">image_trigger_hard_cameraslave</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Where camera is triggered by square wave.
+Since the camera cannot be run this way at 100Hz at full frame,
+image_series3 is used instead.</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.image_trigger_softhard"><code class="name flex">
+<span>def <span class="ident">image_trigger_softhard</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Software triggering of the cameras.</p>
+<p>How this works?
+CameraClient (self.camera) send message to CameraServer to start image acquisition. Starting
+image acquistion takes some time, so to synchronize, we wait a trigger signal from the camera
+before turning the LED on. What is done is essentially half software half hardware triggering.
+Not ideal but seems to work.</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.initialize"><code class="name flex">
+<span>def <span class="ident">initialize</span></span>(<span>self, name, sex, age, camera=False, libui=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Call this to initialize the experiments.</p>
+<p>Returns True if worked or None if user cancelled.</p>
+<p>name, sex age
+Can be '' (empty string)</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.load_preset"><code class="name flex">
+<span>def <span class="ident">load_preset</span></span>(<span>self, preset_name)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.move_motor"><code class="name flex">
+<span>def <span class="ident">move_motor</span></span>(<span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.remove_camera_client"><code class="name flex">
+<span>def <span class="ident">remove_camera_client</span></span>(<span>self, client)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes a camera client and closes its server if local server</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>client</code></strong> :&ensp;<code>object</code> or <code>int</code></dt>
+<dd>Index of the client in self.cameras or the CameraClient
+object to be removed</dd>
+</dl></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.remove_vio_client"><code class="name flex">
+<span>def <span class="ident">remove_vio_client</span></span>(<span>self, client)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes the vio client and closes its server if local server</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>client</code></strong> :&ensp;<code>object</code> or <code>int</code></dt>
+<dd>Index of the client in self.vios or the VIOClient
+object to be removed</dd>
+</dl></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.run_macro"><code class="name flex">
+<span>def <span class="ident">run_macro</span></span>(<span>self, macro_name)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.send_trigger"><code class="name flex">
+<span>def <span class="ident">send_trigger</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sending trigger.</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.set_led"><code class="name flex">
+<span>def <span class="ident">set_led</span></span>(<span>self, device, value, wait_trigger=False, exclude=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set an output channel to a specific voltage value.</p>
+<p>INPUT ARGUMENTS
+DESCRIPTION
+device
+A string (single device) or a list of strings (many devices at once)</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.set_savedir"><code class="name flex">
+<span>def <span class="ident">set_savedir</span></span>(<span>self, savedir, camera=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the directory where the taken images are saved.</p>
+<p>camera : bool
+If False, do not attempt to update save folder to the camera server</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.set_subfolder_suffix"><code class="name flex">
+<span>def <span class="ident">set_subfolder_suffix</span></span>(<span>self, suffix)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set any suffix to a data folder containing the images.
+For example
+pos(-14,0) would become pos(-14,0)_highmag if suffix == "highmag"</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.set_zero"><code class="name flex">
+<span>def <span class="ident">set_zero</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Define the current angle pair as the zero point
+(Like tar button on scales)</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.take_snap"><code class="name flex">
+<span>def <span class="ident">take_snap</span></span>(<span>self, save=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Takes a snap image.</p>
+<p>save
+Whether to save the image directly or not.</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.tick"><code class="name flex">
+<span>def <span class="ident">tick</span></span>(<span>self, horizontal_trigger=True, vertical_trigger=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Updates the current angle and performs all "houskeeping" duties also.</p>
+<p>Meant to be called repeatedly inside the UI loop.</p></div>
+</dd>
+<dt id="gonioimsoft.core.GonioImsoftCore.wait_for_trigger"><code class="name flex">
+<span>def <span class="ident">wait_for_trigger</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Doesn't return until trigger signal is received.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioimsoft" href="index.html">gonioimsoft</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gonioimsoft.core.GonioImsoftCore" href="#gonioimsoft.core.GonioImsoftCore">GonioImsoftCore</a></code></h4>
+<ul class="">
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.add_camera_client" href="#gonioimsoft.core.GonioImsoftCore.add_camera_client">add_camera_client</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.add_vio_client" href="#gonioimsoft.core.GonioImsoftCore.add_vio_client">add_vio_client</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.analog_output" href="#gonioimsoft.core.GonioImsoftCore.analog_output">analog_output</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.exit" href="#gonioimsoft.core.GonioImsoftCore.exit">exit</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.finalize" href="#gonioimsoft.core.GonioImsoftCore.finalize">finalize</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.image_series" href="#gonioimsoft.core.GonioImsoftCore.image_series">image_series</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.image_trigger_hard_cameramaster" href="#gonioimsoft.core.GonioImsoftCore.image_trigger_hard_cameramaster">image_trigger_hard_cameramaster</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.image_trigger_hard_cameraslave" href="#gonioimsoft.core.GonioImsoftCore.image_trigger_hard_cameraslave">image_trigger_hard_cameraslave</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.image_trigger_softhard" href="#gonioimsoft.core.GonioImsoftCore.image_trigger_softhard">image_trigger_softhard</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.initialize" href="#gonioimsoft.core.GonioImsoftCore.initialize">initialize</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.list_macros" href="#gonioimsoft.core.GonioImsoftCore.list_macros">list_macros</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.load_preset" href="#gonioimsoft.core.GonioImsoftCore.load_preset">load_preset</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.move_motor" href="#gonioimsoft.core.GonioImsoftCore.move_motor">move_motor</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.remove_camera_client" href="#gonioimsoft.core.GonioImsoftCore.remove_camera_client">remove_camera_client</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.remove_vio_client" href="#gonioimsoft.core.GonioImsoftCore.remove_vio_client">remove_vio_client</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.run_macro" href="#gonioimsoft.core.GonioImsoftCore.run_macro">run_macro</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.send_trigger" href="#gonioimsoft.core.GonioImsoftCore.send_trigger">send_trigger</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.set_led" href="#gonioimsoft.core.GonioImsoftCore.set_led">set_led</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.set_savedir" href="#gonioimsoft.core.GonioImsoftCore.set_savedir">set_savedir</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.set_subfolder_suffix" href="#gonioimsoft.core.GonioImsoftCore.set_subfolder_suffix">set_subfolder_suffix</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.set_zero" href="#gonioimsoft.core.GonioImsoftCore.set_zero">set_zero</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.take_snap" href="#gonioimsoft.core.GonioImsoftCore.take_snap">take_snap</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.tick" href="#gonioimsoft.core.GonioImsoftCore.tick">tick</a></code></li>
+<li><code><a title="gonioimsoft.core.GonioImsoftCore.wait_for_trigger" href="#gonioimsoft.core.GonioImsoftCore.wait_for_trigger">wait_for_trigger</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioanalysis.drosom.plotting.common API documentation</title>
+<meta name="description" content="Common helper functions likely needed in many different plots.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioanalysis.drosom.plotting.common</code></h1>
+</header>
+<section id="section-intro">
+<p>Common helper functions likely needed in many different plots.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gonioanalysis.drosom.plotting.common.add_line"><code class="name flex">
+<span>def <span class="ident">add_line</span></span>(<span>ax, x0, y0, z0, x1, y1, z1, camerapos=None, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a centered 3D line plot</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.add_rhabdomeres"><code class="name flex">
+<span>def <span class="ident">add_rhabdomeres</span></span>(<span>ax, x0, y0, z0, x1, y1, z1, mirror_lr=False, mirror_bf=False, scale=0.015, camerapos=None, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add rhabdomeres R1-R7/8 patches to a 3D plot.</p>
+<p>ax : object
+Matplotlib Axes object to add attach the patches onto
+x0,y0,z0 : float
+Coordinates of the rhabdomeres center point (R6/R7)
+x1,y1,z1 : float
+Vector pointing the direction of R6R3 line
+mirror_lr, mirror_bf : True, False (or auto for bf)
+Wheter to mirror this rhabdomere or not (left/right, back/front)
+scale : float
+Scale of the rhabdemeres
+**kwargs : dict
+To matplotlib.patches.CirclePolygon</p>
+<p>Returns a list of matplotlib 3d patches</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.histogram_heatmap"><code class="name flex">
+<span>def <span class="ident">histogram_heatmap</span></span>(<span>all_errors, nbins=20, horizontal=True, drange=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>all_errors
+[errors_rot1, errors_rot1, ....] where
+errors_rot_i = [error1, error2, &hellip;], error_i is float</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.is_behind_sphere"><code class="name flex">
+<span>def <span class="ident">is_behind_sphere</span></span>(<span>elev, azim, point)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculates wheter a point seend by observer at (elev,azim) in spehrical
+coordinates is behind a sphere (radius == point) or not.</p>
+<p>NOTICE: Elev from horizontal plane (a non-ISO convention) and azim as in ISO</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.make_animation_angles"><code class="name flex">
+<span>def <span class="ident">make_animation_angles</span></span>(<span>step=0.5)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the matplotlib angles to rotate a 3D plot</p>
+<p>This really shouldnt be here&hellip;</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.make_animation_timestep"><code class="name flex">
+<span>def <span class="ident">make_animation_timestep</span></span>(<span>step_size=0.075, low_val=0.6, high_val=1, rel_return_speed=3, twoway=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>step_size between 0 and 1.
+Once total displacement 1 has been reached go back to low_value</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.plot_2d_opticflow"><code class="name flex">
+<span>def <span class="ident">plot_2d_opticflow</span></span>(<span>ax, direction)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.plot_guidance"><code class="name flex">
+<span>def <span class="ident">plot_guidance</span></span>(<span>ax, camerapos=None, r=1, mutation_scale=6, hide_text=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plot help elements to point left,right,front,back</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.plot_vrot_lines"><code class="name flex">
+<span>def <span class="ident">plot_vrot_lines</span></span>(<span>ax, vrots, n_verts=16, camerapos=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plot vetical rotation lines</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>vrots</code></strong> :&ensp;<code> list</code> of <code>floats</code></dt>
+<dd>Vertical rotations in degrees</dd>
+<dt><strong><code>verts</code></strong> :&ensp;<code>int</code></dt>
+<dd>How many vertices per a half cirle. Higher values give
+smoother and more round results.</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.save_3d_animation"><code class="name flex">
+<span>def <span class="ident">save_3d_animation</span></span>(<span>manalyser, ax=None, plot_function=None, interframe_callback=&lt;built-in function print&gt;, i_worker=None, N_workers=None, animation_type='rotate_plot', video_writer=False, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>interframe_callback</p>
+<p>manalyser : object or list of objects
+Either one analyser or a list of analysers</p>
+<p>animation_type : string
+"rotate_plot" or "rotate_arrows"</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.surface_plot"><code class="name flex">
+<span>def <span class="ident">surface_plot</span></span>(<span>ax, points, values, cb=False, phi_points=None, theta_points=None, colormap='own')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>3D surface plot of the error between the optic flow vectors and the actual
+eye-movements vector map.</p>
+<p>Points and values have to be in the same order.</p>
+<p>points
+values</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>ax</code></strong> :&ensp;<code>object</code></dt>
+<dd>Matplolib Axes object</dd>
+<dt><strong><code>points</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of x,y,z coordinates</dd>
+<dt><strong><code>values</code></strong> :&ensp;<code>list</code> of <code>scalars</code></dt>
+<dd>List of scalar values at the given points, in the same order.</dd>
+<dt><strong><code>colormap</code></strong> :&ensp;<code>string</code></dt>
+<dd>"own", "own-diverge" or any matplotlib colormap name</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.vector_plot"><code class="name flex">
+<span>def <span class="ident">vector_plot</span></span>(<span>ax, points, vectors, color='black', mutation_scale=6, scale_length=1, i_pulsframe=None, guidance=False, camerapos=None, draw_sphere=True, vrot_lines=False, hide_axes=False, hide_text=False, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plot vectors on a 3D matplotlib Axes object as arrows.</p>
+<p>ax : object
+Matplotlib ax (axes) instance
+points : array_like
+Sequence of arrow starting/tail (x,y,z) points
+vectors : array_like
+Arrow lengts and directions, sequence of (x,y,z)
+color : string
+Matplotlib valid color for the drawn arrows
+mutation_scale : float
+Size of the arrow head basically
+i_pulsframe : int
+Index of the pulsation frame, setting the arrow length. For animation.
+guidance : bool
+Add help elements to point left,right,front,back
+camerapos : tuple or None
+Values of (elev, axzim) to hide vectors behind the sphere. If none,
+use values from ax.elev and ax.azim.
+draw_sphere : bool
+If true draw a gray sphere
+hide_axes : bool
+Call set_axis_off
+hide_text : bool
+Omit from drawing any text
+kwargs : dict
+Passed to matplotlib FancyArrowPatch</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>arrow_artists</code></strong> :&ensp;<code>list</code></dt>
+<dd>All ArrowArtists added to the ax</dd>
+</dl></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gonioanalysis.drosom.plotting.common.Arrow3D"><code class="flex name class">
+<span>class <span class="ident">Arrow3D</span></span>
+<span>(</span><span>x0, y0, z0, x1, y1, z1, *args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A fancy arrow patch.</p>
+<p>It draws an arrow using the <code>ArrowStyle</code>. It is primarily used by the
+<code>~.axes.Axes.annotate</code> method.
+For most purposes, use the annotate method for
+drawing arrows.</p>
+<p>The head and tail positions are fixed at the specified start and end points
+of the arrow, but the size and shape (in display coordinates) of the arrow
+does not change when the axis is moved or zoomed.</p>
+<p>There are two ways for defining an arrow:</p>
+<ul>
+<li>
+<p>If <em>posA</em> and <em>posB</em> are given, a path connecting two points is
+created according to <em>connectionstyle</em>. The path will be
+clipped with <em>patchA</em> and <em>patchB</em> and further shrunken by
+<em>shrinkA</em> and <em>shrinkB</em>. An arrow is drawn along this
+resulting path using the <em>arrowstyle</em> parameter.</p>
+</li>
+<li>
+<p>Alternatively if <em>path</em> is provided, an arrow is drawn along this
+path and <em>patchA</em>, <em>patchB</em>, <em>shrinkA</em>, and <em>shrinkB</em> are ignored.</p>
+</li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>posA</code></strong>, <strong><code>posB</code></strong> :&ensp;<code>(float, float)</code>, default<code>: None</code></dt>
+<dd>(x, y) coordinates of arrow tail and arrow head respectively.</dd>
+<dt><strong><code>path</code></strong> :&ensp;<code>~matplotlib.path.Path</code>, default<code>: None</code></dt>
+<dd>If provided, an arrow is drawn along this path and <em>patchA</em>,
+<em>patchB</em>, <em>shrinkA</em>, and <em>shrinkB</em> are ignored.</dd>
+<dt><strong><code>arrowstyle</code></strong> :&ensp;<code>str</code> or <code>.ArrowStyle</code>, default<code>: 'simple'</code></dt>
+<dd>
+<p>The <code>.ArrowStyle</code> with which the fancy arrow is drawn.
+If a
+string, it should be one of the available arrowstyle names, with
+optional comma-separated attributes.
+The optional attributes are
+meant to be scaled with the <em>mutation_scale</em>.
+The following arrow
+styles are available:</p>
+<p>=============
+==========
+===============================================================================================================================
+Class
+Name
+Attrs
+<br>
+=============
+==========
+===============================================================================================================================
+Curve
+<code>-</code>
+None
+<br>
+CurveA
+<code>&lt;-</code>
+head_length=0.4, head_width=0.2, widthA=1.0, widthB=1.0, lengthA=0.2, lengthB=0.2, angleA=0, angleB=0, scaleA=None, scaleB=None
+CurveB
+<code>-&gt;</code>
+head_length=0.4, head_width=0.2, widthA=1.0, widthB=1.0, lengthA=0.2, lengthB=0.2, angleA=0, angleB=0, scaleA=None, scaleB=None
+CurveAB
+<code>&lt;-&gt;</code>
+head_length=0.4, head_width=0.2, widthA=1.0, widthB=1.0, lengthA=0.2, lengthB=0.2, angleA=0, angleB=0, scaleA=None, scaleB=None
+CurveFilledA
+<code>&lt;|-</code>
+head_length=0.4, head_width=0.2, widthA=1.0, widthB=1.0, lengthA=0.2, lengthB=0.2, angleA=0, angleB=0, scaleA=None, scaleB=None
+CurveFilledB
+<code>-|&gt;</code>
+head_length=0.4, head_width=0.2, widthA=1.0, widthB=1.0, lengthA=0.2, lengthB=0.2, angleA=0, angleB=0, scaleA=None, scaleB=None
+CurveFilledAB
+<code>&lt;|-|&gt;</code>
+head_length=0.4, head_width=0.2, widthA=1.0, widthB=1.0, lengthA=0.2, lengthB=0.2, angleA=0, angleB=0, scaleA=None, scaleB=None
+BracketA
+<code>]-</code>
+widthA=1.0, lengthA=0.2, angleA=0
+<br>
+BracketB
+<code>-[</code>
+widthB=1.0, lengthB=0.2, angleB=0
+<br>
+BracketAB
+<code>]-[</code>
+widthA=1.0, lengthA=0.2, angleA=0, widthB=1.0, lengthB=0.2, angleB=0
+<br>
+BarAB
+<code>|-|</code>
+widthA=1.0, angleA=0, widthB=1.0, angleB=0
+<br>
+BracketCurve
+<code>]-&gt;</code>
+widthA=1.0, lengthA=0.2, angleA=None
+<br>
+CurveBracket
+<code>&lt;-[</code>
+widthB=1.0, lengthB=0.2, angleB=None
+<br>
+Simple
+<code>simple</code>
+head_length=0.5, head_width=0.5, tail_width=0.2
+<br>
+Fancy
+<code>fancy</code>
+head_length=0.4, head_width=0.4, tail_width=0.4
+<br>
+Wedge
+<code>wedge</code>
+tail_width=0.3, shrink_factor=0.5
+<br>
+=============
+==========
+===============================================================================================================================</p>
+</dd>
+<dt><strong><code>connectionstyle</code></strong> :&ensp;<code>str</code> or <code>.ConnectionStyle</code> or <code>None</code>, optional, default<code>: 'arc3'</code></dt>
+<dd>
+<p>The <code>.ConnectionStyle</code> with which <em>posA</em> and <em>posB</em> are connected.
+If a string, it should be one of the available connectionstyle
+names, with optional comma-separated attributes.
+The following
+connection styles are available:</p>
+<p>======
+==========
+=================================================
+Class
+Name
+Attrs
+<br>
+======
+==========
+=================================================
+Arc3
+<code>arc3</code>
+rad=0.0
+<br>
+Angle3
+<code>angle3</code>
+angleA=90, angleB=0
+<br>
+Angle
+<code>angle</code>
+angleA=90, angleB=0, rad=0.0
+<br>
+Arc
+<code>arc</code>
+angleA=0, angleB=0, armA=None, armB=None, rad=0.0
+Bar
+<code>bar</code>
+armA=0.0, armB=0.0, fraction=0.3, angle=None
+<br>
+======
+==========
+=================================================</p>
+</dd>
+<dt><strong><code>patchA</code></strong>, <strong><code>patchB</code></strong> :&ensp;<code>~matplotlib.patches.Patch</code>, default<code>: None</code></dt>
+<dd>Head and tail patches, respectively.</dd>
+<dt><strong><code>shrinkA</code></strong>, <strong><code>shrinkB</code></strong> :&ensp;<code>float</code>, default<code>: 2</code></dt>
+<dd>Shrink amount, in points, of the tail and head of the arrow respectively.</dd>
+<dt><strong><code>mutation_scale</code></strong> :&ensp;<code>float</code>, default<code>: 1</code></dt>
+<dd>Value with which attributes of <em>arrowstyle</em> (e.g., <em>head_length</em>)
+will be scaled.</dd>
+<dt><strong><code>mutation_aspect</code></strong> :&ensp;<code>None</code> or <code>float</code>, default<code>: None</code></dt>
+<dd>The height of the rectangle will be squeezed by this value before
+the mutation and the mutated box will be stretched by the inverse
+of it.</dd>
+</dl>
+<h2 id="other-parameters">Other Parameters</h2>
+<dl>
+<dt><strong><code>**kwargs</code></strong> :&ensp;<code>`~matplotlib.patches.Patch</code> properties`, optional</dt>
+<dd>Here is a list of available <code>.Patch</code> properties:</dd>
+</dl>
+<h2 id="properties">Properties</h2>
+<p>agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array and two offsets from the bottom left corner of the image
+alpha: unknown
+animated: bool
+antialiased or aa: bool or None
+capstyle: <code>.CapStyle</code> or {'butt', 'projecting', 'round'}
+clip_box: <code>~matplotlib.transforms.BboxBase</code> or None
+clip_on: bool
+clip_path: Patch or (Path, Transform) or None
+color: :mpltype:<code>color</code>
+edgecolor or ec: :mpltype:<code>color</code> or None
+facecolor or fc: :mpltype:<code>color</code> or None
+figure: <code>~matplotlib.figure.Figure</code>
+fill: bool
+gid: str
+hatch: {'/', '\', '|', '-', '+', 'x', 'o', 'O', '.', '*'}
+in_layout: bool
+joinstyle: <code>.JoinStyle</code> or {'miter', 'round', 'bevel'}
+label: object
+linestyle or ls: {'-', '&ndash;', '-.', ':', '', (offset, on-off-seq), &hellip;}
+linewidth or lw: float or None
+mouseover: bool
+path_effects: list of <code>.AbstractPathEffect</code>
+picker: None or bool or float or callable
+rasterized: bool
+sketch_params: (scale: float, length: float, randomness: float)
+snap: bool or None
+transform: <code>~matplotlib.transforms.Transform</code>
+url: str
+visible: bool
+zorder: float</p>
+<p>In contrast to other patches, the default <code>capstyle</code> and
+<code>joinstyle</code> for <code>FancyArrowPatch</code> are set to <code>"round"</code>.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Arrow3D(FancyArrowPatch):
+    def __init__(self, x0, y0, z0, x1, y1, z1, *args, **kwargs):
+        FancyArrowPatch.__init__(self, (0,0), (0,0), *args, **kwargs)
+        self._verts3d = (x0, x1), (y0, y1), (z0, z1)
+
+    def draw(self, renderer):
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, self.axes.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+        FancyArrowPatch.draw(self, renderer)
+
+    def do_3d_projection(self, renderer=None):
+        &#39;&#39;&#39;Fix for newer matplotlib versions.
+        See https://github.com/matplotlib/matplotlib/issues/21688
+        &#39;&#39;&#39;
+        xs3d, ys3d, zs3d = self._verts3d
+        xs, ys, zs = proj3d.proj_transform(xs3d, ys3d, zs3d, self.axes.M)
+        self.set_positions((xs[0],ys[0]),(xs[1],ys[1]))
+
+        return np.min(zs)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>matplotlib.patches.FancyArrowPatch</li>
+<li>matplotlib.patches.Patch</li>
+<li>matplotlib.artist.Artist</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioanalysis.drosom.plotting.common.Arrow3D.do_3d_projection"><code class="name flex">
+<span>def <span class="ident">do_3d_projection</span></span>(<span>self, renderer=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fix for newer matplotlib versions.
+See <a href="https://github.com/matplotlib/matplotlib/issues/21688">https://github.com/matplotlib/matplotlib/issues/21688</a></p></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.Arrow3D.draw"><code class="name flex">
+<span>def <span class="ident">draw</span></span>(<span>self, renderer)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.drosom.plotting.common.Arrow3D.set"><code class="name flex">
+<span>def <span class="ident">set</span></span>(<span>self, *, agg_filter=&lt;UNSET&gt;, alpha=&lt;UNSET&gt;, animated=&lt;UNSET&gt;, antialiased=&lt;UNSET&gt;, arrowstyle=&lt;UNSET&gt;, capstyle=&lt;UNSET&gt;, clip_box=&lt;UNSET&gt;, clip_on=&lt;UNSET&gt;, clip_path=&lt;UNSET&gt;, color=&lt;UNSET&gt;, connectionstyle=&lt;UNSET&gt;, edgecolor=&lt;UNSET&gt;, facecolor=&lt;UNSET&gt;, fill=&lt;UNSET&gt;, gid=&lt;UNSET&gt;, hatch=&lt;UNSET&gt;, in_layout=&lt;UNSET&gt;, joinstyle=&lt;UNSET&gt;, label=&lt;UNSET&gt;, linestyle=&lt;UNSET&gt;, linewidth=&lt;UNSET&gt;, mouseover=&lt;UNSET&gt;, mutation_aspect=&lt;UNSET&gt;, mutation_scale=&lt;UNSET&gt;, patchA=&lt;UNSET&gt;, patchB=&lt;UNSET&gt;, path_effects=&lt;UNSET&gt;, picker=&lt;UNSET&gt;, positions=&lt;UNSET&gt;, rasterized=&lt;UNSET&gt;, sketch_params=&lt;UNSET&gt;, snap=&lt;UNSET&gt;, transform=&lt;UNSET&gt;, url=&lt;UNSET&gt;, visible=&lt;UNSET&gt;, zorder=&lt;UNSET&gt;)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set multiple properties at once.</p>
+<p>Supported properties are</p>
+<h2 id="properties">Properties</h2>
+<p>agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array and two offsets from the bottom left corner of the image
+alpha: scalar or None
+animated: bool
+antialiased or aa: bool or None
+arrowstyle: str or <code>~matplotlib.patches.ArrowStyle</code>
+capstyle: <code>.CapStyle</code> or {'butt', 'projecting', 'round'}
+clip_box: <code>~matplotlib.transforms.BboxBase</code> or None
+clip_on: bool
+clip_path: Patch or (Path, Transform) or None
+color: :mpltype:<code>color</code>
+connectionstyle: [ 'arc3' | 'angle3' | 'angle' | 'arc' | 'bar' ]
+edgecolor or ec: :mpltype:<code>color</code> or None
+facecolor or fc: :mpltype:<code>color</code> or None
+figure: <code>~matplotlib.figure.Figure</code>
+fill: bool
+gid: str
+hatch: {'/', '\', '|', '-', '+', 'x', 'o', 'O', '.', '*'}
+in_layout: bool
+joinstyle: <code>.JoinStyle</code> or {'miter', 'round', 'bevel'}
+label: object
+linestyle or ls: {'-', '&ndash;', '-.', ':', '', (offset, on-off-seq), &hellip;}
+linewidth or lw: float or None
+mouseover: bool
+mutation_aspect: float
+mutation_scale: float
+patchA: <code>.patches.Patch</code>
+patchB: <code>.patches.Patch</code>
+path_effects: list of <code>.AbstractPathEffect</code>
+picker: None or bool or float or callable
+positions: unknown
+rasterized: bool
+sketch_params: (scale: float, length: float, randomness: float)
+snap: bool or None
+transform: <code>~matplotlib.transforms.Transform</code>
+url: str
+visible: bool
+zorder: float</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioanalysis.drosom.plotting" href="index.html">gonioanalysis.drosom.plotting</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gonioanalysis.drosom.plotting.common.add_line" href="#gonioanalysis.drosom.plotting.common.add_line">add_line</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.add_rhabdomeres" href="#gonioanalysis.drosom.plotting.common.add_rhabdomeres">add_rhabdomeres</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.histogram_heatmap" href="#gonioanalysis.drosom.plotting.common.histogram_heatmap">histogram_heatmap</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.is_behind_sphere" href="#gonioanalysis.drosom.plotting.common.is_behind_sphere">is_behind_sphere</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.make_animation_angles" href="#gonioanalysis.drosom.plotting.common.make_animation_angles">make_animation_angles</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.make_animation_timestep" href="#gonioanalysis.drosom.plotting.common.make_animation_timestep">make_animation_timestep</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.plot_2d_opticflow" href="#gonioanalysis.drosom.plotting.common.plot_2d_opticflow">plot_2d_opticflow</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.plot_guidance" href="#gonioanalysis.drosom.plotting.common.plot_guidance">plot_guidance</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.plot_vrot_lines" href="#gonioanalysis.drosom.plotting.common.plot_vrot_lines">plot_vrot_lines</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.save_3d_animation" href="#gonioanalysis.drosom.plotting.common.save_3d_animation">save_3d_animation</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.surface_plot" href="#gonioanalysis.drosom.plotting.common.surface_plot">surface_plot</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.vector_plot" href="#gonioanalysis.drosom.plotting.common.vector_plot">vector_plot</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gonioanalysis.drosom.plotting.common.Arrow3D" href="#gonioanalysis.drosom.plotting.common.Arrow3D">Arrow3D</a></code></h4>
+<ul class="">
+<li><code><a title="gonioanalysis.drosom.plotting.common.Arrow3D.do_3d_projection" href="#gonioanalysis.drosom.plotting.common.Arrow3D.do_3d_projection">do_3d_projection</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.Arrow3D.draw" href="#gonioanalysis.drosom.plotting.common.Arrow3D.draw">draw</a></code></li>
+<li><code><a title="gonioanalysis.drosom.plotting.common.Arrow3D.set" href="#gonioanalysis.drosom.plotting.common.Arrow3D.set">set</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

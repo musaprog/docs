@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioanalysis.tkgui.plotting API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioanalysis.tkgui.plotting</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gonioanalysis.tkgui.plotting.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gonioanalysis.tkgui.plotting.RecordingPlotter"><code class="flex name class">
+<span>class <span class="ident">RecordingPlotter</span></span>
+<span>(</span><span>core)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>For plotting a single image folder and its data.</p>
+<p>Uses tk_steroids.matplotlib.CanvasPlotter to plot on matplotlib figures.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>core</code></strong></dt>
+<dd>Reference to the Core instance</dd>
+<dt><strong><code>selected_recording</code></strong></dt>
+<dd>The recording currently plotted at the plotter</dd>
+<dt><strong><code>i_repeat</code></strong></dt>
+<dd>None if show all traces, otherwise the index of repeat to be shown</dd>
+<dt><strong><code>N_repeats</code></strong></dt>
+<dd>The total number of repeats in the image folder.</dd>
+</dl>
+<p>core
+An instance of the Core class in core.py</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class RecordingPlotter:
+    &#39;&#39;&#39;For plotting a single image folder and its data.
+
+    Uses tk_steroids.matplotlib.CanvasPlotter to plot on matplotlib figures.
+    
+    Attributes
+    -----------
+    core
+        Reference to the Core instance
+    selected_recording
+        The recording currently plotted at the plotter
+    i_repeat
+        None if show all traces, otherwise the index of repeat to be shown
+    N_repeats
+        The total number of repeats in the image folder.
+
+    &#39;&#39;&#39;
+
+    def __init__(self, core):
+        &#39;&#39;&#39;
+        core    An instance of the Core class in core.py
+        &#39;&#39;&#39;
+
+        self.core = core
+        
+        # Keeps internally track of the current recording on plot
+        self.selected_recording = None
+
+        self.colorbar = None
+        self.roi_rectangles = []
+        
+        self.N_repeats = 0
+        self.i_repeat = None
+
+
+    def _check_recording(self, skip_datafetch=False):
+        &#39;&#39;&#39;
+        Check from core if the selected has changed.
+        &#39;&#39;&#39;
+        selected_recording = self.core.selected_recording
+
+        if self.selected_recording != selected_recording:
+            self.i_repeat = None
+        
+        self.selected_recording = selected_recording
+
+        if not skip_datafetch:
+            if self.core.analyser.is_measured():
+                self.movement_data = self.core.analyser.get_movements_from_folder(selected_recording)
+                self.N_repeats = len(next(iter(self.movement_data.values())))
+                pass
+            else:
+                self.movement_data = {}
+                self.N_repeats = 0
+        
+
+
+    def magnitude(self, ax, **kwargs):
+        &#39;&#39;&#39;
+        Plot a displacement over time of the current specimen/recording.
+        &#39;&#39;&#39;
+        self._check_recording(skip_datafetch=True)
+        
+        ax, self.magnitudes, self.N_repeats = plot_1d_magnitude(self.core.analyser,
+                self.selected_recording,
+                i_repeat=self.i_repeat,
+                label=&#39;EYE-repIREPEAT&#39;,
+                ax=ax,
+                **kwargs)
+
+
+    def vectormap(self, ax, **kwargs):
+
+        self.N_repeats = 0
+        
+        ax, self.vectors = plot_3d_vectormap(self.core.analyser,
+                ax=ax,
+                **kwargs)
+
+
+
+    def xy(self, ax, **kwargs):
+        &#39;&#39;&#39;
+        Plot (x, y) where time is encoded by color.
+        &#39;&#39;&#39;
+        self._check_recording()
+        
+        ax, self.xys = plot_xy_trajectory([self.core.analyser],
+                {self.core.analyser.name: [self.selected_recording]},
+                i_repeat=self.i_repeat,
+                ax=ax,
+                **kwargs)
+
+    
+    def ROI(self, canvas_plotter):
+        &#39;&#39;&#39;
+        Plot specimen/recording image, and the ROIs and imaging parameters on top of it.
+        &#39;&#39;&#39;
+        self._check_recording(skip_datafetch=True)
+        
+        fig, ax = canvas_plotter.get_figax()
+        
+        # Plot the image
+        image_fns = self.core.analyser.list_images(self.selected_recording, absolute_path=True)
+        self.N_repeats = len(image_fns)
+
+        if self.i_repeat:
+            i_frame = self.i_repeat
+        else:
+            i_frame = 0
+        
+        image_fn = image_fns[i_frame]
+        self.image = tifffile.TiffFile(image_fn).asarray(key=0)
+
+        canvas_plotter.imshow(self.image, cmap=&#39;gray&#39;, slider=True)
+
+
+        # Draw ROI rectangles
+        for old_roi in self.roi_rectangles:
+            try:
+                old_roi.remove()
+            except NotImplementedError:
+                # This error occurs when something goes from from here on before
+                # the ax.add_patch(roi) line. We can just ignore this as the
+                # ROI has not been ever added to the ax
+                continue
+        self.roi_rectangles = []
+        
+        for roi in self.core.analyser.get_rois(self.selected_recording):
+            patch = matplotlib.patches.Rectangle((roi[0], roi[1]), roi[2], roi[3],
+                    fill=False, edgecolor=&#39;White&#39;)
+            self.roi_rectangles.append(patch)
+        
+        for roi in self.roi_rectangles:
+            ax.add_patch(roi)
+        
+
+        # Text about imaging parameters
+        imaging_params = self.core.analyser.get_imaging_parameters(self.selected_recording)
+        if imaging_params:
+            text = &#39;\n&#39;.join([&#39;{}: {}&#39;.format(setting, value) for setting, value in imaging_params.items()])
+        else:
+            text = &#39;Unable to fetch imaging parameters&#39;
+
+        try:
+            self.roi_text.set_text(text)
+        except AttributeError:
+            self.roi_text = ax.text(0,1, text, ha=&#39;left&#39;, va=&#39;top&#39;, fontsize=&#39;small&#39;, 
+                    transform=ax.transAxes)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioanalysis.tkgui.plotting.RecordingPlotter.ROI"><code class="name flex">
+<span>def <span class="ident">ROI</span></span>(<span>self, canvas_plotter)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plot specimen/recording image, and the ROIs and imaging parameters on top of it.</p></div>
+</dd>
+<dt id="gonioanalysis.tkgui.plotting.RecordingPlotter.magnitude"><code class="name flex">
+<span>def <span class="ident">magnitude</span></span>(<span>self, ax, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plot a displacement over time of the current specimen/recording.</p></div>
+</dd>
+<dt id="gonioanalysis.tkgui.plotting.RecordingPlotter.vectormap"><code class="name flex">
+<span>def <span class="ident">vectormap</span></span>(<span>self, ax, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.tkgui.plotting.RecordingPlotter.xy"><code class="name flex">
+<span>def <span class="ident">xy</span></span>(<span>self, ax, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Plot (x, y) where time is encoded by color.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioanalysis.tkgui" href="index.html">gonioanalysis.tkgui</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gonioanalysis.tkgui.plotting.main" href="#gonioanalysis.tkgui.plotting.main">main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gonioanalysis.tkgui.plotting.RecordingPlotter" href="#gonioanalysis.tkgui.plotting.RecordingPlotter">RecordingPlotter</a></code></h4>
+<ul class="">
+<li><code><a title="gonioanalysis.tkgui.plotting.RecordingPlotter.ROI" href="#gonioanalysis.tkgui.plotting.RecordingPlotter.ROI">ROI</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.plotting.RecordingPlotter.magnitude" href="#gonioanalysis.tkgui.plotting.RecordingPlotter.magnitude">magnitude</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.plotting.RecordingPlotter.vectormap" href="#gonioanalysis.tkgui.plotting.RecordingPlotter.vectormap">vectormap</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.plotting.RecordingPlotter.xy" href="#gonioanalysis.tkgui.plotting.RecordingPlotter.xy">xy</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

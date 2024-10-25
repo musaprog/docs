@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioanalysis API documentation</title>
+<meta name="description" content="Goniometric Analysis
+…">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Package <code>gonioanalysis</code></h1>
+</header>
+<section id="section-intro">
+<h2 id="goniometric-analysis">Goniometric Analysis</h2>
+<p>Python pacakge <code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code> provides an intergrated set of graphical
+and command line tools to analyse goniometric imaging data.
+Here goniometry means that the rotation of a sample with respect
+to the imaging device is well documented while rotating the sample
+between the imaging runs.</p>
+<p>More precesily, <code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code> takes advantage of the following data structuring</p>
+<pre><code>data_directory
+├── specimen_01
+│   ├── pos(horizontal, vertical)_some-suffix-stufff
+│   │   ├── image_rep0_0.tif
+│   │   └── image_rep0_1.tif
+│   └── ...
+└── ...
+</code></pre>
+<p>Here, the rotation of the sample is encoded in the image folder name
+with <em>pos</em> prefix.
+Alternatively, images with a generalized directory structure can be also used</p>
+<pre><code>data_directory
+├── specimen_01
+│   ├── experiment_01
+│   │   ├── image_001.tif
+│   │   └── image_002.tif
+│   └── ...
+└── ...
+</code></pre>
+<p>Please mind that <code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code> was created to analyse <em>Drosophila</em>'s
+deep pseudogonio movement and orientation data across its left and right eyes
+and because of this the language used in many places can be droso-centric.</p>
+<h2 id="user-interfaces">User Interfaces</h2>
+<p>Currently <code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code> comes with two user interfaces, one being command line based and
+the other graphical.</p>
+<p>The documentation on this page gives out only general instrctions and ideas.
+To have exact usage instructions, please refer to submodule documentation of <code><a title="gonioanalysis.drosom.terminal" href="drosom/terminal.html">gonioanalysis.drosom.terminal</a></code> and
+<code><a title="gonioanalysis.tkgui" href="tkgui/index.html">gonioanalysis.tkgui</a></code>.</p>
+<h2 id="initial-analysis">Initial Analysis</h2>
+<p>The following two steps have to be performed for every imaged specimen, but luckily only once.
+The first one is manual needing user intercation but can be performed quite fast depending the amount of image folders,
+The second one is automated but can take a long time depending on the amount of data.</p>
+<h3 id="1-selecting-regions-of-interest-rois">1) Selecting regions of interest (ROIs)</h3>
+<p>In <code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code>, rectangular ROIs are manually drawn by the user
+once per each image folder.
+The idea is to confine the moving feature inside a rectangle but only in the first frame. </p>
+<h3 id="2-measuring-movements">2) Measuring movements</h3>
+<p>After the ROIs have been selected, movement analysis can be run.
+Using 2D cross-correlation based methods (template matching), <code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code>
+automatically quntifies the movement of the ROI bound method across all the frames and repeats.</p>
+<p>Because this part requires no user interactions and takes a while,
+usually it is best to select all the ROIs for all specimens beforehand,
+then batch run the movement analysis.</p>
+<h2 id="after-initial-analysis">After Initial Analysis</h2>
+<h3 id="vectormap-3d-directions">Vectormap - 3D directions</h3>
+<p>The 2D data of the moving features in the camera coordinates can be transferred into a 3D coordinate
+system of specimens frame of reference.
+To do so, we need to have the rotation of the specimen with respect to the camera specified
+in some fixed coordinate system, most naturally in the coordinate system set by the rotation stages
+that are used to rotate the fly.
+At the moment, <code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code> supports only one rotation stage configuration that is
+a specimen fixed on a vertical rotation stage that is fixed on a horizontal rotation stage that is fixed on a table.</p>
+<h3 id="orientation-analysis">Orientation analysis</h3>
+<p>To analyse directionaly of any arbitrary features (such as hair pointin directions across the head),
+you can override the <code><a title="gonioanalysis.drosom.analysing.MAnalyser" href="drosom/analysing.html#gonioanalysis.drosom.analysing.MAnalyser">MAnalyser</a></code> with <code><a title="gonioanalysis.drosom.orientation_analysis.OAnalyser" href="drosom/orientation_analysis.html#gonioanalysis.drosom.orientation_analysis.OAnalyser">OAnalyser</a></code>,
+making the movement measurement part to be a manual user drawing arrows according to the feature direction analysis.
+Then later, you can use any <code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code> code paths just remembering that for example in the vectormap,
+the arrows point the direction of the features, not their movement.</p>
+<h2 id="exporting-data">Exporting Data</h2>
+<p>All quitely saved files are stored in a location set in <code><a title="gonioanalysis.directories" href="directories.html">gonioanalysis.directories</a></code>.
+By default, on Windows this is <em>C:/Users/USER/GonioAnalysis</em>
+and on other platforms <em>/home/USER/.gonioanalysis</em></p>
+<h2 id="command-line-interface">Command Line Interface</h2>
+<p><code><a title="gonioanalysis" href="#gonioanalysis">gonioanalysis</a></code> also includes a command interface, that can be invoked by</p>
+<pre><code>python -m gonioanalysis.drosom.terminal
+</code></pre>
+<p>For all different options and help use <code>--help</code> option.
+In case no ROIs have been selected, the
+When elections of the ROIs cannot be done in headless environments.</p>
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="gonioanalysis.antenna_level" href="antenna_level.html">gonioanalysis.antenna_level</a></code></dt>
+<dd>
+<div class="desc"><p>Code paths related to manually alinging the vertical angles for many
+specimens (aka. antenna level or zero correction)</p></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.binary_search" href="binary_search.html">gonioanalysis.binary_search</a></code></dt>
+<dd>
+<div class="desc"><p>binary_search.py
+Determining binocular overlap by half-interval search …</p></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.coordinates" href="coordinates.html">gonioanalysis.coordinates</a></code></dt>
+<dd>
+<div class="desc"><p>Working in 3D space</p></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.directories" href="directories.html">gonioanalysis.directories</a></code></dt>
+<dd>
+<div class="desc"><p>Central settings for save/load directories.</p></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.droso" href="droso.html">gonioanalysis.droso</a></code></dt>
+<dd>
+<div class="desc"><p>General methods common for both DrosoM and DrosoX.</p></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.drosom" href="drosom/index.html">gonioanalysis.drosom</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.drosox" href="drosox/index.html">gonioanalysis.drosox</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.image_tools" href="image_tools.html">gonioanalysis.image_tools</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.rotary_encoders" href="rotary_encoders.html">gonioanalysis.rotary_encoders</a></code></dt>
+<dd>
+<div class="desc"><p>Transforming rotary encoder step values into degrees and vice versa.</p></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.settings" href="settings.html">gonioanalysis.settings</a></code></dt>
+<dd>
+<div class="desc"><p>Whole gonioanalysis wide settings here …</p></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.tkgui" href="tkgui/index.html">gonioanalysis.tkgui</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="gonioanalysis.version" href="version.html">gonioanalysis.version</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul>
+<li><a href="#goniometric-analysis">Goniometric Analysis</a></li>
+<li><a href="#user-interfaces">User interfaces</a></li>
+<li><a href="#initial-analysis">Initial analysis</a><ul>
+<li><a href="#1-selecting-regions-of-interest-rois">1) Selecting regions of interest (ROIs)</a></li>
+<li><a href="#2-measuring-movements">2) Measuring movements</a></li>
+</ul>
+</li>
+<li><a href="#after-initial-analysis">After initial analysis</a><ul>
+<li><a href="#vectormap-3d-directions">Vectormap - 3D directions</a></li>
+<li><a href="#orientation-analysis">Orientation analysis</a></li>
+</ul>
+</li>
+<li><a href="#exporting-data">Exporting data</a></li>
+<li><a href="#command-line-interface">Command line interface</a></li>
+</ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="gonioanalysis.antenna_level" href="antenna_level.html">gonioanalysis.antenna_level</a></code></li>
+<li><code><a title="gonioanalysis.binary_search" href="binary_search.html">gonioanalysis.binary_search</a></code></li>
+<li><code><a title="gonioanalysis.coordinates" href="coordinates.html">gonioanalysis.coordinates</a></code></li>
+<li><code><a title="gonioanalysis.directories" href="directories.html">gonioanalysis.directories</a></code></li>
+<li><code><a title="gonioanalysis.droso" href="droso.html">gonioanalysis.droso</a></code></li>
+<li><code><a title="gonioanalysis.drosom" href="drosom/index.html">gonioanalysis.drosom</a></code></li>
+<li><code><a title="gonioanalysis.drosox" href="drosox/index.html">gonioanalysis.drosox</a></code></li>
+<li><code><a title="gonioanalysis.image_tools" href="image_tools.html">gonioanalysis.image_tools</a></code></li>
+<li><code><a title="gonioanalysis.rotary_encoders" href="rotary_encoders.html">gonioanalysis.rotary_encoders</a></code></li>
+<li><code><a title="gonioanalysis.settings" href="settings.html">gonioanalysis.settings</a></code></li>
+<li><code><a title="gonioanalysis.tkgui" href="tkgui/index.html">gonioanalysis.tkgui</a></code></li>
+<li><code><a title="gonioanalysis.version" href="version.html">gonioanalysis.version</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

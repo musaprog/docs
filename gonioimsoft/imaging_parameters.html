@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioimsoft.imaging_parameters API documentation</title>
+<meta name="description" content="Settting and getting imaging parameters …">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioimsoft.imaging_parameters</code></h1>
+</header>
+<section id="section-intro">
+<p>Settting and getting imaging parameters.</p>
+<p>Default imaging parameters, and ParameterEditor for letting the user
+modify them in the program.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gonioimsoft.imaging_parameters.getModifiedParameters"><code class="name flex">
+<span>def <span class="ident">getModifiedParameters</span></span>(<span>libui=None, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Take in the DEFAULT parameters in the beginning of this code file
+and let the user modify them using text based ParameterEditor</p></div>
+</dd>
+<dt id="gonioimsoft.imaging_parameters.getRightType"><code class="name flex">
+<span>def <span class="ident">getRightType</span></span>(<span>parameter_name, string_value)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert user inputted string to correct parameter value based on
+DYNAMIC_PARAMETER_TYPES</p>
+<p>TODO
+- channel checking, check that the channel is proper NI channel</p></div>
+</dd>
+<dt id="gonioimsoft.imaging_parameters.load_parameters"><code class="name flex">
+<span>def <span class="ident">load_parameters</span></span>(<span>fn)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loading imaging parameters, saved as a json file.</p></div>
+</dd>
+<dt id="gonioimsoft.imaging_parameters.save_parameters"><code class="name flex">
+<span>def <span class="ident">save_parameters</span></span>(<span>fn, parameters)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loading imaging parameters, saved as a json file.</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gonioimsoft.imaging_parameters.ParameterEditor"><code class="flex name class">
+<span>class <span class="ident">ParameterEditor</span></span>
+<span>(</span><span>dynamic_parameters, libui=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Dictionary editor on command line with ability to load and save presets.</p>
+<p>dynamic_parameters
+Dictionary of the dynamic imaging parameters.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ParameterEditor:
+    &#39;&#39;&#39;
+    Dictionary editor on command line with ability to load and save presets.
+    &#39;&#39;&#39;
+    def __init__(self, dynamic_parameters, libui=None):
+        &#39;&#39;&#39;
+        dynamic_parameters      Dictionary of the dynamic imaging parameters.
+        &#39;&#39;&#39;
+        self.libui = libui
+
+        self.dynamic_parameters = dynamic_parameters
+        self.parameter_names = sorted(self.dynamic_parameters.keys())
+
+        self.presets_savedir = os.path.join(USERDATA_DIR, &#39;presets&#39;)
+        self.presets = self.load_presets(self.presets_savedir)
+
+    
+    def load_presets(self, directory):
+        
+        presets = {}
+        
+        if os.path.isdir(directory):
+            files = [os.path.join(directory, fn) for fn in os.listdir(directory)]
+        else:
+            files = []
+
+        for afile in files:
+            try:
+                preset = load_parameters(afile)
+            except:
+                print(&#34;Couldn&#39;t load preset {}&#34;.format(afile))
+                continue
+            
+            # If older files lack some parameters, use default parameters
+            for key in self.parameter_names:
+                if not key in preset:
+                    preset[key] = DEFAULT_DYNAMIC_PARAMETERS[key]
+                    
+            presets[os.path.basename(afile)] = preset
+
+        return presets
+
+
+    def print_preset(self, preset):
+        &#39;&#39;&#39;
+        Prints the current parameters and the help strings.
+        &#39;&#39;&#39;
+                 
+        parameter_names = sorted(self.dynamic_parameters.keys())
+
+        print()
+        
+        print(&#39;{:&lt;20} {:&lt;40} {}&#39;.format(&#39;PARAMETER NAME&#39;, &#39;VALUE&#39;, &#39;DESCRIPTION&#39;))
+        for parameter in parameter_names:
+
+            value = str(preset[parameter])
+
+            # Special addition for frame_length parameter; Show Hz so that
+            # it is harder to do mistakes
+            if parameter == &#39;frame_length&#39;:
+                hz = str(round(1/float(value)))
+                if hz == 1:
+                    hz = str(1/float(value))
+                value += &#39; ({} Hz)&#39;.format(hz)
+
+            print(&#39;{:&lt;20} {:&lt;40} {}&#39;.format(
+                parameter, value, DYNAMIC_PARAMETERS_HELP[parameter]))
+        print()
+
+
+    def getModified(self):
+        &#39;&#39;&#39;
+        Ask user to edit the parameters until happy and then return
+        the parameters.
+        &#39;&#39;&#39;
+        
+        while True:
+            print(&#39;MODIFYING IMAGING PARAMETERS&#39;)
+            self.print_preset(self.dynamic_parameters)
+            parameter = self.libui.input(&#39;Parameter name or (list/save/load/back) (Enter to continue) &gt;&gt; &#39;)
+            
+            # If breaking free
+            if parameter == &#39;&#39;:
+                break
+            
+
+            self.presets = self.load_presets(self.presets_savedir)
+
+            
+            # If saving preset
+            if parameter.lower() == &#39;save&#39;:
+                name = self.libui.input(&#39;Save current parameters under preset name (if empty == suffix) &gt;&gt; &#39;)
+                if name == &#39;&#39; and self.dynamic_parameters[&#39;suffix&#39;] != &#39;&#39;:
+                    name = self.dynamic_parameters[&#39;suffix&#39;]
+                
+                if os.path.isdir(USERDATA_DIR):
+                    os.makedirs(self.presets_savedir, exist_ok=True)
+                    save_parameters(os.path.join(self.presets_savedir, name), self.dynamic_parameters)
+                else:
+                    print(&#39;Saving the preset failed, {} does not exist&#39;.format(USERDATA_DIR))
+
+                continue        
+
+            if parameter.lower() == &#39;list&#39;:
+                if self.presets is {}:
+                    print(&#39;There are no existing presets!&#39;)
+                else:
+                    print(&#39;These are the existing presets:&#39;)
+                    for preset in self.presets.keys():
+                        print(&#39;  &#39;+preset)
+                    print(&#39;&#39;)
+                continue
+
+            if parameter.lower() == &#39;load&#39;:
+                # If parameter is actually a preset
+                
+                while True:
+                    
+                    preset_names = sorted(self.presets.keys())
+
+                    for i, name in enumerate(preset_names):
+                        print(&#39;{}) {}&#39;.format(i+1, name))
+                    
+                    sel = self.libui.input(&#39;&gt;&gt; &#39;)
+
+                    try:
+                        to_load = preset_names[int(sel)-1]
+                        break
+                    except:
+                        print(&#39;Invalid preset.&#39;)
+
+                parameter = to_load
+
+            if parameter == &#39;back&#39;:
+                return None
+
+            if parameter in self.presets.keys():
+                self.print_preset(self.presets[parameter])
+                
+                confirm = self.libui.input(&#39;Load this (y/n)&gt;&gt; &#39;).lower()
+                if confirm and confirm[0] == &#39;y&#39;:
+                    self.dynamic_parameters = self.presets[parameter]
+                else:
+                    print(&#39;Answer not yes, loading of the preset cancelled&#39;)
+                continue
+            
+    
+
+            try:
+                self.dynamic_parameters[parameter]
+            except KeyError:
+                print(&#39;Invalid input, not a parameter name&#39;)
+                time.sleep(1)
+                continue
+
+            while True:
+
+                value = self.libui.input(&#39;Value for {} &gt;&gt; &#39;.format(parameter))
+                
+                if value == &#39;&#39;:
+                    break
+
+                try:
+                    value = getRightType(parameter, value)
+                except ValueError as e:
+                    print(str(e))
+                    print(&#39;Could not convert the value to right type. Try againg or Enter to skip.&#39;)
+                    continue
+
+                self.dynamic_parameters[parameter] = value
+                break
+
+        return self.dynamic_parameters</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioimsoft.imaging_parameters.ParameterEditor.getModified"><code class="name flex">
+<span>def <span class="ident">getModified</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask user to edit the parameters until happy and then return
+the parameters.</p></div>
+</dd>
+<dt id="gonioimsoft.imaging_parameters.ParameterEditor.load_presets"><code class="name flex">
+<span>def <span class="ident">load_presets</span></span>(<span>self, directory)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.imaging_parameters.ParameterEditor.print_preset"><code class="name flex">
+<span>def <span class="ident">print_preset</span></span>(<span>self, preset)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Prints the current parameters and the help strings.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioimsoft" href="index.html">gonioimsoft</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gonioimsoft.imaging_parameters.getModifiedParameters" href="#gonioimsoft.imaging_parameters.getModifiedParameters">getModifiedParameters</a></code></li>
+<li><code><a title="gonioimsoft.imaging_parameters.getRightType" href="#gonioimsoft.imaging_parameters.getRightType">getRightType</a></code></li>
+<li><code><a title="gonioimsoft.imaging_parameters.load_parameters" href="#gonioimsoft.imaging_parameters.load_parameters">load_parameters</a></code></li>
+<li><code><a title="gonioimsoft.imaging_parameters.save_parameters" href="#gonioimsoft.imaging_parameters.save_parameters">save_parameters</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gonioimsoft.imaging_parameters.ParameterEditor" href="#gonioimsoft.imaging_parameters.ParameterEditor">ParameterEditor</a></code></h4>
+<ul class="">
+<li><code><a title="gonioimsoft.imaging_parameters.ParameterEditor.getModified" href="#gonioimsoft.imaging_parameters.ParameterEditor.getModified">getModified</a></code></li>
+<li><code><a title="gonioimsoft.imaging_parameters.ParameterEditor.load_presets" href="#gonioimsoft.imaging_parameters.ParameterEditor.load_presets">load_presets</a></code></li>
+<li><code><a title="gonioimsoft.imaging_parameters.ParameterEditor.print_preset" href="#gonioimsoft.imaging_parameters.ParameterEditor.print_preset">print_preset</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

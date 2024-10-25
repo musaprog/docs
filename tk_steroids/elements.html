@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>tk_steroids.elements API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>tk_steroids.elements</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="tk_steroids.elements.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="tk_steroids.elements.BufferShower"><code class="flex name class">
+<span>class <span class="ident">BufferShower</span></span>
+<span>(</span><span>parent, string_buffer, max_entries=100)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Redirect any string buffer to be printed on this buffer reader.
+Bit like a non-interactive console window.</p>
+<p>string_buffer
+Like StringIO, or sys.stdout</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BufferShower(tk.Frame):
+    &#39;&#39;&#39;
+    Redirect any string buffer to be printed on this buffer reader.
+    Bit like a non-interactive console window.
+    &#39;&#39;&#39;
+    def __init__(self, parent, string_buffer, max_entries=100):
+        &#39;&#39;&#39;
+        string_buffer       Like StringIO, or sys.stdout
+        &#39;&#39;&#39;
+        tk.Frame.__init__(self, parent)
+
+        self.parent = parent    
+        self.string_buffer = string_buffer
+        self.max_entries = max_entries
+        
+        self.entries = 0
+        self.offset = 0
+
+        self.text = tkinter.scrolledtext.ScrolledText(self)
+        self.text.grid()
+        
+        self.parent.after(20, self.callback)
+        
+    def callback(self):
+        self.string_buffer.seek(self.offset)
+
+        for line in self.string_buffer:
+
+            if self.entries &gt; self.max_entries:
+                self.text.delete(&#39;1.0&#39;,&#39;2.0&#39;)
+
+            self.text.insert(tk.END, line)
+            self.text.yview(tk.END)
+            self.entries += 1
+        
+        self.offset = self.string_buffer.tell()
+
+        self.parent.after(20, self.callback)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tk_steroids.elements.BufferShower.callback"><code class="name flex">
+<span>def <span class="ident">callback</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="tk_steroids.elements.ButtonsFrame"><code class="flex name class">
+<span>class <span class="ident">ButtonsFrame</span></span>
+<span>(</span><span>parent, button_names, button_commands, title='', label='', horizontal=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>If you just need a frame with simply buttons (with a callback) next to each other,
+use this widget.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>buttons</code></strong> :&ensp;<code>list</code> of <code>objects</code></dt>
+<dd>Tkinter button objects</dd>
+<dt><strong><code>label</code></strong> :&ensp;<code>object</code> or <code>None</code></dt>
+<dd>If label given at init, store the tk.Label object in this attibute</dd>
+</dl>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>horizontal</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True, grid buttons horizontally. If False, grid vertically.</dd>
+<dt><strong><code>title</code></strong> :&ensp;<code>string</code></dt>
+<dd>If set, init using LabelFrame that encloses the buttons and
+use this text (title) as the label.</dd>
+<dt><strong><code>label</code></strong> :&ensp;<code>string</code></dt>
+<dd>Alternative or complementary to the title option, just adds a tk.Label
+as the first button (if avoiding the LabelFrame box is desired).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ButtonsFrame(tk.Frame):
+    &#39;&#39;&#39;
+    If you just need a frame with simply buttons (with a callback) next to each other,
+    use this widget.
+    
+    Attributes
+    ----------
+    buttons : list of objects
+        Tkinter button objects
+    label : object or None
+        If label given at init, store the tk.Label object in this attibute
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, button_names, button_commands,
+            title=&#39;&#39;, label=&#39;&#39;, horizontal=True):
+        &#39;&#39;&#39;
+        Arguments
+        ---------
+        horizontal : bool
+            If True, grid buttons horizontally. If False, grid vertically.
+        title : string
+            If set, init using LabelFrame that encloses the buttons and
+            use this text (title) as the label.
+        label : string
+            Alternative or complementary to the title option, just adds a tk.Label
+            as the first button (if avoiding the LabelFrame box is desired).
+        &#39;&#39;&#39;
+        tk.Frame.__init__(self, parent)
+        self.parent = parent
+        
+        if title:
+            target = tk.LabelFrame(self, text=title)
+            target.grid()
+        else:
+            target = self
+
+        if label:
+            self.label = tk.Label(self, text=label)
+            if horizontal:
+                self.label.grid(row=1, column=0)
+            else:
+                self.label.grid(row=0, column=1)
+        else:
+            self.label = None
+
+        self.buttons = []
+
+        for i_button, (name, command) in enumerate(zip(button_names, button_commands)):
+            button = tk.Button(target, text=name, command=command)
+            
+            if horizontal:
+                button.grid(row=1, column=i_button+1)
+            else:
+                button.grid(row=i_button+1, column=1)
+
+            self.buttons.append(button)
+
+
+    def get_buttons(self):
+        &#39;&#39;&#39;
+        Returns the initialized buttons in the order that the buttons_kwargs
+        were delivered in the ButtonsFrame constructor.
+        &#39;&#39;&#39;
+        return self.buttons</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tk_steroids.elements.ButtonsFrame.get_buttons"><code class="name flex">
+<span>def <span class="ident">get_buttons</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the initialized buttons in the order that the buttons_kwargs
+were delivered in the ButtonsFrame constructor.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="tk_steroids.elements.ColorExplanation"><code class="flex name class">
+<span>class <span class="ident">ColorExplanation</span></span>
+<span>(</span><span>parent, colors, help_strings)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>If colors were used in the GUI, this widget can be used easily to
+create help texts to explain meaning of the colors.</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ColorExplanation(tk.Frame):
+    &#39;&#39;&#39;
+    If colors were used in the GUI, this widget can be used easily to
+    create help texts to explain meaning of the colors.
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, colors, help_strings):
+        tk.Frame.__init__(self, parent)
+
+        for i_row, (color, string) in enumerate(zip(colors, help_strings)):
+            tk.Canvas(self, width=30, height=15, bg=color).grid(row=i_row, column=0, sticky=&#39;W&#39;)
+            tk.Label(self, text=string, font=(&#39;System&#39;, 8)).grid(row=i_row, column=1, sticky=&#39;W&#39;)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+</dd>
+<dt id="tk_steroids.elements.DropdownList"><code class="flex name class">
+<span>class <span class="ident">DropdownList</span></span>
+<span>(</span><span>parent, options, fancynames=None, label=None, default=None, callback=None, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A drop-in replacement for TickboxFrame using tkinter's OptionMenu
+(looks just like OptionMenu)</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>option_menu</code></strong> :&ensp;<code>object</code></dt>
+<dd>Underlying tkinter OptionMenu object</dd>
+<dt><strong><code>label</code></strong> :&ensp;<code>object</code></dt>
+<dd>Underlying tkinter Label object (if label was specified at init)</dd>
+</dl>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DropdownList(tk.Frame):
+    &#39;&#39;&#39;
+    A drop-in replacement for TickboxFrame using tkinter&#39;s OptionMenu
+    (looks just like OptionMenu)
+
+    Attributes
+    ----------
+    option_menu : object
+        Underlying tkinter OptionMenu object
+    label : object
+        Underlying tkinter Label object (if label was specified at init)
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, options, fancynames=None, label=None,
+            default=None, callback=None, **kwargs):
+        
+        tk.Frame.__init__(self, parent)
+        
+        self.__options = options
+        
+        self.columnconfigure(2, weight=1)
+        self.rowconfigure(1, weight=1)
+   
+        # Check fancynames to show
+        if fancynames is None:
+            fancynames = options
+        else:
+            if len(fancynames) != len(options):
+                raise ValueError(&#39;options and fancynames different lengths, {} vs {}&#39;.format(
+                    len(fancynames), len(options)))
+        
+        self._fancynames = fancynames
+
+        self._state = tk.StringVar(self)
+        self._state.set(fancynames[0])
+        if callback is not None:
+            if callable(callback):
+                self._state.trace(&#39;w&#39;, lambda *args: callback())
+            else:
+                raise ValueError(&#39;callback has to be callable or none, now {}&#39;.format(callback))
+
+        self.option_menu = tk.OptionMenu(self, self._state, *fancynames)
+        self.option_menu.grid(row=1, column=2, sticky=&#39;NSWE&#39;)
+
+        if label:
+            self.label = tk.Label(self, text=label)
+            self.label.grid(row=1, column=1, sticky=&#39;NSWE&#39;)
+    
+    @property
+    def states(self):
+        index = self._fancynames.index(self._state.get())
+        current = self.__options[index]
+        return {option: current == option for option in self.__options}
+
+    @property
+    def ticked(self):
+        &#39;&#39;&#39;
+        Returns a list of one item, the current selection.
+        &#39;&#39;&#39;
+        index = self._fancynames.index(self._state.get())
+        return [self.__options[index]]</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="tk_steroids.elements.DropdownList.states"><code class="name">prop <span class="ident">states</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def states(self):
+    index = self._fancynames.index(self._state.get())
+    current = self.__options[index]
+    return {option: current == option for option in self.__options}</code></pre>
+</details>
+</dd>
+<dt id="tk_steroids.elements.DropdownList.ticked"><code class="name">prop <span class="ident">ticked</span></code></dt>
+<dd>
+<div class="desc"><p>Returns a list of one item, the current selection.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def ticked(self):
+    &#39;&#39;&#39;
+    Returns a list of one item, the current selection.
+    &#39;&#39;&#39;
+    index = self._fancynames.index(self._state.get())
+    return [self.__options[index]]</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tk_steroids.elements.Listbox"><code class="flex name class">
+<span>class <span class="ident">Listbox</span></span>
+<span>(</span><span>parent, selections, callback, maintain_selected=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Tkinter's Listbox and Scrollbar wrapped for convienece.</p>
+<p>At the init, it takes in a list of selectable options, and a callback function.
+When the user selects and item, it evokes the callback that receives
+the user selection (one of the selectable options) as the input
+(or None if no selection).</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>selections</code></strong> :&ensp;<code>list</code> of <code>strings</code></dt>
+<dd>Items that show up in the listbox</dd>
+<dt><strong><code>callback</code></strong> :&ensp;<code>callable</code></dt>
+<dd>The callback function</dd>
+<dt><strong><code>parent</code></strong> :&ensp;<code>object</code></dt>
+<dd>Parent widget</dd>
+<dt><strong><code>listbox</code></strong> :&ensp;<code>object</code></dt>
+<dd>Tkinter's Listbox widget</dd>
+<dt><strong><code>scrollbar</code></strong> :&ensp;<code>object</code></dt>
+<dd>Tkinter's Scrollbar widget</dd>
+<dt><strong><code>maintain_selected</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If true, clicking other Listboxes or widgets does not make the current
+selection to None (deselecting the selected)</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Listbox(tk.Frame):
+    &#39;&#39;&#39;Tkinter&#39;s Listbox and Scrollbar wrapped for convienece.
+    
+    At the init, it takes in a list of selectable options, and a callback function.
+    When the user selects and item, it evokes the callback that receives
+    the user selection (one of the selectable options) as the input
+    (or None if no selection).
+    
+    Attributes
+    ----------
+    selections : list of strings
+        Items that show up in the listbox
+    callback : callable
+        The callback function
+    parent : object
+        Parent widget
+    listbox : object
+        Tkinter&#39;s Listbox widget
+    scrollbar : object
+        Tkinter&#39;s Scrollbar widget
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, selections, callback, maintain_selected=True):
+        &#39;&#39;&#39;
+        maintain_selected : bool
+            If true, clicking other Listboxes or widgets does not make the current
+            selection to None (deselecting the selected)
+        &#39;&#39;&#39;
+        
+        tk.Frame.__init__(self, parent)
+        self.parent = parent
+
+        
+        self.maintain_selected = maintain_selected
+
+        self.listbox = tk.Listbox(self, height=20)
+        self.listbox.grid(sticky=&#39;NSEW&#39;)
+       
+        self.scrollbar= tk.Scrollbar(self, orient=&#39;vertical&#39;, command=self.listbox.yview)
+        self.scrollbar.grid(row=0, column=1, sticky=&#39;NS&#39;)
+        
+        self.listbox.config(yscrollcommand=self.scrollbar.set)
+
+
+        self.set_selections(selections) # self.selections = selections
+        self.callback = callback
+        
+        self.listbox.bind(&#39;&lt;&lt;ListboxSelect&gt;&gt;&#39;, self._call_callback)
+        
+        # Make the listbox to stretch in North-South to take all the available space
+        self.rowconfigure(0, weight=1)
+        self.columnconfigure(0, weight=1)
+        
+        self._previous_selection = None
+        self._state_valid = True
+
+
+    def _call_callback(self, *args):
+        &#39;&#39;&#39;Validate selection and the callback and call back
+        &#39;&#39;&#39;
+        try:
+            sel = self.listbox.curselection()[0]
+            argument = self.selections[sel]
+            self._previous_selection = argument
+            self._state_valid = True
+        except:
+            argument = None
+
+        if not argument is None and callable(self.callback):
+            self.callback(self.selections[sel])
+
+
+
+    def set_selections(self, selections, colors=None):
+        &#39;&#39;&#39;Reset the selectables
+
+        Options
+        -------
+        selections : list of strings
+            
+        colors : list
+            A list of valid tkinter colors. It sets
+            the background color for each selectable in the Listbox.
+        &#39;&#39;&#39;
+        
+        # Empty current as it may have old entries
+        self.listbox.delete(0, tk.END)
+        
+        self.selections = selections
+        
+        for i_item, item in enumerate(self.selections):
+            self.listbox.insert(tk.END, item)
+            
+            if colors:
+                self.listbox.itemconfig(i_item, bg=colors[i_item])
+
+
+    def disable(self):
+        &#39;&#39;&#39;Makes the listbox&#39;s state unselectable
+        &#39;&#39;&#39;
+        self.listbox.configure(state=tk.DISABLED)
+
+
+    def enable(self):
+        &#39;&#39;&#39;Makes the listbox&#39;s state selectable
+        &#39;&#39;&#39;
+        self.listbox.configure(state=tk.NORMAL)
+
+    
+    def get_current(self):
+        &#39;&#39;&#39;Returns the current selection.
+
+        Returns None if no selection has been made.
+        &#39;&#39;&#39;
+        if not self._state_valid:
+            return None
+
+        try:
+            sel = self.listbox.curselection()[0]
+            return self.selections[sel]
+        except:
+            return self._previous_selection
+
+    @property
+    def current(self):
+        &#39;&#39;&#39;
+        current : string
+            The current selection
+        &#39;&#39;&#39;
+        return self.get_current()
+
+    
+    @current.setter
+    def current(self, value):
+        if value is None:
+            self._state_valid = False
+            return
+
+        if value not in self.selections:
+            raise ValueError(f&#39;&#34;{value}&#34; not in the selections {self.selections}&#39;)
+        index = self.selections.index(value)
+        self.listbox.select_set(index)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="tk_steroids.elements.Listbox.current"><code class="name">prop <span class="ident">current</span></code></dt>
+<dd>
+<div class="desc"><p>current : string
+The current selection</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def current(self):
+    &#39;&#39;&#39;
+    current : string
+        The current selection
+    &#39;&#39;&#39;
+    return self.get_current()</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="tk_steroids.elements.Listbox.disable"><code class="name flex">
+<span>def <span class="ident">disable</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Makes the listbox's state unselectable</p></div>
+</dd>
+<dt id="tk_steroids.elements.Listbox.enable"><code class="name flex">
+<span>def <span class="ident">enable</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Makes the listbox's state selectable</p></div>
+</dd>
+<dt id="tk_steroids.elements.Listbox.get_current"><code class="name flex">
+<span>def <span class="ident">get_current</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the current selection.</p>
+<p>Returns None if no selection has been made.</p></div>
+</dd>
+<dt id="tk_steroids.elements.Listbox.set_selections"><code class="name flex">
+<span>def <span class="ident">set_selections</span></span>(<span>self, selections, colors=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Reset the selectables</p>
+<h2 id="options">Options</h2>
+<p>selections : list of strings</p>
+<p>colors : list
+A list of valid tkinter colors. It sets
+the background color for each selectable in the Listbox.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="tk_steroids.elements.SliderFrame"><code class="flex name class">
+<span>class <span class="ident">SliderFrame</span></span>
+<span>(</span><span>parent, options, fancynames=None, defaults=None, ncols=1, ranges=None, default_range=(0, 1), resolutions=None, default_resolution=0.01)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Multiple sliders (similar to TickboxFrame)</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>options</code></strong> :&ensp;<code>list</code></dt>
+<dd>Names of the variables that the sliders control</dd>
+<dt><strong><code>labels</code></strong> :&ensp;<code>list</code></dt>
+<dd>Tkinter Label widgets</dd>
+<dt><strong><code>sliders</code></strong> :&ensp;<code>list</code></dt>
+<dd>Tkinter Scale widgets</dd>
+</dl>
+<h2 id="options">Options</h2>
+<p>parent : object
+Tkinter parent widget
+options : list of strings
+Names of the variables that the sliders control
+fancynames : list of strings, or None
+Optional, "fancy" names that are shown to the user
+defaults : list or None
+Slider default values
+ncols : int
+Reserved, not yet implemented.
+ranges : list of tuples
+Slider specific ranges (min, max) or None for each slider.
+default_range : tuple of numerical values
+Default (min, max) range
+resolutions : list of numerical values
+Slider specific resolutions or None for each slider.
+default_resolution : numerical
+Default slider resolution</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SliderFrame(tk.Frame):
+    &#39;&#39;&#39;
+    Multiple sliders (similar to TickboxFrame)
+    
+    Attributes
+    ----------
+    options : list
+        Names of the variables that the sliders control
+    labels : list
+        Tkinter Label widgets
+    sliders : list
+        Tkinter Scale widgets
+    &#39;&#39;&#39;
+    def __init__(self, parent, options, fancynames=None, defaults=None, ncols=1,
+            ranges=None, default_range=(0,1),
+            resolutions=None, default_resolution=0.01):
+        &#39;&#39;&#39;
+        Options
+        -------
+        parent : object
+            Tkinter parent widget
+        options : list of strings
+            Names of the variables that the sliders control
+        fancynames : list of strings, or None
+            Optional, &#34;fancy&#34; names that are shown to the user
+        defaults : list or None
+            Slider default values
+        ncols : int
+            Reserved, not yet implemented.
+        ranges : list of tuples
+            Slider specific ranges (min, max) or None for each slider.
+        default_range : tuple of numerical values
+            Default (min, max) range
+        resolutions : list of numerical values
+            Slider specific resolutions or None for each slider.
+        default_resolution : numerical
+            Default slider resolution
+        &#39;&#39;&#39;
+        tk.Frame.__init__(self, parent)
+        self.grid_columnconfigure(1, weight=1)
+ 
+        self.options = options
+        self.labels = []
+        self.sliders = []
+
+        for i_row, name in enumerate(options):
+            
+            if fancynames and fancynames[i_row]:
+                fancyname = fancynames[i_row]
+            else:
+                fancyname = name
+
+            label = tk.Label(self, text=fancyname)
+            label.grid(row=i_row, column=0)
+
+            if ranges and ranges[i_row]:
+                A, B = ranges[i_row]
+            else:
+                A, B = default_range
+
+            if resolutions and resolutions[i_row]:
+                resolution = resolutions[i_row]
+            else:
+                resolution = default_resolution
+
+            slider = tk.Scale(self, from_=A, to=B, orient=tk.HORIZONTAL,
+                    resolution=resolution)
+            slider.grid(row=i_row, column=1, sticky=&#39;WE&#39;)
+
+            if defaults and defaults[i_row]:
+                slider.set(defaults[i_row])
+
+            self.labels.append(label)
+            self.sliders.append(slider)
+
+
+    @property
+    def states(self):
+        &#39;&#39;&#39;
+        Returns the slider values dictionary.
+        Keys are slider names (options) and items are slider values.
+        &#39;&#39;&#39;
+        return {option: slider.get() for option, slider in zip(self.options, self.sliders)}
+
+    
+    @states.setter
+    def states(self, s):
+        for slider, option in zip(self.sliders, self.options):
+            value = s.get(option, None)
+            if value is not None:
+                slider.set(value)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="tk_steroids.elements.SliderFrame.states"><code class="name">prop <span class="ident">states</span></code></dt>
+<dd>
+<div class="desc"><p>Returns the slider values dictionary.
+Keys are slider names (options) and items are slider values.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def states(self):
+    &#39;&#39;&#39;
+    Returns the slider values dictionary.
+    Keys are slider names (options) and items are slider values.
+    &#39;&#39;&#39;
+    return {option: slider.get() for option, slider in zip(self.options, self.sliders)}</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tk_steroids.elements.Tabs"><code class="flex name class">
+<span>class <span class="ident">Tabs</span></span>
+<span>(</span><span>parent, tab_names, elements=None, draw_frame=False, on_select_callback=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Tabs widget. Can contain any tkinter widgets.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>i_current</code></strong> :&ensp;<code>int</code></dt>
+<dd>Index of the currently selected tab.</dd>
+<dt><strong><code>buttons</code></strong> :&ensp;<code>list</code> of <code>objects</code></dt>
+<dd>List of tk.Button instances.</dd>
+<dt><strong><code>pages</code></strong> :&ensp;<code>list</code> of <code>objects</code></dt>
+<dd>A list of Tkinter widgets the tab holds.</dd>
+</dl>
+<p>Initializing the tabs.</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>parent</code></strong></dt>
+<dd>Tkinter parent widget</dd>
+<dt><strong><code>tab_names</code></strong></dt>
+<dd>Human readable names, shown in the buttons</dd>
+<dt><strong><code>elements</code></strong> :&ensp;<code>None</code> or <code>list</code> of <code>classes</code></dt>
+<dd>
+<p>If None (by default), initializes tk.Frames as tabs.
+You can get these tk.Frames are in pages attribute.</p>
+<p>Can also classes, that get initialized as this Tabs class
+as the sole argument.</p>
+</dd>
+<dt><strong><code>draw_frame</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True, draw an extra frame to confine the tabs</dd>
+<dt><strong><code>on_select_callback</code></strong> :&ensp;<code>callable</code></dt>
+<dd>Callback that is executed just before changing the tab.
+Has to take in one argument that is new i_current (integer).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Tabs(tk.Frame):
+    &#39;&#39;&#39;
+    Tabs widget. Can contain any tkinter widgets.
+
+    Attributes
+    ----------
+    i_current : int
+        Index of the currently selected tab.
+    buttons : list of objects
+        List of tk.Button instances.
+    pages : list of objects
+        A list of Tkinter widgets the tab holds.
+    
+    &#39;&#39;&#39;
+    def __init__(self, parent, tab_names,
+            elements=None, draw_frame=False,
+            on_select_callback=None):
+        &#39;&#39;&#39;
+        Initializing the tabs.
+        
+        Arguments
+        ---------
+        parent
+            Tkinter parent widget
+        tab_names
+            Human readable names, shown in the buttons
+        elements : None or list of classes
+            If None (by default), initializes tk.Frames as tabs.
+            You can get these tk.Frames are in pages attribute.
+
+            Can also classes, that get initialized as this Tabs class
+            as the sole argument.
+        draw_frame : bool
+            If True, draw an extra frame to confine the tabs
+        on_select_callback : callable
+            Callback that is executed just before changing the tab.
+            Has to take in one argument that is new i_current (integer).
+        
+        &#39;&#39;&#39;
+        
+        # Call init from LabelFrame if framing is wanted
+        # Not sure if this can cause problems (when inheriting from tk.Frame)
+        if draw_frame:
+            tk.LabelFrame.__init__(self, parent)
+        else:
+            tk.Frame.__init__(self, parent)
+
+        self.parent = parent
+
+        self.on_select_callback = on_select_callback
+
+        self.i_current = 0
+
+        self.buttons = []
+        self.pages = []
+
+
+        buttons_frame = tk.Frame(self)
+        buttons_frame.grid()
+
+        if elements is None:
+            elements = [tk.Frame for i_tab in tab_names]
+
+        # Initialize content/elements
+        for i_button, (name, element) in enumerate(zip(tab_names, elements)):
+
+            initialized_element = element(self)
+            self.pages.append(initialized_element)
+            
+
+            button = tk.Button(buttons_frame, text=name, command=lambda i_button=i_button: self.set_page(i_button))
+            button.grid(row=0, column = i_button, sticky=&#39;N&#39;)
+            self.buttons.append(button)
+            
+
+        self.pages[self.i_current].grid(row=1, columnspan=len(self.buttons), sticky=&#39;NSEW&#39;)
+        
+        self.grid_rowconfigure(1, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+    
+    @property
+    def tabs(self):
+        return self.pages
+
+    def set_page(self, i_page):
+        &#39;&#39;&#39;
+        When button number i_button is pressed.
+        &#39;&#39;&#39;
+        # Update i_current and take i_old for now
+        i_old = self.i_current
+        self.i_current = i_page
+
+        if self.on_select_callback is not None:
+            self.on_select_callback(self.i_current)
+
+        # Remove the previously gridded widget
+        self.pages[i_old].grid_remove()
+
+        # Grid the new widget
+        self.pages[self.i_current].grid(row=1, columnspan=len(self.buttons), sticky=&#39;NSEW&#39;)
+
+        # Change button reliefs (pressed)
+        self.buttons[i_old].config(relief=tk.RAISED)
+        self.buttons[i_page].config(relief=tk.SUNKEN)
+
+
+    def get_elements(self):
+        &#39;&#39;&#39;
+        Returns the initialized elements which have to the Tab as their master/parent.
+        &#39;&#39;&#39;
+        return self.pages</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="tk_steroids.elements.Tabs.tabs"><code class="name">prop <span class="ident">tabs</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def tabs(self):
+    return self.pages</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="tk_steroids.elements.Tabs.get_elements"><code class="name flex">
+<span>def <span class="ident">get_elements</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the initialized elements which have to the Tab as their master/parent.</p></div>
+</dd>
+<dt id="tk_steroids.elements.Tabs.set_page"><code class="name flex">
+<span>def <span class="ident">set_page</span></span>(<span>self, i_page)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>When button number i_button is pressed.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="tk_steroids.elements.TickboxFrame"><code class="flex name class">
+<span>class <span class="ident">TickboxFrame</span></span>
+<span>(</span><span>parent, options, fancynames=None, defaults=None, ncols=3, single_select=False, callback=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A series of tickboxes (Checkbuttons) and getting their True/False values.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>states</code></strong> :&ensp;<code>dict</code></dt>
+<dd>True/False</dd>
+<dt><strong><code>ticked</code></strong> :&ensp;<code>list</code></dt>
+<dd>self.states keys that have True value</dd>
+<dt><strong><code>checkbuttons</code></strong> :&ensp;<code>list</code></dt>
+<dd>tk.Checkbutton objects</dd>
+<dt><strong><code>parent</code></strong></dt>
+<dd>Tkinter parent widget</dd>
+<dt><strong><code>options</code></strong> :&ensp;<code>list</code> of <code>strings</code></dt>
+<dd>Names of the options</dd>
+<dt><strong><code>fancynames</code></strong> :&ensp;<code>list</code> of <code>strings</code></dt>
+<dd>Names to show on the gui</dd>
+<dt><strong><code>defaults</code></strong> :&ensp;<code>list</code> of <code>bools</code></dt>
+<dd>Start values, True for ticked and False for unticked</dd>
+<dt><strong><code>ncols</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of columns</dd>
+<dt><strong><code>single_select</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True, use Radiobuttons instead of Checkbuttons to only have
+one active selection at a time.</dd>
+<dt><strong><code>callback</code></strong> :&ensp;<code>callable</code></dt>
+<dd>Executed when there's a change in the tickboxes.
+Gets the self.states dict as an input argument.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TickboxFrame(tk.Frame):
+    &#39;&#39;&#39;
+    A series of tickboxes (Checkbuttons) and getting their True/False values.
+    
+    Attributes
+    ----------
+    states : dict
+        True/False
+    ticked : list
+        self.states keys that have True value
+    checkbuttons : list
+        tk.Checkbutton objects
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, options, fancynames=None, defaults=None, ncols=3,
+            single_select=False,
+            callback=None):
+        &#39;&#39;&#39;
+        parent
+            Tkinter parent widget
+        options : list of strings
+            Names of the options
+        fancynames : list of strings
+            Names to show on the gui
+        defaults : list of bools
+            Start values, True for ticked and False for unticked
+        ncols : int
+            Number of columns
+        single_select : bool
+            If True, use Radiobuttons instead of Checkbuttons to only have
+            one active selection at a time.
+        callback : callable
+            Executed when there&#39;s a change in the tickboxes.
+            Gets the self.states dict as an input argument.
+        &#39;&#39;&#39;
+         
+        tk.Frame.__init__(self, parent)
+        self.parent = parent
+        self._single_select = single_select 
+
+        if single_select:
+            intvar = tk.IntVar()
+            self.__states = {option: intvar for option in options}
+            self._option_names = options
+            try:
+                intvar.set(defaults.index(True))
+            except:
+                intvar.set(0)
+
+        else:
+            self.__states = {option: tk.IntVar() for option in options}
+        
+            if defaults is not None:
+                for option, default in zip(options, defaults):
+                    self.__states[option].set( int(default) ) 
+            
+
+        if fancynames is None:
+            fancynames = {option: option for option in options}
+        else:
+            fancynames = {option: fancyname for option, fancyname in zip(options, fancynames)}
+        
+        if single_select:
+            self.checkbuttons = [tk.Radiobutton(self, text=fancynames[option],
+                variable=self.__states[option], command=callback,
+                value=i_option) for i_option, option in enumerate(options)]
+        else:
+            self.checkbuttons = [tk.Checkbutton(self, text=fancynames[option],
+                variable=self.__states[option], command=callback) for option in options]
+
+
+        i_row = 1
+        i_col = 1
+        for button in self.checkbuttons:
+            button.grid(row=i_row, column=i_col)
+            
+            i_col += 1
+            if i_col &gt; ncols:
+                i_col = 1
+                i_row += 1
+    
+    @property
+    def states(self):
+        if self._single_select:
+            return {option: int(self.__states[option].get()) == i for i, option in enumerate(self._option_names)}
+        else:
+            return {option: bool(intvar.get()) for option, intvar in self.__states.items()}
+
+    @states.setter
+    def states(self, s):
+        
+        for option in self.__states.keys():
+            value = s.get(option, None)
+            if value is not None:
+                self.__states[option].set(value)
+
+    @property
+    def ticked(self):
+        return [s for s, b in self.states.items() if b]</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="tk_steroids.elements.TickboxFrame.states"><code class="name">prop <span class="ident">states</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def states(self):
+    if self._single_select:
+        return {option: int(self.__states[option].get()) == i for i, option in enumerate(self._option_names)}
+    else:
+        return {option: bool(intvar.get()) for option, intvar in self.__states.items()}</code></pre>
+</details>
+</dd>
+<dt id="tk_steroids.elements.TickboxFrame.ticked"><code class="name">prop <span class="ident">ticked</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def ticked(self):
+    return [s for s, b in self.states.items() if b]</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="tk_steroids" href="index.html">tk_steroids</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="tk_steroids.elements.main" href="#tk_steroids.elements.main">main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="tk_steroids.elements.BufferShower" href="#tk_steroids.elements.BufferShower">BufferShower</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.elements.BufferShower.callback" href="#tk_steroids.elements.BufferShower.callback">callback</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tk_steroids.elements.ButtonsFrame" href="#tk_steroids.elements.ButtonsFrame">ButtonsFrame</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.elements.ButtonsFrame.get_buttons" href="#tk_steroids.elements.ButtonsFrame.get_buttons">get_buttons</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tk_steroids.elements.ColorExplanation" href="#tk_steroids.elements.ColorExplanation">ColorExplanation</a></code></h4>
+</li>
+<li>
+<h4><code><a title="tk_steroids.elements.DropdownList" href="#tk_steroids.elements.DropdownList">DropdownList</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.elements.DropdownList.states" href="#tk_steroids.elements.DropdownList.states">states</a></code></li>
+<li><code><a title="tk_steroids.elements.DropdownList.ticked" href="#tk_steroids.elements.DropdownList.ticked">ticked</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tk_steroids.elements.Listbox" href="#tk_steroids.elements.Listbox">Listbox</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.elements.Listbox.current" href="#tk_steroids.elements.Listbox.current">current</a></code></li>
+<li><code><a title="tk_steroids.elements.Listbox.disable" href="#tk_steroids.elements.Listbox.disable">disable</a></code></li>
+<li><code><a title="tk_steroids.elements.Listbox.enable" href="#tk_steroids.elements.Listbox.enable">enable</a></code></li>
+<li><code><a title="tk_steroids.elements.Listbox.get_current" href="#tk_steroids.elements.Listbox.get_current">get_current</a></code></li>
+<li><code><a title="tk_steroids.elements.Listbox.set_selections" href="#tk_steroids.elements.Listbox.set_selections">set_selections</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tk_steroids.elements.SliderFrame" href="#tk_steroids.elements.SliderFrame">SliderFrame</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.elements.SliderFrame.states" href="#tk_steroids.elements.SliderFrame.states">states</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tk_steroids.elements.Tabs" href="#tk_steroids.elements.Tabs">Tabs</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.elements.Tabs.get_elements" href="#tk_steroids.elements.Tabs.get_elements">get_elements</a></code></li>
+<li><code><a title="tk_steroids.elements.Tabs.set_page" href="#tk_steroids.elements.Tabs.set_page">set_page</a></code></li>
+<li><code><a title="tk_steroids.elements.Tabs.tabs" href="#tk_steroids.elements.Tabs.tabs">tabs</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tk_steroids.elements.TickboxFrame" href="#tk_steroids.elements.TickboxFrame">TickboxFrame</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.elements.TickboxFrame.states" href="#tk_steroids.elements.TickboxFrame.states">states</a></code></li>
+<li><code><a title="tk_steroids.elements.TickboxFrame.ticked" href="#tk_steroids.elements.TickboxFrame.ticked">ticked</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioanalysis.tkgui.examine API documentation</title>
+<meta name="description" content="TODO …">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioanalysis.tkgui.examine</code></h1>
+</header>
+<section id="section-intro">
+<p>TODO</p>
+<p>Features
++ video of the moving ROIs
++ no need for manual add to PythonPath on Windows
+- window to strecth to full screen
+- multiselect ROIs (if many separate recordings at the same site)</p>
+<p>Polishing
+- specimens control title, retain name specimen
+- image folders control title as specimens
+- after movement measure, update MAnalyser
+- displacement plot Y axis label
+- highlight specimens/image_folders:
+red: no rois / movements
+yellow: rois but no movements
+- x-axis from frames to time?</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gonioanalysis.tkgui.examine.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gonioanalysis.tkgui.examine.ExamineMenubar"><code class="flex name class">
+<span>class <span class="ident">ExamineMenubar</span></span>
+<span>(</span><span>parent)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Menubar class for the examine GUI.</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ExamineMenubar(tk.Frame):
+    &#39;&#39;&#39;
+    Menubar class for the examine GUI.
+    &#39;&#39;&#39;
+
+    def __init__(self, parent):
+        tk.Frame.__init__(self, parent)
+
+        self.parent = parent
+        self.root = parent.root
+        self.core = parent.core
+        self.menubar = tk.Menu(self)
+
+        # File command and menu
+        self.file_commands = FileCommands(self.parent, self.core, &#39;File&#39;)
+        self.file_commands._connect(self.menubar, tearoff=0)
+        
+        self.menubar.add_command(label=&#34;|&#34;)
+
+        # Imagefolder command and menu
+        self.imagefolder_commands = ImageFolderCommands(self.parent, self.core, &#39;Image folder&#39;)
+        self.imagefolder_commands._connect(self.menubar, tearoff=0)
+
+        # Specimen commands and menu
+        self.specimen_commands = SpecimenCommands(self.parent, self.core, &#39;Specimen&#39;)
+        self.specimen_commands._connect(self.menubar, tearoff=0)
+        
+        #    Submenu: Add terminal commands
+        self.terminal_commands = ModifiedMenuMaker(self.parent, self.core, &#39;Terminal interface commands&#39;)
+        for name in ANALYSER_CMDS:
+            setattr(self.terminal_commands, name, lambda name=name: self.core.adm_subprocess(&#39;current&#39;, &#34;-A &#34;+name) )
+        self.terminal_commands._connect(self.specimen_commands.tkmenu)
+
+        # Many specimen commands and menu
+        self.many_specimen_commands = ManySpecimenCommands(self.parent, self.core, &#39;Many specimens&#39;)
+        self.many_specimen_commands._connect(self.menubar, tearoff=0)
+       
+        self.menubar.add_command(label=&#34;|&#34;)
+        
+        # Other commands and menu
+        self.other_commands = OtherCommands(self.parent, self.core, &#39;Other&#39;)
+        self.other_commands._connect(self.menubar, tearoff=0)
+        
+
+        self.winfo_toplevel().config(menu=self.menubar)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.ExamineView"><code class="flex name class">
+<span>class <span class="ident">ExamineView</span></span>
+<span>(</span><span>parent)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The examine frame. Selection of
+- data directory
+- specimen
+- recording
+and plotting the intemediate result for each recording.</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ExamineView(tk.Frame):
+    &#39;&#39;&#39;
+    The examine frame. Selection of
+    - data directory
+    - specimen
+    - recording
+    and plotting the intemediate result for each recording.
+    
+    &#39;&#39;&#39;
+    
+    def __init__(self, parent):
+
+        self.last_saveplotter_dir = GONIODIR
+
+        tk.Frame.__init__(self, parent)
+        
+        self.core = Core()
+        self.core.update_gui = self.update_specimen
+        
+        self.root = self.winfo_toplevel()
+        
+        # Make canvas plotter to stretch
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=3)
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(0, minsize=400)
+
+
+        #tk.Button(self, text=&#39;Set data directory...&#39;, command=self.set_data_directory).grid(row=0, column=0)
+        
+        # Uncomment to have the menubar
+        self.menu = ExamineMenubar(self)
+
+        # LEFTSIDE frame
+        self.leftside_frame = tk.Frame(self)
+        self.leftside_frame.grid(row=0, column=0, sticky=&#39;NSWE&#39;) 
+        self.leftside_frame.grid_rowconfigure(4, weight=1) 
+        self.leftside_frame.grid_columnconfigure(0, weight=1)
+        self.leftside_frame.grid_columnconfigure(1, weight=1)
+
+
+
+        # The 1st buttons frame, selecting root data directory
+        self.buttons_frame_1 = ButtonsFrame(self.leftside_frame, [&#39;Set data directory&#39;],
+                [self.menu.file_commands.set_data_directory, self.menu.file_commands.set_data_directory])
+        self.buttons_frame_1.grid(row=0, column=0, sticky=&#39;NW&#39;, columnspan=2)
+
+ 
+        self.specimen_control_frame = tk.LabelFrame(self.leftside_frame, text=&#39;Specimen&#39;)
+        self.specimen_control_frame.grid(row=1, column=0, sticky=&#39;NWES&#39;, columnspan=2)
+
+       
+        # The 2nd buttons frame, ROIs and movements
+        self.buttons_frame_2 = ButtonsFrame(self.specimen_control_frame,
+                [&#39;Select ROIs&#39;, &#39;Measure movement&#39;],
+                [self.menu.specimen_commands.select_ROIs, self.menu.specimen_commands.measure_movement])
+        self.buttons_frame_2.grid(row=1, column=0, sticky=&#39;NW&#39;, columnspan=2)
+        self.button_rois, self.button_measure = self.buttons_frame_2.get_buttons()
+        
+        # Subframe for 2nd buttons frame
+        #self.status_frame = tk.Frame(self.leftside_frame)
+        #self.status_frame.grid(row=2)
+
+        self.status_rois = tk.Label(self.specimen_control_frame, text=&#39;ROIs selected 0/0&#39;, font=(&#39;system&#39;, 8))
+        self.status_rois.grid(row=2, column=0, sticky=&#39;W&#39;)
+        
+        self.status_antenna_level = tk.Label(self.specimen_control_frame, text=&#39;Zero correcter N/A&#39;, font=(&#39;system&#39;, 8))
+        #self.status_antenna_level.grid(row=3, column=0, sticky=&#39;W&#39;)
+        
+        self.status_active_analysis = tk.Label(self.specimen_control_frame, text=&#39;Active analysis: default&#39;, font=(&#39;system&#39;, 8), justify=tk.LEFT)
+        self.status_active_analysis.grid(row=4, column=0, sticky=&#39;W&#39;)
+       
+        self.tickbox_analyses = TickboxFrame(self.specimen_control_frame, [], ncols=4)
+        self.tickbox_analyses.grid(row=5, column=0, sticky=&#39;W&#39;)
+
+
+        # Image folder manipulations
+        self.folder_control_frame = tk.LabelFrame(self.leftside_frame, text=&#39;Image folder&#39;)
+        self.folder_control_frame.grid(row=2, column=0, sticky=&#39;NWES&#39;, columnspan=2)
+       
+        self.buttons_frame_3 = ButtonsFrame(self.folder_control_frame,
+                [&#39;Reselect ROI&#39;, &#39;Remeasure&#39;],
+                [self.menu.imagefolder_commands.select_ROIs, self.menu.imagefolder_commands.measure_movement])
+        self.buttons_frame_3.grid(row=1, column=0, sticky=&#39;NW&#39;, columnspan=2)
+        self.button_one_roi = self.buttons_frame_2.get_buttons()[0]
+        
+
+        self.status_horizontal = tk.Label(self.folder_control_frame, text=&#39;Horizontal angle N/A&#39;, font=(&#39;system&#39;, 8))
+        self.status_horizontal.grid(row=2, column=0, sticky=&#39;W&#39;)
+        
+        self.status_vertical = tk.Label(self.folder_control_frame, text=&#39;Vertical angle N/A&#39;, font=(&#39;system&#39;, 8))
+        self.status_vertical.grid(row=3, column=0, sticky=&#39;W&#39;)
+        
+
+        # Selecting the specimen 
+        tk.Label(self.leftside_frame, text=&#39;Specimens&#39;).grid(row=3, column=0)
+        self.specimen_box = Listbox(self.leftside_frame, [&#39;(select directory)&#39;], self.on_specimen_selection)
+        self.specimen_box.grid(row=4, column=0, sticky=&#39;NSEW&#39;)
+
+       
+        # Selecting the recording
+        tk.Label(self.leftside_frame, text=&#39;Image folders&#39;).grid(row=3, column=1)
+        self.recording_box = Listbox(self.leftside_frame, [&#39;&#39;], self.on_recording_selection)
+        self.recording_box.grid(row=4, column=1, sticky=&#39;NSEW&#39;)
+
+        
+        # Add color explanation frame in the bottom
+        ColorExplanation(self.leftside_frame, [&#39;white&#39;, &#39;green&#39;, &#39;yellow&#39;],
+                [&#39;Movements measured&#39;, &#39;ROIs selected&#39;, &#39;No ROIs&#39;]).grid(row=5, column=0, sticky=&#39;NW&#39;)
+
+
+        self.default_button_bg = self.button_rois.cget(&#39;bg&#39;)
+        
+        self.plot_view = PlotView(self, self.core)
+        self.plot_view.grid(row=0, column=1, sticky=&#39;NSWE&#39;)
+
+
+    def _color_specimens(self, specimens):
+        &#39;&#39;&#39;
+        See _color_recording for reference.
+        &#39;&#39;&#39;
+        colors = []
+        for specimen in specimens:
+            analyser = self.core.get_manalyser(specimen, no_data_load=True)
+            color = &#39;yellow&#39;
+            if analyser.are_rois_selected():
+                color = &#39;green&#39;
+                if analyser.is_measured():
+                    color = &#39;white&#39;
+            
+            colors.append(color)
+        return colors
+
+
+
+    def copy_to_csv(self, formatted): 
+        with open(os.path.join(GONIODIR, &#39;clipboard.csv&#39;), &#39;w&#39;) as fp:
+            fp.write(formatted.replace(&#39;\t&#39;, &#39;,&#39;))
+
+
+    def specimen_traces_to_clipboard(self, mean=False):
+        &#39;&#39;&#39;
+        If mean==True, copy only the average trace.
+        Otherwise, copy all the traces of the fly.
+        &#39;&#39;&#39;
+
+        formatted = &#39;&#39; 
+        
+        # Always first clear clipboard; If something goes wrong, the user
+        # doesn&#39;t want to keep pasting old data thinking it&#39;s new.
+        self.root.clipboard_clear()
+
+        if self.core.selected_recording is None:
+            return None
+
+        data = []
+
+        self.root.clipboard_append(formatted)
+        
+        for pos_folder in self.core.analyser.list_imagefolders():
+            all_movements = self.core.analyser.get_movements_from_folder(pos_folder)
+            
+            for eye, movements in all_movements.items():
+                for repetition in range(len(movements)):
+                    mag = np.sqrt(np.array(movements[repetition][&#39;x&#39;])**2 + np.array(movements[repetition][&#39;y&#39;])**2)
+                    data.append(mag)
+
+        if mean:
+            data = [np.mean(data, axis=0)]
+        
+        for i_frame in range(len(data[0])):
+            formatted += &#39;\t&#39;.join([str(data[i_repeat][i_frame]) for i_repeat in range(len(data)) ]) + &#39;\n&#39;
+        
+        self.root.clipboard_append(formatted)
+        self.copy_to_csv(formatted)       
+
+
+     
+
+
+    def _color_recordings(self, recordings):
+        &#39;&#39;&#39;
+        Returns a list of colours, each corresponding to a recording
+        in recordings, based on wheter the ROIs have been selected or
+        movements measured for the recording.
+
+        yellow      No ROIs, no movements
+        green       ROIs, no movements
+        white       ROIs and movements
+        &#39;&#39;&#39;
+        colors = []
+        for recording in recordings:
+            color = &#39;yellow&#39;
+            if self.core.analyser.folder_has_rois(recording):
+                color = &#39;green&#39;
+                if self.core.analyser.folder_has_movements(recording):
+                    color = &#39;white&#39;
+            
+            colors.append(color)
+        return colors
+
+
+    def on_specimen_selection(self, specimen):
+        &#39;&#39;&#39;
+        When a selection happens in the specimens listbox.
+        &#39;&#39;&#39;
+        self.specimen_control_frame.config(text=specimen)
+
+        self.core.set_current_specimen(specimen)
+        
+
+        # Recordings box
+        recordings = self.core.analyser.list_imagefolders()
+        self.recording_box.enable()
+        self.recording_box.set_selections(recordings, colors=self._color_recordings(recordings))
+         
+        
+        # Logick to set buttons inactive/active and their texts
+        if self.core.analyser.are_rois_selected(): 
+  
+            self.button_rois.config(text=&#39;Reselect ROIs&#39;)
+            self.button_rois.config(bg=self.default_button_bg)
+            
+            self.button_measure.config(state=tk.NORMAL)
+            
+            self.button_one_roi.config(state=tk.NORMAL)
+            
+            # Enable image_folder buttons
+            for button in self.buttons_frame_3.get_buttons():
+                button.config(state=tk.NORMAL)
+
+            if self.core.analyser.is_measured():
+                self.button_measure.config(text=&#39;Remeasure movement&#39;)
+                self.button_measure.config(bg=self.default_button_bg)
+            else:
+                self.button_measure.config(text=&#39;Measure movement&#39;)
+                self.button_measure.config(bg=&#39;green&#39;)
+        else:
+            #self.recording_box.disable()
+
+            self.button_rois.config(text=&#39;Select ROIs&#39;)
+            self.button_rois.config(bg=&#39;yellow&#39;)
+
+            self.button_measure.config(state=tk.DISABLED)
+            self.button_measure.config(text=&#39;Measure movement&#39;)
+            self.button_measure.config(bg=self.default_button_bg)
+
+            self.button_one_roi.config(state=tk.DISABLED)
+            
+            # Disable image_folder buttons
+            for button in self.buttons_frame_3.get_buttons():
+                button.config(state=tk.DISABLED)
+
+
+
+        if self.core.analyser.are_rois_selected():
+            self.core.analyser.load_ROIs()
+
+        # Loading cached analyses and setting the recordings listbox
+
+        if self.core.analyser.is_measured():
+            self.core.analyser.load_analysed_movements()
+            #self.recording_box.enable()
+            
+        
+        N_rois = self.core.analyser.count_roi_selected_folders()
+        N_image_folders = len(self.core.analyser.list_imagefolders())
+        self.status_rois.config(text=&#39;ROIs selected {}/{}&#39;.format(N_rois, N_image_folders))
+        
+        try:
+            self.correction = self.core.analyser.get_antenna_level_correction()
+        except:
+            self.correction = False
+        if self.correction is not False:
+            self.status_antenna_level.config(text=&#39;Zero corrected, {:.2f} degrees&#39;.format(self.correction))
+        else:
+            self.status_antenna_level.config(text=&#39;Zero corrected FALSE&#39;)
+
+        self.status_active_analysis.config(text=&#39;Active analysis: {}&#39;.format(self.core.analyser.active_analysis))
+
+        
+        # FIXME Instead of destroyign tickbox, make changes to tk_steroids
+        # so that the selections can be reset
+        self.tickbox_analyses.grid_forget()
+        self.tickbox_analyses.destroy()
+        self.tickbox_analyses = TickboxFrame(self.specimen_control_frame, self.core.analyser.list_analyses(),
+                defaults=[self.core.analyser.active_analysis == an for an in self.core.analyser.list_analyses()],
+                ncols=4, callback=lambda: self.update_plot(None))
+        self.tickbox_analyses.grid(row=5, column=0, sticky=&#39;W&#39;)
+
+        self.button_rois.config(state=tk.NORMAL)
+
+
+
+    def on_recording_selection(self, selected_recording):
+        &#39;&#39;&#39;
+        When a selection happens in the recordings listbox.
+        
+        selected_recording      Name of the recording. If &#39;current&#39;, keeps the current
+        &#39;&#39;&#39;
+        if selected_recording == &#39;current&#39;:
+            selected_recording = self.core.selected_recording
+        else:
+            self.core.set_selected_recording(selected_recording)
+
+        
+        print(self.core.analyser.get_recording_time(selected_recording))
+        
+        angles = [list(angles_from_fn(selected_recording))]
+        to_degrees(angles)
+        horizontal, vertical = angles[0]
+        self.status_horizontal.config(text=&#39;Horizontal angle {:.2f} degrees&#39;.format(horizontal))
+        self.status_vertical.config(text=&#39;Vertical angle {:.2f} degrees&#39;.format(vertical))
+        
+
+        # Plotting only the view we have currently open
+        self.plot_view.update_plot()
+        
+
+
+
+    def update_specimen(self, changed_specimens=False):
+        &#39;&#39;&#39;
+        Updates GUI colors, button states etc. to right values.
+        
+        Call this if there has been changes to specimens/image_folders by an
+        external process or similar.
+        &#39;&#39;&#39;        
+        if changed_specimens:
+            specimens = self.core.list_specimens()
+            self.specimen_box.set_selections(specimens, self._color_specimens(specimens))
+
+        if self.core.current_specimen is not None:
+            self.on_specimen_selection(self.core.current_specimen)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioanalysis.tkgui.examine.ExamineView.copy_to_csv"><code class="name flex">
+<span>def <span class="ident">copy_to_csv</span></span>(<span>self, formatted)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.ExamineView.on_recording_selection"><code class="name flex">
+<span>def <span class="ident">on_recording_selection</span></span>(<span>self, selected_recording)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>When a selection happens in the recordings listbox.</p>
+<p>selected_recording
+Name of the recording. If 'current', keeps the current</p></div>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.ExamineView.on_specimen_selection"><code class="name flex">
+<span>def <span class="ident">on_specimen_selection</span></span>(<span>self, specimen)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>When a selection happens in the specimens listbox.</p></div>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.ExamineView.specimen_traces_to_clipboard"><code class="name flex">
+<span>def <span class="ident">specimen_traces_to_clipboard</span></span>(<span>self, mean=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>If mean==True, copy only the average trace.
+Otherwise, copy all the traces of the fly.</p></div>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.ExamineView.update_specimen"><code class="name flex">
+<span>def <span class="ident">update_specimen</span></span>(<span>self, changed_specimens=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Updates GUI colors, button states etc. to right values.</p>
+<p>Call this if there has been changes to specimens/image_folders by an
+external process or similar.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.PlotView"><code class="flex name class">
+<span>class <span class="ident">PlotView</span></span>
+<span>(</span><span>examine, core)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The plot showing part of the examine view (the old rightside_frame).</p>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PlotView(tk.Frame):
+    &#39;&#39;&#39;The plot showing part of the examine view (the old rightside_frame).
+    &#39;&#39;&#39;
+    def __init__(self, examine, core):
+
+        tk.Frame.__init__(self, examine)
+        self.examine = examine
+        self.core = core
+
+        tab_kwargs = [{}, {}, {}, {&#39;projection&#39;: &#39;3d&#39;}]
+        tab_names = [&#39;ROI&#39;, &#39;Displacement&#39;, &#39;XY&#39;, &#39;3D&#39;]
+        canvas_constructors = [lambda parent, kwargs=kwargs: CanvasPlotter(parent, visibility_button=False, **kwargs) for kwargs in tab_kwargs]
+        self.tabs = Tabs(self, tab_names, canvas_constructors,
+                on_select_callback=self.update_plot)
+        
+        self.tabs.grid(row=0, column=0, sticky=&#39;NWES&#39;)
+
+
+        # Make canvas plotter to stretch
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+
+
+        self.canvases = self.tabs.get_elements()
+        
+        # Controls for displacement plot (means etc)
+        displacementplot_options, displacementplot_defaults = inspect_booleans(
+                plot_1d_magnitude, exclude_keywords=[&#39;mean_imagefolders&#39;])
+        self.displacement_ticks = TickboxFrame(self.canvases[1], displacementplot_options,
+                defaults=displacementplot_defaults, callback=lambda:self.update_plot(1))
+        self.displacement_ticks.grid()
+
+        xyplot_options, xyplot_defaults = inspect_booleans(
+                plot_xy_trajectory)
+        self.xy_ticks = TickboxFrame(self.canvases[2], xyplot_options,
+                defaults=xyplot_defaults, callback=lambda:self.update_plot(2))
+        self.xy_ticks.grid()
+
+
+
+        # Controls for the vector plot
+        # Controls for displacement plot (means etc)
+        vectorplot_options, vectorplot_defaults = inspect_booleans(
+                plot_3d_vectormap, exclude_keywords=[])
+        self.vectorplot_ticks = TickboxFrame(self.canvases[3], vectorplot_options,
+                defaults=vectorplot_defaults, callback=lambda:self.update_plot(3))
+        self.vectorplot_ticks.grid()
+        
+        tk.Button(self.canvases[3], text=&#39;Save animation&#39;, command=self.save_3d_animation).grid()
+
+
+
+        self.plotter = RecordingPlotter(self.core)
+                
+        # Add buttons for selecting single repeats from a recording
+        self.repetition_selector = RepetitionSelector(self, self.plotter, self.core,
+                update_command=lambda: self.examine.on_recording_selection(&#39;current&#39;))
+        self.repetition_selector.grid(row=1, column=0)
+        
+
+        tk.Button(self.repetition_selector, text=&#39;Copy data&#39;,
+                command=self.copy_to_clipboard).grid(row=0, column=5)
+
+        tk.Button(self.repetition_selector, text=&#39;Save view...&#39;,
+                command=self.save_view).grid(row=0, column=6)
+
+    
+    def update_plot(self, i_plot=None):
+        &#39;&#39;&#39;
+        i_plot : int or None
+            Index of the plot (from 0 to N-1 tabs) or None just to update the current open tab.
+        &#39;&#39;&#39;
+        if self.core.selected_recording is None:
+            return None
+        
+        if i_plot is None:
+            i_plot = self.tabs.i_current
+
+        fig, ax = self.canvases[i_plot].get_figax()
+
+        if i_plot == 0:
+            self.plotter.ROI(self.canvases[i_plot])
+        else:
+            
+            ax.clear()
+
+            remember_analysis = self.core.analyser.active_analysis
+
+            for analysis in [name for name, state in self.examine.tickbox_analyses.states.items() if state == True]:
+                
+                self.core.analyser.active_analysis = analysis
+
+                if i_plot == 1:
+                    self.plotter.magnitude(ax, **self.displacement_ticks.states)
+                elif i_plot == 2:  
+                    self.plotter.xy(ax, **self.xy_ticks.states) 
+                elif i_plot == 3:
+                    self.plotter.vectormap(ax, **self.vectorplot_ticks.states)
+            
+            self.core.active_analysis = remember_analysis
+
+
+        self.canvases[i_plot].update()
+        
+        self.repetition_selector.update_text()
+
+
+    def copy_to_clipboard(self, force_i_tab=None):
+        &#39;&#39;&#39;
+        Copies data currently visible on theopen plotter tab to the clipboard.
+        
+        force_i_tab         Copy from the specified tab index, instead of
+                            the currently opened tab
+        &#39;&#39;&#39;
+        formatted = &#39;&#39;
+        
+        # Always first clear clipboard; If something goes wrong, the user
+        # doesn&#39;t want to keep pasting old data thinking it&#39;s new.
+        self.examine.root.clipboard_clear()
+        
+        if self.core.selected_recording is None:
+            return None
+
+        if force_i_tab is not None:
+            i_tab = int(force_i_tab)
+        else:
+            i_tab = self.tabs.i_current
+        
+        # Make sure we have the correct data in the plot by reissuing
+        # the plotting command
+        self.update_plot(i_tab)
+        
+        # Select data based on where we want to copy
+        if i_tab == 0:
+            data = self.plotter.image
+        elif i_tab == 1:
+            data = self.plotter.magnitudes
+        elif i_tab == 2:
+            data = self.plotter.xys
+            data = list(itertools.chain(*data))
+        elif i_tab == 3:
+            raise NotImplementedError(&#39;Cannot yet cliboard vectormap data&#39;)
+
+        # Format the data for tkinter clipboard copy
+        for i_frame in range(len(data[0])):
+            formatted += &#39;\t&#39;.join([str(data[i_repeat][i_frame]) for i_repeat in range(len(data)) ]) + &#39;\n&#39;
+        
+        self.examine.root.clipboard_append(formatted)
+        self.examine.copy_to_csv(formatted)
+
+
+    def save_view(self):
+        &#39;&#39;&#39;
+        Launches a save dialog for the current plotter view.
+        &#39;&#39;&#39;
+        fig, ax = self.canvases[self.tabs.i_current].get_figax()
+        
+        dformats = fig.canvas.get_supported_filetypes()
+        formats = [(value, &#39;*.&#39;+key) for key, value in sorted(dformats.items())]
+        
+        # Make png first
+        if &#39;png&#39; in dformats.keys():
+            i = formats.index((dformats[&#39;png&#39;], &#39;*.png&#39;))
+            formats.insert(0, formats.pop(i))
+
+        fn = filedialog.asksaveasfilename(title=&#39;Save current view&#39;,
+                initialdir=self.examine.last_saveplotter_dir,
+                filetypes=formats)
+
+        if fn:
+            self.last_saveplotter_dir = os.path.dirname(fn)
+
+            fig.savefig(fn, dpi=1200)
+        
+
+    def save_3d_animation(self):
+        
+        def callback():
+            self.canvases[3].update()
+        
+        fig, ax = self.canvases[3].get_figax()
+        save_3d_animation(self.core.analyser, ax=ax, interframe_callback=callback)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioanalysis.tkgui.examine.PlotView.copy_to_clipboard"><code class="name flex">
+<span>def <span class="ident">copy_to_clipboard</span></span>(<span>self, force_i_tab=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Copies data currently visible on theopen plotter tab to the clipboard.</p>
+<p>force_i_tab
+Copy from the specified tab index, instead of
+the currently opened tab</p></div>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.PlotView.save_3d_animation"><code class="name flex">
+<span>def <span class="ident">save_3d_animation</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.PlotView.save_view"><code class="name flex">
+<span>def <span class="ident">save_view</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Launches a save dialog for the current plotter view.</p></div>
+</dd>
+<dt id="gonioanalysis.tkgui.examine.PlotView.update_plot"><code class="name flex">
+<span>def <span class="ident">update_plot</span></span>(<span>self, i_plot=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>i_plot : int or None
+Index of the plot (from 0 to N-1 tabs) or None just to update the current open tab.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioanalysis.tkgui" href="index.html">gonioanalysis.tkgui</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gonioanalysis.tkgui.examine.main" href="#gonioanalysis.tkgui.examine.main">main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gonioanalysis.tkgui.examine.ExamineMenubar" href="#gonioanalysis.tkgui.examine.ExamineMenubar">ExamineMenubar</a></code></h4>
+</li>
+<li>
+<h4><code><a title="gonioanalysis.tkgui.examine.ExamineView" href="#gonioanalysis.tkgui.examine.ExamineView">ExamineView</a></code></h4>
+<ul class="">
+<li><code><a title="gonioanalysis.tkgui.examine.ExamineView.copy_to_csv" href="#gonioanalysis.tkgui.examine.ExamineView.copy_to_csv">copy_to_csv</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.examine.ExamineView.on_recording_selection" href="#gonioanalysis.tkgui.examine.ExamineView.on_recording_selection">on_recording_selection</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.examine.ExamineView.on_specimen_selection" href="#gonioanalysis.tkgui.examine.ExamineView.on_specimen_selection">on_specimen_selection</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.examine.ExamineView.specimen_traces_to_clipboard" href="#gonioanalysis.tkgui.examine.ExamineView.specimen_traces_to_clipboard">specimen_traces_to_clipboard</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.examine.ExamineView.update_specimen" href="#gonioanalysis.tkgui.examine.ExamineView.update_specimen">update_specimen</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gonioanalysis.tkgui.examine.PlotView" href="#gonioanalysis.tkgui.examine.PlotView">PlotView</a></code></h4>
+<ul class="">
+<li><code><a title="gonioanalysis.tkgui.examine.PlotView.copy_to_clipboard" href="#gonioanalysis.tkgui.examine.PlotView.copy_to_clipboard">copy_to_clipboard</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.examine.PlotView.save_3d_animation" href="#gonioanalysis.tkgui.examine.PlotView.save_3d_animation">save_3d_animation</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.examine.PlotView.save_view" href="#gonioanalysis.tkgui.examine.PlotView.save_view">save_view</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.examine.PlotView.update_plot" href="#gonioanalysis.tkgui.examine.PlotView.update_plot">update_plot</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

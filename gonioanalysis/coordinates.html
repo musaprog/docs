@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioanalysis.coordinates API documentation</title>
+<meta name="description" content="Working in 3D space">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioanalysis.coordinates</code></h1>
+</header>
+<section id="section-intro">
+<p>Working in 3D space</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gonioanalysis.coordinates.camera2Fly"><code class="name flex">
+<span>def <span class="ident">camera2Fly</span></span>(<span>horizontal, vertical, radius=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>With the given goniometer positions, calculates camera's position
+in fly's cartesian coordinate system.</p>
+<p>Input in degrees</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.camera_rotation"><code class="name flex">
+<span>def <span class="ident">camera_rotation</span></span>(<span>horizontal, vertical, return_degrees=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Camera's rotation</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.camvec2Fly"><code class="name flex">
+<span>def <span class="ident">camvec2Fly</span></span>(<span>imx, imy, horizontal, vertical, radius=1, normalize=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns 3D vector endpoints.</p>
+<p>normalize
+If true, return unit length vectors</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.distance"><code class="name flex">
+<span>def <span class="ident">distance</span></span>(<span>a, b)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculates distance between two points in 3D cartesian space.
+a,b
+(x,y,z)</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.force_to_tplane"><code class="name flex">
+<span>def <span class="ident">force_to_tplane</span></span>(<span>P0, P1, radius=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Forces a vector (P0-P1) on a tangent plane of a sphere but
+retaining the vector's length</p>
+<p>P0 is the point on the sphere (and the tangent plane)
+P1 is the point off the tangent plane</p>
+<p>Returns P2, point on the tangent plane and the line connecting
+the sphere centre point to the P1.</p>
+<p>Notice DOES NOT RETURN VEC BUT P2 (vec=P2-P0)</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.get_rotation_matrix"><code class="name flex">
+<span>def <span class="ident">get_rotation_matrix</span></span>(<span>axis, rot)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns an elementar rotation matrix.</p>
+<p>axis
+'x', 'y', or 'z'
+rot
+rotation in radians</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.mean_vector"><code class="name flex">
+<span>def <span class="ident">mean_vector</span></span>(<span>point, vectors)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Average vectors and return a vector at point point.</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.nearest_neighbour"><code class="name flex">
+<span>def <span class="ident">nearest_neighbour</span></span>(<span>point_A, points_B, max_distance=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return the nearest point to the point_A from points_B.</p>
+<p>point_A
+1D np.array [x0, y0, z0]
+points_B
+2D np.array [ [x1,y1,z1], [z2,y2,z2], &hellip; ]</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.normalize"><code class="name flex">
+<span>def <span class="ident">normalize</span></span>(<span>P0, P1, scale=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Normalize a vector</p>
+<p>P0
+Vector start point
+P1
+Vector end point</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.optimal_sampling"><code class="name flex">
+<span>def <span class="ident">optimal_sampling</span></span>(<span>horizontals, verticals)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Determine optimal way to sample using two orthogonal goniometers.</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.rotate_about_x"><code class="name flex">
+<span>def <span class="ident">rotate_about_x</span></span>(<span>point, degs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Rotate a point in 3D space along the first axis (x-axis).</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.rotate_along_arbitrary"><code class="name flex">
+<span>def <span class="ident">rotate_along_arbitrary</span></span>(<span>P1, points, rot)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Rotate along arbitrary axis.</p>
+<p>P0 is at origin.</p>
+<p>P0 and P1 specify the rotation axis</p>
+<p>Implemented from here:
+<a href="http://paulbourke.net/geometry/rotate/">http://paulbourke.net/geometry/rotate/</a></p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>P1</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>&nbsp;</dd>
+<dt><strong><code>points</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>&nbsp;</dd>
+<dt><strong><code>rot</code></strong> :&ensp;<code>float</code> or <code>int</code></dt>
+<dd>Rotation in radians (not degres!)</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.coordinates.rotate_points"><code class="name flex">
+<span>def <span class="ident">rotate_points</span></span>(<span>points, yaw, pitch, roll)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Just as rotate_vectors but only for points.</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>yaw</code></strong>, <strong><code>pitch</code></strong>, <strong><code>roll</code></strong> :&ensp;<code>float</code> or <code>int</code></dt>
+<dd>Rotations in radians (not degrees!)</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.coordinates.rotate_vectors"><code class="name flex">
+<span>def <span class="ident">rotate_vectors</span></span>(<span>points, vectors, yaw, pitch, roll)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>In the beginning,
+it is assumed that
+yaw
+rotation along Z
+pitch
+rotation along X
+roll
+rotation along Y</p>
+<p>ie that the fly head is at zero rotation, antenna roots pointing towards
+positive y-axis.</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.test1_camera_rotation"><code class="name flex">
+<span>def <span class="ident">test1_camera_rotation</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.coordinates.test2_camera_rotation"><code class="name flex">
+<span>def <span class="ident">test2_camera_rotation</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.coordinates.test_camvec2Fly"><code class="name flex">
+<span>def <span class="ident">test_camvec2Fly</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.coordinates.test_imx"><code class="name flex">
+<span>def <span class="ident">test_imx</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.coordinates.test_rotate_vectors"><code class="name flex">
+<span>def <span class="ident">test_rotate_vectors</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.coordinates.to_spherical"><code class="name flex">
+<span>def <span class="ident">to_spherical</span></span>(<span>x, y, z, return_degrees=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Transform to spherical coordinates (ISO)</p>
+<p>return_degrees
+If true, return angles in degrees instead of radians</p>
+<p>Returns: r, phi, theta</p></div>
+</dd>
+<dt id="gonioanalysis.coordinates.where_vertical_between"><code class="name flex">
+<span>def <span class="ident">where_vertical_between</span></span>(<span>points_3d, lower=None, upper=None, reverse=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>'Returns a boolean array based on points' vertical angle.</p>
+<p>Takes in 3D points and returns an 1D True/False array of length points_3d</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>points_3d</code></strong> :&ensp;<code>sequence</code></dt>
+<dd>A sequence of (x,y,z) points</dd>
+<dt><strong><code>lower</code></strong> :&ensp;<code>float</code></dt>
+<dd>Lower vertical angle degree in degrees</dd>
+<dt><strong><code>upper</code></strong> :&ensp;<code>float</code></dt>
+<dd>&nbsp;</dd>
+<dt><strong><code>reverse</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True, inverses the returned array (True -&gt; False and vice versa).</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>booleans</code></strong> :&ensp;<code>ndarray</code></dt>
+<dd>1D True/False array</dd>
+</dl></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioanalysis" href="index.html">gonioanalysis</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gonioanalysis.coordinates.camera2Fly" href="#gonioanalysis.coordinates.camera2Fly">camera2Fly</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.camera_rotation" href="#gonioanalysis.coordinates.camera_rotation">camera_rotation</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.camvec2Fly" href="#gonioanalysis.coordinates.camvec2Fly">camvec2Fly</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.distance" href="#gonioanalysis.coordinates.distance">distance</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.force_to_tplane" href="#gonioanalysis.coordinates.force_to_tplane">force_to_tplane</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.get_rotation_matrix" href="#gonioanalysis.coordinates.get_rotation_matrix">get_rotation_matrix</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.mean_vector" href="#gonioanalysis.coordinates.mean_vector">mean_vector</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.nearest_neighbour" href="#gonioanalysis.coordinates.nearest_neighbour">nearest_neighbour</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.normalize" href="#gonioanalysis.coordinates.normalize">normalize</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.optimal_sampling" href="#gonioanalysis.coordinates.optimal_sampling">optimal_sampling</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.rotate_about_x" href="#gonioanalysis.coordinates.rotate_about_x">rotate_about_x</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.rotate_along_arbitrary" href="#gonioanalysis.coordinates.rotate_along_arbitrary">rotate_along_arbitrary</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.rotate_points" href="#gonioanalysis.coordinates.rotate_points">rotate_points</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.rotate_vectors" href="#gonioanalysis.coordinates.rotate_vectors">rotate_vectors</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.test1_camera_rotation" href="#gonioanalysis.coordinates.test1_camera_rotation">test1_camera_rotation</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.test2_camera_rotation" href="#gonioanalysis.coordinates.test2_camera_rotation">test2_camera_rotation</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.test_camvec2Fly" href="#gonioanalysis.coordinates.test_camvec2Fly">test_camvec2Fly</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.test_imx" href="#gonioanalysis.coordinates.test_imx">test_imx</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.test_rotate_vectors" href="#gonioanalysis.coordinates.test_rotate_vectors">test_rotate_vectors</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.to_spherical" href="#gonioanalysis.coordinates.to_spherical">to_spherical</a></code></li>
+<li><code><a title="gonioanalysis.coordinates.where_vertical_between" href="#gonioanalysis.coordinates.where_vertical_between">where_vertical_between</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioanalysis.drosom.loading API documentation</title>
+<meta name="description" content="Functions related to DrosoM data loading …">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioanalysis.drosom.loading</code></h1>
+</header>
+<section id="section-intro">
+<p>Functions related to DrosoM data loading.</p>
+<h2 id="module-level-variables">Module Level Variables</h2>
+<p>REPETITION_INDICATOR : str
+In filenames, the text preceding the repetition value
+POSITION_INDICATOR : str
+In filenames, the text preceding the imaging location value
+IMAGE_NAME_EXTENSIONS : str
+File name extensions that are treated as image files.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gonioanalysis.drosom.loading.angleFromFn"><code class="name flex">
+<span>def <span class="ident">angleFromFn</span></span>(<span>fn)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the horizontal and vertical angles from a given filename
+The filename must be IMSOFT formatted as
+im_pos(-30, 170)_rep0_0.tiff</p>
+<p>fn
+Filename, from which to read the angles</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.loading.angles_from_fn"><code class="name flex">
+<span>def <span class="ident">angles_from_fn</span></span>(<span>fn, prefix='pos')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Takes in a filename that somewhere contains string "pos(hor, ver)",
+for example "pos(-30, 170)" and returns tuple (-30, 170)</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>angle</code></strong> :&ensp;<code>tuple</code> of <code>ints</code></dt>
+<dd>Rotation stage values or (0, 0) if the rotation was not found.</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.drosom.loading.arange_fns"><code class="name flex">
+<span>def <span class="ident">arange_fns</span></span>(<span>fns)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Arange filenames based on REPETITION_INDICATOR and POSITION_INDICATOR
+in their time order (repeat 1, image1,2,3,4, repeat 2, image1,2,3,4, &hellip;).</p>
+<p>If no indicators are found in the filenames then the ordering is
+at least alphabetical.</p></div>
+</dd>
+<dt id="gonioanalysis.drosom.loading.load_data"><code class="name flex">
+<span>def <span class="ident">load_data</span></span>(<span>drosom_folder)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loads GonioImsoft imaging data filenames into a dictionary.</p>
+<p>The data has to be saved according to the folder hierarchy:</p>
+<pre><code>LEVEL   Content             Examples
+1       specimen_folder     "DrosoM2"
+2       image_folder        "pos(0, 0)" "pos(20, 20)") "pos(0, 10)_somesuffixhere"
+3       image files         "im_pos(0, 0)_rep0_stack.tiff", "im_pos(0, 0)_rep0_cam2_stack.tiff"
+</code></pre>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>drosom_folder</code></strong> :&ensp;<code>string</code></dt>
+<dd>Path to the specimen folder that contains the image folders.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>stacks_dictionary</code></strong> :&ensp;<code>dict</code></dt>
+<dd>
+<p>Contains the str((horizontal, pitch)) as keys and a list of image stacks
+as values.</p>
+<pre><code>stacks_dictionary = {"(hor1, pitch1): [[stack_rep1], [stack_rep2], ...]"},
+where stack_rep1 = [image1_fn, image2_fn, ...].
+</code></pre>
+<p>Notice 1: The horizontal and pitch angles in the keys are in
+rotary encoder steps (not degrees).</p>
+</dd>
+</dl></div>
+</dd>
+<dt id="gonioanalysis.drosom.loading.split_to_repeats"><code class="name flex">
+<span>def <span class="ident">split_to_repeats</span></span>(<span>fns)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Split a list of filenames into repeats (sublists) based on the
+REPETITION_INDICATOR</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>fns</code></strong> :&ensp;<code>list</code></dt>
+<dd>1D sequence of filenames</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>splitted_fns</code></strong> :&ensp;<code>list</code></dt>
+<dd>A list where each item is a sublist of filenames (or empty list
+if there were no filenames for that repeat)</dd>
+</dl></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul>
+<li><a href="#module-level-variables">MODULE LEVEL VARIABLES</a></li>
+</ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioanalysis.drosom" href="index.html">gonioanalysis.drosom</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gonioanalysis.drosom.loading.angleFromFn" href="#gonioanalysis.drosom.loading.angleFromFn">angleFromFn</a></code></li>
+<li><code><a title="gonioanalysis.drosom.loading.angles_from_fn" href="#gonioanalysis.drosom.loading.angles_from_fn">angles_from_fn</a></code></li>
+<li><code><a title="gonioanalysis.drosom.loading.arange_fns" href="#gonioanalysis.drosom.loading.arange_fns">arange_fns</a></code></li>
+<li><code><a title="gonioanalysis.drosom.loading.load_data" href="#gonioanalysis.drosom.loading.load_data">load_data</a></code></li>
+<li><code><a title="gonioanalysis.drosom.loading.split_to_repeats" href="#gonioanalysis.drosom.loading.split_to_repeats">split_to_repeats</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

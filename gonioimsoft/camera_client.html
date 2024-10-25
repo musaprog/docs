@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioimsoft.camera_client API documentation</title>
+<meta name="description" content="Client code for the camera server/client division.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioimsoft.camera_client</code></h1>
+</header>
+<section id="section-intro">
+<p>Client code for the camera server/client division.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gonioimsoft.camera_client.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gonioimsoft.camera_client.CameraClient"><code class="flex name class">
+<span>class <span class="ident">CameraClient</span></span>
+<span>(</span><span>host=None, port=None, running_index=0)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Local part of the camera server/client division.</p>
+<p>CameraClient runs on the same PC as GonioImsoft and it connects to
+a CameraServer instance (over network sockets, so using IP addressess).
+It works as a middleman.</p>
+<p>No big data is transmitted over the connection, only commands (strings).
+It is the CameraServer's job to store the images, and display them on
+screen (livefeed) if needed.</p>
+<p>See also clientbase.py and camera_server.py for more information.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>modified_settings</code></strong> :&ensp;<code>set</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CameraClient(ClientBase):
+    &#39;&#39;&#39;Local part of the camera server/client division.
+
+    CameraClient runs on the same PC as GonioImsoft and it connects to
+    a CameraServer instance (over network sockets, so using IP addressess).
+    It works as a middleman.
+    
+    No big data is transmitted over the connection, only commands (strings).
+    It is the CameraServer&#39;s job to store the images, and display them on
+    screen (livefeed) if needed.
+    
+    See also clientbase.py and camera_server.py for more information.
+
+    Attributes
+    ----------
+    modified_settings : set
+    &#39;&#39;&#39;
+
+
+    def __init__(self, host=None, port=None, running_index=0):
+        
+        if host is None:
+            host = SERVER_HOSTNAME
+        if port is None:
+            port = int(CAMERA_PORT) + int(running_index)
+        super().__init__(host, port)
+
+        self.modified_settings = set()
+        self._roi = None
+
+
+    def acquireSeries(self, exposure_time, image_interval, N_frames, label, subdir):
+        &#39;&#39;&#39;
+        Acquire a time series of images.
+        For more see camera_server.py.
+
+        Notice that it is important to give a new label every time
+        or to change data savedir, otherwise images may be written over
+        each other (or error raised).
+        &#39;&#39;&#39;
+        function = &#39;acquireSeries;&#39;
+        parameters = &#34;{}:{}:{}:{}:{}&#34;.format(exposure_time, image_interval, N_frames, label, subdir)
+        message = function+parameters
+        
+        self.send_command(message)
+
+
+    def acquireSingle(self, save, subdir):
+        self.send_command(&#39;acquireSingle;0.1:{}:{}&#39;.format(str(save), subdir))
+    
+    def saveDescription(self, filename, string):
+        self.send_command(&#39;saveDescription;&#39;+filename+&#39;:&#39;+string)
+
+    def set_roi(self, roi):
+        self._roi = roi
+        self.send_command(&#39;set_roi;{}:{}:{}:{}&#39;.format(*roi))
+
+    def set_save_stack(self, boolean):
+        self.send_command(&#39;set_save_stack;{}&#39;.format(boolean))
+
+
+    def get_cameras(self):
+        &#39;&#39;&#39;Lists available cameras (their names) on the server.
+        &#39;&#39;&#39;
+        return self.send_command(&#39;get_cameras&#39;, listen=True)
+
+    
+    def get_camera(self):
+        &#39;&#39;&#39;Returns a name describing the current camera device.
+        &#39;&#39;&#39;
+        return self.send_command(&#39;get_camera&#39;, listen=True)
+
+
+    def set_camera(self, name):
+        &#39;&#39;&#39;Sets what camera to use on the server.
+        &#39;&#39;&#39;
+        self.send_command(f&#39;set_camera;{name}&#39;)
+
+
+    def get_settings(self):
+        &#39;&#39;&#39;Retrieves available settings of the camera device.
+        &#39;&#39;&#39;
+        return self.send_command(&#39;get_settings&#39;, listen=True)
+    
+    def get_setting_type(self, setting_name):
+        &#39;&#39;&#39;Returns the type of the setting.
+        One of the following: &#34;string&#34;, &#34;float&#34; or &#34;integer&#34;
+        &#39;&#39;&#39;
+        return self.send_command(f&#39;get_setting_type;{setting_name}&#39;,
+                                listen=True)
+
+    def get_setting(self, setting_name):
+        &#39;&#39;&#39;Returns the current value of the setting as a string.
+        &#39;&#39;&#39;
+        return self.send_command(f&#39;get_setting;{setting_name}&#39;,
+                                listen=True)
+    
+    def set_setting(self, setting_name, value):
+        &#39;&#39;&#39;Sets the specified setting to the specified value.
+        &#39;&#39;&#39;
+        self.send_command(f&#39;set_setting;{setting_name}:{value}&#39;)
+        self.modified_settings.add(setting_name)
+
+
+    def save_state(self, label, modified_only=True):
+        &#39;&#39;&#39;Acquires the current camera state and saves it
+        
+        modified_only : bool
+            If True, save only those settings that have been edited
+            by the user during this session.
+        &#39;&#39;&#39;
+        state = {}
+        state[&#39;settings&#39;] = {}
+        
+        # Save camera device settings
+        for setting in self.get_settings():
+            if modified_only and setting not in self.modified_settings:
+                continue
+            state[&#39;settings&#39;][setting] = self.get_setting(setting)
+
+        savedir = os.path.join(SAVEDIR, self.get_camera())
+        os.makedirs(savedir, exist_ok=True)
+
+        with open(os.path.join(savedir, f&#39;{label}.json&#39;), &#39;w&#39;) as fp:
+            json.dump(state, fp)
+
+
+    def load_state(self, label):
+        &#39;&#39;&#39;Loads a previously saved camera state.
+        &#39;&#39;&#39;
+
+        savedir = os.path.join(SAVEDIR, self.get_camera())
+        fn = os.path.join(savedir, f&#39;{label}.json&#39;)
+        
+        if not os.path.exists(fn):
+            raise FileNotFoundError(f&#39;{fn} does not exist&#39;)
+
+        with open(fn, &#39;r&#39;) as fp:
+            state = json.load(fp)
+
+        for setting, value in state[&#39;settings&#39;].items():
+            self.set_setting(setting, value)
+
+
+    def list_states(self):
+        &#39;&#39;&#39;Lists saved states available for the current camera.
+        &#39;&#39;&#39;
+        savedir = os.path.join(SAVEDIR, self.get_camera())
+        if not os.path.isdir(savedir):
+            return []
+        return [fn.removesuffix(&#39;.json&#39;) for fn in os.listdir(savedir) if fn.endswith(&#39;.json&#39;)]
+
+
+    def start_server(self):
+        super().start_server(&#39;camera&#39;)
+
+    def reboot(self):
+        &#39;&#39;&#39;Performs a &#34;reboot&#34; for the camera and restores settings.
+
+        Can be used as a &#34;dirty fix&#34; when the first image acqusition
+        works fine but the subsequent ones crash for unkown reasons.
+        &#39;&#39;&#39;
+        self.set_camera(self.get_camera())
+        self.load_state(&#39;previous&#39;)
+        if self._roi:
+            self.set_roi(self._roi)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="gonioimsoft.clientbase.ClientBase" href="clientbase.html#gonioimsoft.clientbase.ClientBase">ClientBase</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioimsoft.camera_client.CameraClient.acquireSeries"><code class="name flex">
+<span>def <span class="ident">acquireSeries</span></span>(<span>self, exposure_time, image_interval, N_frames, label, subdir)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Acquire a time series of images.
+For more see camera_server.py.</p>
+<p>Notice that it is important to give a new label every time
+or to change data savedir, otherwise images may be written over
+each other (or error raised).</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.acquireSingle"><code class="name flex">
+<span>def <span class="ident">acquireSingle</span></span>(<span>self, save, subdir)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.get_camera"><code class="name flex">
+<span>def <span class="ident">get_camera</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a name describing the current camera device.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.get_cameras"><code class="name flex">
+<span>def <span class="ident">get_cameras</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Lists available cameras (their names) on the server.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.get_setting"><code class="name flex">
+<span>def <span class="ident">get_setting</span></span>(<span>self, setting_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the current value of the setting as a string.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.get_setting_type"><code class="name flex">
+<span>def <span class="ident">get_setting_type</span></span>(<span>self, setting_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the type of the setting.
+One of the following: "string", "float" or "integer"</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.get_settings"><code class="name flex">
+<span>def <span class="ident">get_settings</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves available settings of the camera device.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.list_states"><code class="name flex">
+<span>def <span class="ident">list_states</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Lists saved states available for the current camera.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.load_state"><code class="name flex">
+<span>def <span class="ident">load_state</span></span>(<span>self, label)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loads a previously saved camera state.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.reboot"><code class="name flex">
+<span>def <span class="ident">reboot</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Performs a "reboot" for the camera and restores settings.</p>
+<p>Can be used as a "dirty fix" when the first image acqusition
+works fine but the subsequent ones crash for unkown reasons.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.saveDescription"><code class="name flex">
+<span>def <span class="ident">saveDescription</span></span>(<span>self, filename, string)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.save_state"><code class="name flex">
+<span>def <span class="ident">save_state</span></span>(<span>self, label, modified_only=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Acquires the current camera state and saves it</p>
+<p>modified_only : bool
+If True, save only those settings that have been edited
+by the user during this session.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.set_camera"><code class="name flex">
+<span>def <span class="ident">set_camera</span></span>(<span>self, name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets what camera to use on the server.</p></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.set_roi"><code class="name flex">
+<span>def <span class="ident">set_roi</span></span>(<span>self, roi)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.set_save_stack"><code class="name flex">
+<span>def <span class="ident">set_save_stack</span></span>(<span>self, boolean)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioimsoft.camera_client.CameraClient.set_setting"><code class="name flex">
+<span>def <span class="ident">set_setting</span></span>(<span>self, setting_name, value)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the specified setting to the specified value.</p></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="gonioimsoft.clientbase.ClientBase" href="clientbase.html#gonioimsoft.clientbase.ClientBase">ClientBase</a></b></code>:
+<ul class="hlist">
+<li><code><a title="gonioimsoft.clientbase.ClientBase.close_server" href="clientbase.html#gonioimsoft.clientbase.ClientBase.close_server">close_server</a></code></li>
+<li><code><a title="gonioimsoft.clientbase.ClientBase.is_server_running" href="clientbase.html#gonioimsoft.clientbase.ClientBase.is_server_running">is_server_running</a></code></li>
+<li><code><a title="gonioimsoft.clientbase.ClientBase.send_command" href="clientbase.html#gonioimsoft.clientbase.ClientBase.send_command">send_command</a></code></li>
+<li><code><a title="gonioimsoft.clientbase.ClientBase.set_save_directory" href="clientbase.html#gonioimsoft.clientbase.ClientBase.set_save_directory">set_save_directory</a></code></li>
+<li><code><a title="gonioimsoft.clientbase.ClientBase.start_server" href="clientbase.html#gonioimsoft.clientbase.ClientBase.start_server">start_server</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioimsoft" href="index.html">gonioimsoft</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gonioimsoft.camera_client.main" href="#gonioimsoft.camera_client.main">main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gonioimsoft.camera_client.CameraClient" href="#gonioimsoft.camera_client.CameraClient">CameraClient</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gonioimsoft.camera_client.CameraClient.acquireSeries" href="#gonioimsoft.camera_client.CameraClient.acquireSeries">acquireSeries</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.acquireSingle" href="#gonioimsoft.camera_client.CameraClient.acquireSingle">acquireSingle</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.get_camera" href="#gonioimsoft.camera_client.CameraClient.get_camera">get_camera</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.get_cameras" href="#gonioimsoft.camera_client.CameraClient.get_cameras">get_cameras</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.get_setting" href="#gonioimsoft.camera_client.CameraClient.get_setting">get_setting</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.get_setting_type" href="#gonioimsoft.camera_client.CameraClient.get_setting_type">get_setting_type</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.get_settings" href="#gonioimsoft.camera_client.CameraClient.get_settings">get_settings</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.list_states" href="#gonioimsoft.camera_client.CameraClient.list_states">list_states</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.load_state" href="#gonioimsoft.camera_client.CameraClient.load_state">load_state</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.reboot" href="#gonioimsoft.camera_client.CameraClient.reboot">reboot</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.saveDescription" href="#gonioimsoft.camera_client.CameraClient.saveDescription">saveDescription</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.save_state" href="#gonioimsoft.camera_client.CameraClient.save_state">save_state</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.set_camera" href="#gonioimsoft.camera_client.CameraClient.set_camera">set_camera</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.set_roi" href="#gonioimsoft.camera_client.CameraClient.set_roi">set_roi</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.set_save_stack" href="#gonioimsoft.camera_client.CameraClient.set_save_stack">set_save_stack</a></code></li>
+<li><code><a title="gonioimsoft.camera_client.CameraClient.set_setting" href="#gonioimsoft.camera_client.CameraClient.set_setting">set_setting</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

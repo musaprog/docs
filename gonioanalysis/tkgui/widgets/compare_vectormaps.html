@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>gonioanalysis.tkgui.widgets.compare_vectormaps API documentation</title>
+<meta name="description" content="Gonio-analysis tkinter GUI widgets.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gonioanalysis.tkgui.widgets.compare_vectormaps</code></h1>
+</header>
+<section id="section-intro">
+<p>Gonio-analysis tkinter GUI widgets.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps"><code class="flex name class">
+<span>class <span class="ident">CompareVectormaps</span></span>
+<span>(</span><span>tk_parent, core)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Widget to compare two vectormaps interactively to
+each other.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>tk_parent</code></strong> :&ensp;<code>object</code></dt>
+<dd>Parent widget</dd>
+<dt><strong><code>plot_functions</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of plot functions,
+default [plot_3d_vectormap, plot_3d_vectormap, plot_3d_differencemap]</dd>
+<dt><strong><code>canvases</code></strong> :&ensp;<code>list</code></dt>
+<dd>CanvasPlotter objects, canvas2 to show difference</dd>
+<dt><strong><code>tickbox_frames</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of tickbox frame objects</dd>
+<dt><strong><code>buttons</code></strong> :&ensp;<code>list</code></dt>
+<dd>Corresponding tk.Buttons under the canvases</dd>
+<dt><strong><code>analysers</code></strong> :&ensp;<code>list</code></dt>
+<dd>Analyser objects selected by the user (len == 2)</dd>
+</dl>
+<p>Construct a frame widget with the parent MASTER.</p>
+<p>Valid resource names: background, bd, bg, borderwidth, class,
+colormap, container, cursor, height, highlightbackground,
+highlightcolor, highlightthickness, relief, takefocus, visual, width.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CompareVectormaps(tk.Frame):
+    &#39;&#39;&#39;
+    Widget to compare two vectormaps interactively to
+    each other.
+
+    Attributes
+    ----------
+    tk_parent : object
+        Parent widget
+    plot_functions : list
+        List of plot functions,
+        default [plot_3d_vectormap, plot_3d_vectormap, plot_3d_differencemap]
+    canvases : list
+        CanvasPlotter objects, canvas2 to show difference
+    tickbox_frames : list
+        List of tickbox frame objects
+    buttons : list
+        Corresponding tk.Buttons under the canvases
+    analysers : list
+        Analyser objects selected by the user (len == 2)
+    &#39;&#39;&#39;
+
+
+    def __init__(self, tk_parent, core):
+        class FileMenu(MenuMaker):
+        
+            def __init__(self, main_widget, *args, **kwargs):
+                super().__init__(*args, **kwargs)
+                self.main_widget = main_widget
+            
+            def save_all_views(self):
+                self.main_widget.savefig()
+
+            def close_window(self):
+                self.main_widget.tk_parent.destroy()
+                
+        tk.Frame.__init__(self, tk_parent)
+        self.tk_parent = tk_parent
+        
+        self.core = core
+
+        self.plot_functions = [plot_3d_vectormap, plot_3d_vectormap,
+                plot_3d_differencemap]
+        self.canvases = []
+        self.tickbox_frames = []
+        self.buttons = []
+        self.analysers = [None, None]
+
+        self.grid_rowconfigure(0, weight=1)
+
+        axes = []
+        for i in range(3):
+            canvas = CanvasPlotter(self, projection=&#39;3d&#39;)
+            canvas.grid(row=3, column=i, sticky=&#39;NSWE&#39;)
+            self.canvases.append(canvas)
+
+            axes.append(canvas.ax)
+            axes[-1].elev = 15
+            axes[-1].azim = 60
+            
+            # Plot settings
+            if i in [0,1]:
+                cmd = lambda i=i: self.set_vectormap(i_canvas=i)
+            else:
+                cmd = self.plot_difference
+            options, defaults = inspect_booleans(self.plot_functions[i])
+            tickboxes = TickboxFrame(self, options, defaults=defaults,
+                    callback=cmd)
+            tickboxes.grid(row=4, column=i, sticky=&#39;NSWE&#39;)
+            self.tickbox_frames.append(tickboxes)
+
+            # Main buttons
+            if i in [0, 1]:
+                cmd = lambda i=i: self.select_specimens(i_canvas=i)
+                txt = &#39;Select specimens...&#39;
+            else:
+                cmd = self.plot_difference
+                txt = &#39;Compare&#39;
+
+            button = tk.Button(self, text=txt, command=cmd)
+            button.grid(row=45, column=i)
+            self.buttons.append(button)
+
+            self.grid_columnconfigure(i, weight=1)
+
+        
+        hors = [-80, -60, -50, -30, -15, 0, 30, 15, 50, 60, 80]
+        verts = hors
+        
+        hors = [(None, hor) for hor in hors]
+        verts = [(ver, None) for ver in verts]
+
+        for i, (name, rotations) in enumerate(zip([&#39;Horizontal&#39;, &#39;Vertical&#39;], [hors, verts])):
+            self.rotation_buttons = RotationButtons(self, axes, rotations,
+                    label=name+&#39; rotation&#39;, callback=self._update_canvases,
+                    rotation_offset=(0,90))
+            self.rotation_buttons.grid(row=i+1, column=0, columnspan=3)
+
+        self.menubar = tk.Menu()
+        self.filemenu = FileMenu(self, &#39;File&#39;)
+        self.filemenu._connect(self.menubar)
+        self.winfo_toplevel().config(menu=self.menubar)
+
+
+    def _update_canvases(self):
+        for i in range(3):
+            ax = self.canvases[i].ax
+            #if ax.dist != 8.5:
+            #    ax.dist = 8.5
+ 
+            self.canvases[i].update()
+
+    def select_specimens(self, i_canvas):
+        select_specimens(self.core, self.set_vectormap,
+                command_args=[i_canvas], return_manalysers=True,
+                with_movements=True)
+
+
+    def set_vectormap(self, manalysers=None, i_canvas=None):
+        import time 
+        start_time = time.time()
+
+        canvas = self.canvases[i_canvas]
+        ax = canvas.ax
+        
+        if manalysers is None:
+            analyser = self.analysers[i_canvas]
+            if analyser is None:
+                return None
+        else:
+            if len(manalysers) &gt; 1:
+                analyser = MAverager(manalysers)
+            else:
+                analyser = manalysers[0]
+        
+        azim, elev = (ax.azim, ax.elev)
+        ax.clear()
+        
+       
+        kwargs = self.tickbox_frames[i_canvas].states
+        
+        plot_3d_vectormap(analyser, ax=ax, azim=azim, elev=elev,
+                mutation_scale=6, scale_length=1.2, **kwargs)
+       
+        #if ax.dist != 8.5:
+        #    ax.dist = 8.5
+ 
+        canvas.update()
+
+        self.analysers[i_canvas] = analyser
+
+        print(&#39;took {} seconds&#39;.format(time.time()-start_time))
+
+
+    def plot_difference(self):
+        
+        if any([an is None for an in self.analysers]):
+            return None
+        
+        kwargs = self.tickbox_frames[-1].states
+        
+        ax = self.canvases[-1].ax
+        ax.clear()
+        plot_3d_differencemap(*self.analysers[0:2], ax=ax, **kwargs)
+        
+        #if ax.dist != 8.5:
+        #    ax.dist = 8.5
+
+        self.canvases[-1].update()
+
+    
+    def savefig(self, i_canvas=None, fn=None):
+        &#39;&#39;&#39;
+        Save current images visible on the canvases
+
+        i_canvas : int or None
+            If none, save all views by inserting index of the canvas
+            to the end of the saved filename.
+        fn : string or None
+            If not given, save name is asked from the user.
+        &#39;&#39;&#39;
+        
+        if i_canvas is None:
+            iterate = range(len(self.canvases))
+        elif isinstance(i_canvas, int) and i_canvas:
+            iterate = [i_canvas]
+        else:
+            raise ValueError(&#39;wrong type for i_canvas: {}&#39;.format(i_canvas))
+
+        if fn is None:
+            
+            if i_canvas == &#39;all&#39;:
+                text = &#39;Select common save name for the views&#39;
+            else:
+                text = &#39;Save image on a view&#39;
+
+            fn = filedialog.asksaveasfilename(title=text)
+            
+            if not &#39;.&#39; in os.path.basename(fn):
+                fn = fn + &#39;.png&#39;
+
+            if fn:
+                for i_canvas in iterate:
+                    efn = &#39;.&#39;.join(fn.split(&#39;.&#39;)[:-1]+[str(i_canvas)]+fn.split(&#39;.&#39;)[-1:])
+                    self.canvases[i_canvas].figure.savefig(efn, dpi=600)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.plot_difference"><code class="name flex">
+<span>def <span class="ident">plot_difference</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.savefig"><code class="name flex">
+<span>def <span class="ident">savefig</span></span>(<span>self, i_canvas=None, fn=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Save current images visible on the canvases</p>
+<p>i_canvas : int or None
+If none, save all views by inserting index of the canvas
+to the end of the saved filename.
+fn : string or None
+If not given, save name is asked from the user.</p></div>
+</dd>
+<dt id="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.select_specimens"><code class="name flex">
+<span>def <span class="ident">select_specimens</span></span>(<span>self, i_canvas)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.set_vectormap"><code class="name flex">
+<span>def <span class="ident">set_vectormap</span></span>(<span>self, manalysers=None, i_canvas=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="gonioanalysis.tkgui.widgets.compare_vectormaps.RotationButtons"><code class="flex name class">
+<span>class <span class="ident">RotationButtons</span></span>
+<span>(</span><span>tk_parent, axes, rotations, callback=None, label='', hide_none=True, rotation_offset=(0, 0))</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create buttons to set a matplotlib 3D plot rotations</p>
+<h2 id="attrubutes">Attrubutes</h2>
+<p>axes : list
+Associated matplotlib axes that get rotated
+buttons_frame : object
+Buttons frame object containing the tkinter under the buttons attribute
+rotation_offset : tuple
+(elev, azim) offset in rotations
+callback : callable or None
+Additional callback to be called after changing rotation.</p>
+<p>tk_parent : object
+Tkinter parent object
+axes : list
+List of matplotlib axes
+rotations : list of tuples
+Rotations [(elev, azim), &hellip;]. If any None, keeps the corresponding
+rotation as it is.
+callback : None or callable
+Callback after each rotation update
+hide_none : bool
+When one of the rotations is None, hide the None from
+button text
+rotation_offset : tuple
+Offset in elevation and azitmuth, respectively in degrees</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class RotationButtons(tk.Frame):
+    &#39;&#39;&#39;
+    Create buttons to set a matplotlib 3D plot rotations
+    
+    Attrubutes
+    ----------
+    axes : list
+        Associated matplotlib axes that get rotated
+    buttons_frame : object
+        Buttons frame object containing the tkinter under the buttons attribute
+    rotation_offset : tuple
+        (elev, azim) offset in rotations
+    callback : callable or None
+        Additional callback to be called after changing rotation.
+    &#39;&#39;&#39;
+
+    def __init__(self, tk_parent, axes, rotations, callback=None,
+            label=&#39;&#39;, hide_none=True, rotation_offset=(0,0)):
+        &#39;&#39;&#39;
+        tk_parent : object
+            Tkinter parent object
+        axes : list
+            List of matplotlib axes
+        rotations : list of tuples
+            Rotations [(elev, azim), ...]. If any None, keeps the corresponding
+            rotation as it is.
+        callback : None or callable
+            Callback after each rotation update
+        hide_none : bool
+            When one of the rotations is None, hide the None from
+            button text
+        rotation_offset : tuple
+            Offset in elevation and azitmuth, respectively in degrees
+        &#39;&#39;&#39;
+        tk.Frame.__init__(self, tk_parent)
+        
+        self.axes = axes
+        self.rotation_offset = rotation_offset
+        
+        if hide_none:
+            names = []
+            for rotation in rotations:
+                if None in rotation:
+                    for r in rotation:
+                        if r is not None:
+                            names.append(r)
+                else:
+                    names.append(rotation)
+        else:
+            names = rotations
+
+        commands = [lambda rot=rot: self.set_rotation(*rot) for rot in rotations]
+        self.buttons_frame = ButtonsFrame(self, names, commands, label=label)
+        self.buttons_frame.grid(row=1, column=2)
+       
+        self.callback = callback
+
+
+    def set_rotation(self, elev, azim):
+        for ax in self.axes:
+            if elev is None:
+                uelev = ax.elev
+            else:
+                uelev = elev + self.rotation_offset[0]
+
+            if azim is None:
+                uazim = ax.azim
+            else:
+                uazim = azim + self.rotation_offset[1]
+
+            ax.view_init(uelev, uazim)
+
+        if callable(self.callback):
+            self.callback()</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="gonioanalysis.tkgui.widgets.compare_vectormaps.RotationButtons.set_rotation"><code class="name flex">
+<span>def <span class="ident">set_rotation</span></span>(<span>self, elev, azim)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gonioanalysis.tkgui.widgets" href="index.html">gonioanalysis.tkgui.widgets</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps" href="#gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps">CompareVectormaps</a></code></h4>
+<ul class="">
+<li><code><a title="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.plot_difference" href="#gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.plot_difference">plot_difference</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.savefig" href="#gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.savefig">savefig</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.select_specimens" href="#gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.select_specimens">select_specimens</a></code></li>
+<li><code><a title="gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.set_vectormap" href="#gonioanalysis.tkgui.widgets.compare_vectormaps.CompareVectormaps.set_vectormap">set_vectormap</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gonioanalysis.tkgui.widgets.compare_vectormaps.RotationButtons" href="#gonioanalysis.tkgui.widgets.compare_vectormaps.RotationButtons">RotationButtons</a></code></h4>
+<ul class="">
+<li><code><a title="gonioanalysis.tkgui.widgets.compare_vectormaps.RotationButtons.set_rotation" href="#gonioanalysis.tkgui.widgets.compare_vectormaps.RotationButtons.set_rotation">set_rotation</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>

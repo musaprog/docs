@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>tk_steroids.dialogs API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>tk_steroids.dialogs</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="tk_steroids.dialogs.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="tk_steroids.dialogs.popup"><code class="name flex">
+<span>def <span class="ident">popup</span></span>(<span>tk_parent, widget_class, args=[], kwargs={}, title=None, grid_pos=(1, 1), sticky='NSWE', grid_weights=(1, 1), close_button=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Launch a (uninitialized) tkinter widget in a Toplevel window,
+using grid positioning system.</p>
+<h2 id="options">Options</h2>
+<p>tk_parent : object
+Parent widget
+widget_class: class
+The (uninitialized) widget to be opened in the toplevel
+args: list
+Additional arguments passed to the widget, corresponding to
+widget(toplevel, args[0], args[1], &hellip;)
+kwargs : dict
+Additional keyword arguments to the widget.
+title : string
+Optional title to the widow
+grid_pos : tuple
+Position (row, column) of the created widget
+sticky : string
+Tkinter grid sticky option for the widget
+grid_weights: tuple
+Row and column weights for grid_{row,column}configure at grid_pos
+close_button : bool
+If True, add close button</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>toplevel</code></strong> :&ensp;<code>object</code></dt>
+<dd>The toplevel window</dd>
+<dt><strong><code>widget</code></strong> :&ensp;<code>object</code></dt>
+<dd>The initialized widget</dd>
+</dl></div>
+</dd>
+<dt id="tk_steroids.dialogs.popup_tickselect"><code class="name flex">
+<span>def <span class="ident">popup_tickselect</span></span>(<span>tk_parent, *args, title='Make selection', **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="tk_steroids.dialogs.TickSelect"><code class="flex name class">
+<span>class <span class="ident">TickSelect</span></span>
+<span>(</span><span>parent, selections, callback_on_ok, close_on_ok=True, ticked=None, callback_args=[], callback_kwargs={}, single_select=False, search=10)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>User sets ticks to select items from selections group and
+presses ok -&gt; callback_on_ok gets called as the made selections list
+as the only input argument.</p>
+<p>selections
+List of strings
+callback_on_ok
+Callable, whom a sublist of selections is passed
+close_on_ok
+Call root.destroy() when pressing ok
+ticked
+A sublist of selections that should be enabled by default.
+callback_args
+A list of secondary callback arguments, passed after the selections
+callback_kwargs
+A dict of callback keyword arguments
+single_select
+Use Radiobuttons instead Checkbutton, allowing only one item to be selected.
+search : int or bool
+If True, show the seach bar, false hide. If integer, specifies the number
+of selections when to start showing the search bar.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TickSelect(tk.Frame):
+    &#39;&#39;&#39;
+    User sets ticks to select items from selections group and
+    presses ok -&gt; callback_on_ok gets called as the made selections list
+    as the only input argument.
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, selections, callback_on_ok, close_on_ok=True, ticked=None,
+            callback_args=[], callback_kwargs={}, single_select=False, search=10):
+        &#39;&#39;&#39;
+        selections          List of strings
+        callback_on_ok      Callable, whom a sublist of selections is passed
+        close_on_ok         Call root.destroy() when pressing ok
+        ticked              A sublist of selections that should be enabled by default.
+        callback_args       A list of secondary callback arguments, passed after the selections
+        callback_kwargs     A dict of callback keyword arguments
+        single_select       Use Radiobuttons instead Checkbutton, allowing only one item to be selected.
+        search : int or bool
+            If True, show the seach bar, false hide. If integer, specifies the number
+            of selections when to start showing the search bar.
+        &#39;&#39;&#39;
+        tk.Frame.__init__(self, parent)
+
+        self.grid_rowconfigure(0, weight=1) 
+        self.grid_columnconfigure(0, weight=1) 
+        
+        self.callback_on_ok = callback_on_ok
+        self.selections = selections
+        self.close_on_ok = close_on_ok
+
+        self.callback_args = callback_args
+        self.callback_kwargs = callback_kwargs
+
+        # Add scrollbar - adds canvas and extra frame
+        canvas = tk.Canvas(self)
+        frame = tk.Frame(canvas)
+        frame.grid(row=0, column=0, sticky=&#39;NSEW&#39;)
+
+        scrollbar = tk.Scrollbar(self, orient=&#39;vertical&#39;, command=canvas.yview)
+        scrollbar.grid(row=0, column=1, sticky=&#39;NS&#39;)
+        
+        canvas.configure(yscrollcommand=scrollbar.set)
+        canvas.create_window((0,0), window=frame, anchor=&#39;nw&#39;)
+        
+        canvas.grid_rowconfigure(0, weight=1)
+        canvas.grid(row=0, column=0, sticky=&#39;NSEW&#39;)
+        
+        self.checkbuttons = []
+
+        # Create tickboxes and entries
+        if single_select:
+            N_selections = 1
+        else:
+            N_selections = len(self.selections)
+        tk_variables = [tk.IntVar() for i in range(N_selections)]
+
+        for i_row, selection in enumerate(self.selections):        
+            if single_select:
+                checkbutton = tk.Radiobutton(frame, text=selection, variable=tk_variables[0], value=i_row)
+            else:
+                checkbutton = tk.Checkbutton(frame, text=selection, variable=tk_variables[i_row])
+            checkbutton.grid(sticky=&#39;W&#39;)
+            
+            # Set ticked
+            if not ticked is None and selection in ticked:
+                checkbutton.select()
+
+            self.checkbuttons.append(checkbutton)
+    
+        # Buttons under the selections list
+        self.buttons_frame = tk.Frame(self)
+        tk.Button(self, text=&#39;Ok&#39;, command=self.on_ok).grid(row=1, column=1)
+        tk.Button(self.buttons_frame, text=&#39;Select all&#39;, command=self.select_all).grid(row=1, column=0)
+        tk.Button(self.buttons_frame, text=&#39;Inverse&#39;, command=self.toggle_selection).grid(row=1, column=1)
+        self.buttons_frame.grid(row=1, column=0)
+
+        if (search is True) or (search is not False and search &lt; len(self.selections)):
+            self.last_search = &#39;&#39;
+            self.searchtext = tk.StringVar()
+            self.searchbox = tk.Entry(self, text=&#39;Search&#39;, textvariable=self.searchtext)
+            self.searchbox.grid(row=2, column=0, sticky=&#39;WE&#39;)
+            self.winfo_toplevel().after(2000, lambda: self._update_search(repeat_after=1000))
+
+        self.winfo_toplevel().after(50, self._update)
+        
+        self.frame = frame
+        self.canvas = canvas
+        self.tk_variables = tk_variables
+        self.single_select = single_select
+        
+        self.visible_checkbuttons = self.checkbuttons
+
+
+    def _update_search(self, repeat_after=None):
+        &#39;&#39;&#39;
+        Check the searchbox input and hide selections that do not match
+        the search.
+        &#39;&#39;&#39;
+        key = str(self.searchtext.get())
+        if key != self.last_search:
+            
+            self.visible_checkbuttons  = []
+
+            for checkbutton in self.checkbuttons:
+                checkbutton.grid_remove()
+                if key in checkbutton.cget(&#39;text&#39;):
+                    checkbutton.grid()
+
+                    self.visible_checkbuttons.append(checkbutton)
+
+            self.last_search = key
+
+        if repeat_after:
+            self.winfo_toplevel().after(repeat_after, lambda r=repeat_after: self._update_search(repeat_after=r))
+
+
+    def _update(self):
+        self.canvas.config(scrollregion=(0, 0, self.frame.winfo_reqwidth(), self.frame.winfo_reqheight()))
+        self.winfo_toplevel().after(1000, self._update)
+
+
+    def select_all(self):
+        for checkbutton in self.visible_checkbuttons:
+            checkbutton.select()
+
+
+    def toggle_selection(self):
+        for checkbutton in self.visible_checkbuttons:
+            checkbutton.toggle()
+
+
+    def on_ok(self):
+        &#39;&#39;&#39;
+        Gets called when the OK button is pressed, and calls callback_on_ok with
+        the made selections.
+        &#39;&#39;&#39;
+        made_selections = []
+
+        if self.single_select:
+            made_selections.append(self.selections[self.tk_variables[0].get()])
+        else:
+            for tk_variable, selection in zip(self.tk_variables, self.selections):
+                if tk_variable.get() == 1:
+                    made_selections.append(selection)
+
+        self.callback_on_ok(made_selections, *self.callback_args, **self.callback_kwargs)
+        
+
+        if self.close_on_ok:
+            self.winfo_toplevel().destroy()</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tk_steroids.dialogs.TickSelect.on_ok"><code class="name flex">
+<span>def <span class="ident">on_ok</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets called when the OK button is pressed, and calls callback_on_ok with
+the made selections.</p></div>
+</dd>
+<dt id="tk_steroids.dialogs.TickSelect.select_all"><code class="name flex">
+<span>def <span class="ident">select_all</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="tk_steroids.dialogs.TickSelect.toggle_selection"><code class="name flex">
+<span>def <span class="ident">toggle_selection</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<a href='../index.html'><- Back to All Docs</a><br>
+<a href="javascript:history.back()"><- Back one page</a>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="tk_steroids" href="index.html">tk_steroids</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="tk_steroids.dialogs.main" href="#tk_steroids.dialogs.main">main</a></code></li>
+<li><code><a title="tk_steroids.dialogs.popup" href="#tk_steroids.dialogs.popup">popup</a></code></li>
+<li><code><a title="tk_steroids.dialogs.popup_tickselect" href="#tk_steroids.dialogs.popup_tickselect">popup_tickselect</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="tk_steroids.dialogs.TickSelect" href="#tk_steroids.dialogs.TickSelect">TickSelect</a></code></h4>
+<ul class="">
+<li><code><a title="tk_steroids.dialogs.TickSelect.on_ok" href="#tk_steroids.dialogs.TickSelect.on_ok">on_ok</a></code></li>
+<li><code><a title="tk_steroids.dialogs.TickSelect.select_all" href="#tk_steroids.dialogs.TickSelect.select_all">select_all</a></code></li>
+<li><code><a title="tk_steroids.dialogs.TickSelect.toggle_selection" href="#tk_steroids.dialogs.TickSelect.toggle_selection">toggle_selection</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>
